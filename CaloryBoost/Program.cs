@@ -14,6 +14,7 @@ namespace CaloryBoost
         [STAThread]
         static void Main()
         {
+            //taner deneme
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
