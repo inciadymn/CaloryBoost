@@ -14,7 +14,8 @@ namespace CaloryBoost
         [STAThread]
         static void Main()
         {
-            //Conflict deneme
+            //ahmet deneme
+            //inci deneme
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
