@@ -10,5 +10,13 @@ namespace CaloryBoost.Model.Entities
     {
         public DateTime CreatedDate { get; set; }
         public decimal Portion { get; set; }
+
+        public int UserID { get; set; }
+        public int FoodID { get; set; }
+        public int MealID { get; set; }
+
+        public virtual User User { get; set; }
+        public virtual Food Food { get; set; }
+        public virtual Meal Meal { get; set; }
     }
 }

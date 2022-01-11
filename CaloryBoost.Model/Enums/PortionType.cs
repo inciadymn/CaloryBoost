@@ -9,9 +9,7 @@ namespace CaloryBoost.Model.Enums
     public enum PortionType
     {
         piece,
-        ml,
-        slice,
-        gram,
+        cup,
         portion
     }
 }

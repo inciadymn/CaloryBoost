@@ -8,6 +8,11 @@ namespace CaloryBoost.Model.Entities
 {
     public class User
     {
+        public User()
+        {
+            UserMealFoods = new HashSet<UserMealFood>();
+        }
+
         public int ID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -18,5 +23,7 @@ namespace CaloryBoost.Model.Entities
         public DateTime CreatedDate { get; set; }
         public string Phone { get; set; }
         public string PhotoPath { get; set; }
+
+        public virtual ICollection<UserMealFood> UserMealFoods { get; set; }
     }
 }
