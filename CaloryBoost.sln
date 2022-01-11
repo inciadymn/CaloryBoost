@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaloryBoost", "CaloryBoost\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaloryBoost.Model", "CaloryBoost.Model\CaloryBoost.Model.csproj", "{80FB3639-2A1D-4B88-B5AB-9ABDC92D179B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaloryBoost.DAL", "CaloryBoost.DAL\CaloryBoost.DAL.csproj", "{BA0A043F-4918-4C9C-BA0F-80DA6AECBBC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{80FB3639-2A1D-4B88-B5AB-9ABDC92D179B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80FB3639-2A1D-4B88-B5AB-9ABDC92D179B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80FB3639-2A1D-4B88-B5AB-9ABDC92D179B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA0A043F-4918-4C9C-BA0F-80DA6AECBBC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA0A043F-4918-4C9C-BA0F-80DA6AECBBC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA0A043F-4918-4C9C-BA0F-80DA6AECBBC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA0A043F-4918-4C9C-BA0F-80DA6AECBBC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
