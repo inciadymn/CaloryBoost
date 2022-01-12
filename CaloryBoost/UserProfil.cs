@@ -10,15 +10,11 @@ using System.Windows.Forms;
 
 namespace CaloryBoost
 {
-    public partial class Form1 : Form
+    public partial class UserProfil : Form
     {
-        public Form1()
+        public UserProfil()
         {
             InitializeComponent();
         }
-        
-        
-
-       
     }
 }
