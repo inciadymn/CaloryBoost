@@ -10,15 +10,16 @@ using System.Windows.Forms;
 
 namespace CaloryBoost
 {
-    public partial class Form1 : Form
+    public partial class Meal : Form
     {
-        public Form1()
+        public Meal()
         {
             InitializeComponent();
         }
-        
-        
 
-       
+        private void Meal_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
