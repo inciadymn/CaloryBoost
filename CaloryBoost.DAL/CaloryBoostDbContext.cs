@@ -11,7 +11,7 @@ namespace CaloryBoost.DAL
 {
     public class CaloryBoostDbContext : DbContext
     {
-        public CaloryBoostDbContext() : base("Server=.; Database=CaloryBoostDb; Trusted_Connection=True")
+        public CaloryBoostDbContext() : base("Server=DESKTOP-M78KLHI; Database=CaloryBoostDb; Trusted_Connection=True")
         {
 
         }
