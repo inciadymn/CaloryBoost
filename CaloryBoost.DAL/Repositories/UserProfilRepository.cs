@@ -19,5 +19,29 @@ namespace CaloryBoost.DAL.Repositories
         {
             return context.Users.Where(a => a.ID == userID).ToList();
         }
+
+        public double GetByCalory(int userID)
+        {
+            double totalCalory = context.Foods.Join(context.UserMealFoods,
+                                               food => food.ID,
+                                               x => x.FoodID,
+                                               (food, x) => new UserTotalCalory
+                                               {
+                                                   Id=x.UserID,
+                                                   TotalCalory= (x.Portion / food.Portion) * food.Calory,  
+                                                   DailyCalory=x.CreatedDate
+                                                   
+                                               }).Where(a=> a.Id == userID && a.DailyCalory.Date == DateTime.Now.Date).Sum(a => a.TotalCalory);
+            return totalCalory;
+        }
     }
 }
+
+public class UserTotalCalory
+{
+    public double TotalCalory { get; set; }
+    public int Id { get; set; }
+    public DateTime DailyCalory { get; set; }
+}
+
+

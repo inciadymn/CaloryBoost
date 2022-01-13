@@ -29,5 +29,15 @@ namespace CaloryBoost.BLL.Services
             }
             return users;
         }
+
+        public double GetByCalory(int userID)
+        {
+            if (userID==0)
+            {
+                throw new Exception("Parametre değeri uygun değil");
+            }
+
+            return userProfilRepository.GetByCalory(userID);
+        }
     }
 }
