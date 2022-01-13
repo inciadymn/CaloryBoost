@@ -15,11 +15,11 @@ namespace CaloryBoost.Model.Entities
 
         public int ID { get; set; }
         public string Name { get; set; }
-        public decimal Calory { get; set; }
+        public double Calory { get; set; }
         public string PhotoPath { get; set; }
         public string FoodTypes { get; set; }
         public string Description { get; set; }
-        public decimal Portion { get; set; }
+        public double Portion { get; set; }
         public string PortionTypes { get; set; }
 
         public int FoodCategoryID { get; set; }

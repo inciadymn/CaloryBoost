@@ -147,6 +147,21 @@
   <ItemGroup>
     <None Include="İmages\photo-1592545287571-8afd34aada57.jpg" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="İmages\FoodImages\food_1.jpg" />
+    <Content Include="İmages\FoodImages\food_10.jpg" />
+    <Content Include="İmages\FoodImages\food_11.jpg" />
+    <Content Include="İmages\FoodImages\food_12.jpg" />
+    <Content Include="İmages\FoodImages\food_2.jpg" />
+    <Content Include="İmages\FoodImages\food_3.jpg" />
+    <Content Include="İmages\FoodImages\food_4.jpg" />
+    <Content Include="İmages\FoodImages\food_5.jpg" />
+    <Content Include="İmages\FoodImages\food_6.jpg" />
+    <Content Include="İmages\FoodImages\food_7.jpg" />
+    <Content Include="İmages\FoodImages\food_8.jpg" />
+    <Content Include="İmages\FoodImages\food_9.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

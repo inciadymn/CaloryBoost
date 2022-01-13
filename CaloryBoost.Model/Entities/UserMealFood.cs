@@ -9,7 +9,7 @@ namespace CaloryBoost.Model.Entities
     public class UserMealFood
     {
         public DateTime CreatedDate { get; set; }
-        public decimal Portion { get; set; }
+        public double Portion { get; set; }
 
         public int UserID { get; set; }
         public int FoodID { get; set; }

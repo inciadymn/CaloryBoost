@@ -61,8 +61,22 @@
     <Compile Include="Migrations\202201111324029_Initial.Designer.cs">
       <DependentUpon>202201111324029_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202201131038414_Data_Added.cs" />
+    <Compile Include="Migrations\202201131038414_Data_Added.designer.cs">
+      <DependentUpon>202201131038414_Data_Added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201131052505_Data_Added_2.cs" />
+    <Compile Include="Migrations\202201131052505_Data_Added_2.designer.cs">
+      <DependentUpon>202201131052505_Data_Added_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201131101330_Data_Added_Meals.cs" />
+    <Compile Include="Migrations\202201131101330_Data_Added_Meals.designer.cs">
+      <DependentUpon>202201131101330_Data_Added_Meals.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\UserProfilRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CaloryBoost.Model\CaloryBoost.Model.csproj">
@@ -78,7 +92,17 @@
     <EmbeddedResource Include="Migrations\202201111324029_Initial.resx">
       <DependentUpon>202201111324029_Initial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201131038414_Data_Added.resx">
+      <DependentUpon>202201131038414_Data_Added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201131052505_Data_Added_2.resx">
+      <DependentUpon>202201131052505_Data_Added_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201131101330_Data_Added_Meals.resx">
+      <DependentUpon>202201131101330_Data_Added_Meals.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
