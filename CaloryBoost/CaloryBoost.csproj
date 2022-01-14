@@ -161,6 +161,7 @@
     <Content Include="İmages\FoodImages\food_7.jpg" />
     <Content Include="İmages\FoodImages\food_8.jpg" />
     <Content Include="İmages\FoodImages\food_9.jpg" />
+    <Content Include="İmages\plus_icon.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
