@@ -147,7 +147,16 @@
   <ItemGroup>
     <None Include="İmages\photo-1592545287571-8afd34aada57.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CaloryBoost.BLL\CaloryBoost.BLL.csproj">
+      <Project>{ca55dd10-2c5f-4c3e-bbd7-e7f05ca2a165}</Project>
+      <Name>CaloryBoost.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CaloryBoost.Model\CaloryBoost.Model.csproj">
+      <Project>{80fb3639-2a1d-4b88-b5ab-9abdc92d179b}</Project>
+      <Name>CaloryBoost.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="İmages\FoodImages\food_1.jpg" />
     <Content Include="İmages\FoodImages\food_10.jpg" />

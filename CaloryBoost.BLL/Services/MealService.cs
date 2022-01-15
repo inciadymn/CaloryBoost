@@ -16,12 +16,12 @@ namespace CaloryBoost.BLL.Services
             mealRepository = new MealRepository();
         }
 
-        public List<SelecedFood> GetFood(int mealID)
+        public List<SelecedFood> GetFood(int mealID,int userID)
         {
             List<SelecedFood> selecedFoods = new List<SelecedFood>();
             if (mealID > 0)
             {
-                selecedFoods = mealRepository.GetFood(mealID);
+                selecedFoods = mealRepository.GetFood(mealID,userID);
             }
             else
             {
@@ -47,6 +47,17 @@ namespace CaloryBoost.BLL.Services
             }
 
             return mealRepository.Delete(food);
+        }
+
+        public List<Food> FoodsList()
+        {
+            return mealRepository.FoodsList();
+        }
+
+        public bool Insert(UserMealFood userMealFood)
+        {
+            userMealFood.CreatedDate = DateTime.Now.Date;
+            return mealRepository.Insert(userMealFood);
         }
     }
 }

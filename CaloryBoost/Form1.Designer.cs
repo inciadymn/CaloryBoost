@@ -31,8 +31,8 @@ namespace CaloryBoost
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
-            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnGetStarted = new RJCodeAdvance.RJControls.RJButton();
+            this.btnLogin = new RJCodeAdvance.RJControls.RJButton();
             this.SuspendLayout();
             // 
             // bigLabel1
@@ -47,43 +47,45 @@ namespace CaloryBoost
             this.bigLabel1.TabIndex = 1;
             this.bigLabel1.Text = "CALORYBOOST";
             // 
-            // rjButton1
+            // btnGetStarted
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.AliceBlue;
-            this.rjButton1.BorderRadius = 12;
-            this.rjButton1.BorderSize = 2;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(49, 387);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(255, 49);
-            this.rjButton1.TabIndex = 0;
-            this.rjButton1.Text = "GET STARTED";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            this.btnGetStarted.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
+            this.btnGetStarted.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
+            this.btnGetStarted.BorderColor = System.Drawing.Color.AliceBlue;
+            this.btnGetStarted.BorderRadius = 12;
+            this.btnGetStarted.BorderSize = 2;
+            this.btnGetStarted.FlatAppearance.BorderSize = 0;
+            this.btnGetStarted.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetStarted.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGetStarted.ForeColor = System.Drawing.Color.White;
+            this.btnGetStarted.Location = new System.Drawing.Point(49, 387);
+            this.btnGetStarted.Name = "btnGetStarted";
+            this.btnGetStarted.Size = new System.Drawing.Size(255, 49);
+            this.btnGetStarted.TabIndex = 0;
+            this.btnGetStarted.Text = "GET STARTED";
+            this.btnGetStarted.TextColor = System.Drawing.Color.White;
+            this.btnGetStarted.UseVisualStyleBackColor = false;
+            this.btnGetStarted.Click += new System.EventHandler(this.btnGetStarted_Click);
             // 
-            // rjButton2
+            // btnLogin
             // 
-            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
-            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
-            this.rjButton2.BorderColor = System.Drawing.Color.AliceBlue;
-            this.rjButton2.BorderRadius = 12;
-            this.rjButton2.BorderSize = 2;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(49, 463);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(255, 49);
-            this.rjButton2.TabIndex = 0;
-            this.rjButton2.Text = "LOG IN";
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
+            this.btnLogin.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
+            this.btnLogin.BorderColor = System.Drawing.Color.AliceBlue;
+            this.btnLogin.BorderRadius = 12;
+            this.btnLogin.BorderSize = 2;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(49, 463);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(255, 49);
+            this.btnLogin.TabIndex = 0;
+            this.btnLogin.Text = "LOG IN";
+            this.btnLogin.TextColor = System.Drawing.Color.White;
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // Form1
             // 
@@ -93,8 +95,8 @@ namespace CaloryBoost
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(360, 610);
             this.Controls.Add(this.bigLabel1);
-            this.Controls.Add(this.rjButton2);
-            this.Controls.Add(this.rjButton1);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnGetStarted);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -106,8 +108,8 @@ namespace CaloryBoost
 
         #endregion
         private ReaLTaiizor.Controls.BigLabel bigLabel1;
-        private RJCodeAdvance.RJControls.RJButton rjButton1;
-        private RJCodeAdvance.RJControls.RJButton rjButton2;
+        private RJCodeAdvance.RJControls.RJButton btnGetStarted;
+        private RJCodeAdvance.RJControls.RJButton btnLogin;
     }
 }
 
