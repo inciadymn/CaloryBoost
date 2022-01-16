@@ -16,9 +16,21 @@ namespace CaloryBoost
         {
             InitializeComponent();
         }
-        
-        
 
-       
+        private void btnGetStarted_Click(object sender, EventArgs e)
+        {
+            Register register = new Register();
+            this.Hide();
+            register.ShowDialog();
+            this.Show();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            UserLogin userLogin = new UserLogin();
+            this.Hide();
+            userLogin.ShowDialog();
+            this.Close();
+        }
     }
 }

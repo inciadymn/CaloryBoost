@@ -36,6 +36,7 @@ namespace CaloryBoost
                 Label lblFoodName = new Label();
                 lblFoodName.BackColor = Color.White;
                 lblFoodName.Width = 150;
+                //lblFoodName.Tag = $"lblFoodName_{item.FoodID}"; 
                 lblFoodName.Location = new Point(110, 10);
 
                 Label lblDescription = new Label();
@@ -47,7 +48,8 @@ namespace CaloryBoost
                 addButton2.BackColor = Color.Blue;
                 addButton2.Width = 30;
                 addButton2.Height = 30;
-                addButton2.BorderRadius = 15;               
+                addButton2.BorderRadius = 15;
+                //addButton2.Tag = $"{item.FoodID}"; 
                 //addButton2.Image = Image.FromFile(@"..\..\İmages\plus_icon.jpg");
                 //addButton2.BackgroundImageLayout = ImageLayout.Center;
                 addButton2.Location = new Point(270, 20);
@@ -58,6 +60,7 @@ namespace CaloryBoost
                 lblAmount.ForeColor = Color.Black;
                 lblAmount.Width = 50;
                 lblAmount.Height= 15;
+                //lblAmount.Tag = $"lblAmount_{item.FoodID}"; 
                 lblAmount.Location = new Point(110, 45);
 
                 TextBox txtAmount = new TextBox();

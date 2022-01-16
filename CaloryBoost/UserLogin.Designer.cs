@@ -75,7 +75,6 @@ namespace CaloryBoost
             this.richTextBoxEdit4.Size = new System.Drawing.Size(229, 30);
             this.richTextBoxEdit4.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             this.richTextBoxEdit4.TabIndex = 2;
-            this.richTextBoxEdit4.Text = "richTextBoxEdit1";
             this.richTextBoxEdit4.TextBackColor = System.Drawing.Color.White;
             this.richTextBoxEdit4.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxEdit4.TextFont = new System.Drawing.Font("Tahoma", 10F);
@@ -96,7 +95,6 @@ namespace CaloryBoost
             this.richTextBoxEdit3.Size = new System.Drawing.Size(229, 30);
             this.richTextBoxEdit3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             this.richTextBoxEdit3.TabIndex = 3;
-            this.richTextBoxEdit3.Text = "richTextBoxEdit1";
             this.richTextBoxEdit3.TextBackColor = System.Drawing.Color.White;
             this.richTextBoxEdit3.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxEdit3.TextFont = new System.Drawing.Font("Tahoma", 10F);

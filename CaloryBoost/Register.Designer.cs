@@ -29,43 +29,43 @@ namespace CaloryBoost
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBoxEdit1 = new ReaLTaiizor.Controls.RichTextBoxEdit();
+            this.txtFirstName = new ReaLTaiizor.Controls.RichTextBoxEdit();
             this.headerLabel1 = new ReaLTaiizor.Controls.HeaderLabel();
-            this.richTextBoxEdit2 = new ReaLTaiizor.Controls.RichTextBoxEdit();
+            this.txtLastName = new ReaLTaiizor.Controls.RichTextBoxEdit();
             this.headerLabel2 = new ReaLTaiizor.Controls.HeaderLabel();
-            this.richTextBoxEdit3 = new ReaLTaiizor.Controls.RichTextBoxEdit();
+            this.txtEmail = new ReaLTaiizor.Controls.RichTextBoxEdit();
             this.headerLabel3 = new ReaLTaiizor.Controls.HeaderLabel();
-            this.richTextBoxEdit4 = new ReaLTaiizor.Controls.RichTextBoxEdit();
+            this.txtPassword = new ReaLTaiizor.Controls.RichTextBoxEdit();
             this.headerLabel4 = new ReaLTaiizor.Controls.HeaderLabel();
             this.headerLabel5 = new ReaLTaiizor.Controls.HeaderLabel();
             this.headerLabel6 = new ReaLTaiizor.Controls.HeaderLabel();
-            this.richTextBoxEdit7 = new ReaLTaiizor.Controls.RichTextBoxEdit();
+            this.txtPhohe = new ReaLTaiizor.Controls.RichTextBoxEdit();
             this.headerLabel7 = new ReaLTaiizor.Controls.HeaderLabel();
-            this.thunderRadioButton1 = new ReaLTaiizor.Controls.ThunderRadioButton();
-            this.thunderRadioButton2 = new ReaLTaiizor.Controls.ThunderRadioButton();
-            this.rjDatePicker1 = new RJCodeAdvance.RJControls.RJDatePicker();
-            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
+            this.rdFemale = new ReaLTaiizor.Controls.ThunderRadioButton();
+            this.rdMale = new ReaLTaiizor.Controls.ThunderRadioButton();
+            this.dtpcDate = new RJCodeAdvance.RJControls.RJDatePicker();
+            this.btnSave = new RJCodeAdvance.RJControls.RJButton();
             this.SuspendLayout();
             // 
-            // richTextBoxEdit1
+            // txtFirstName
             // 
-            this.richTextBoxEdit1.AutoWordSelection = false;
-            this.richTextBoxEdit1.BackColor = System.Drawing.Color.Transparent;
-            this.richTextBoxEdit1.BaseColor = System.Drawing.Color.Transparent;
-            this.richTextBoxEdit1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.richTextBoxEdit1.EdgeColor = System.Drawing.Color.White;
-            this.richTextBoxEdit1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBoxEdit1.ForeColor = System.Drawing.Color.DimGray;
-            this.richTextBoxEdit1.Location = new System.Drawing.Point(119, 131);
-            this.richTextBoxEdit1.Name = "richTextBoxEdit1";
-            this.richTextBoxEdit1.ReadOnly = false;
-            this.richTextBoxEdit1.Size = new System.Drawing.Size(229, 30);
-            this.richTextBoxEdit1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.richTextBoxEdit1.TabIndex = 0;
-            this.richTextBoxEdit1.TextBackColor = System.Drawing.Color.White;
-            this.richTextBoxEdit1.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBoxEdit1.TextFont = new System.Drawing.Font("Tahoma", 10F);
-            this.richTextBoxEdit1.WordWrap = false;
+            this.txtFirstName.AutoWordSelection = false;
+            this.txtFirstName.BackColor = System.Drawing.Color.Transparent;
+            this.txtFirstName.BaseColor = System.Drawing.Color.Transparent;
+            this.txtFirstName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.txtFirstName.EdgeColor = System.Drawing.Color.White;
+            this.txtFirstName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtFirstName.ForeColor = System.Drawing.Color.DimGray;
+            this.txtFirstName.Location = new System.Drawing.Point(119, 131);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.ReadOnly = false;
+            this.txtFirstName.Size = new System.Drawing.Size(229, 30);
+            this.txtFirstName.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.txtFirstName.TabIndex = 0;
+            this.txtFirstName.TextBackColor = System.Drawing.Color.White;
+            this.txtFirstName.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFirstName.TextFont = new System.Drawing.Font("Tahoma", 10F);
+            this.txtFirstName.WordWrap = false;
             // 
             // headerLabel1
             // 
@@ -79,26 +79,25 @@ namespace CaloryBoost
             this.headerLabel1.TabIndex = 1;
             this.headerLabel1.Text = "First Name : ";
             // 
-            // richTextBoxEdit2
+            // txtLastName
             // 
-            this.richTextBoxEdit2.AutoWordSelection = false;
-            this.richTextBoxEdit2.BackColor = System.Drawing.Color.Transparent;
-            this.richTextBoxEdit2.BaseColor = System.Drawing.Color.Transparent;
-            this.richTextBoxEdit2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.richTextBoxEdit2.EdgeColor = System.Drawing.Color.White;
-            this.richTextBoxEdit2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBoxEdit2.ForeColor = System.Drawing.Color.DimGray;
-            this.richTextBoxEdit2.Location = new System.Drawing.Point(119, 186);
-            this.richTextBoxEdit2.Name = "richTextBoxEdit2";
-            this.richTextBoxEdit2.ReadOnly = false;
-            this.richTextBoxEdit2.Size = new System.Drawing.Size(229, 30);
-            this.richTextBoxEdit2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.richTextBoxEdit2.TabIndex = 0;
-            this.richTextBoxEdit2.Text = "richTextBoxEdit1";
-            this.richTextBoxEdit2.TextBackColor = System.Drawing.Color.White;
-            this.richTextBoxEdit2.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBoxEdit2.TextFont = new System.Drawing.Font("Tahoma", 10F);
-            this.richTextBoxEdit2.WordWrap = true;
+            this.txtLastName.AutoWordSelection = false;
+            this.txtLastName.BackColor = System.Drawing.Color.Transparent;
+            this.txtLastName.BaseColor = System.Drawing.Color.Transparent;
+            this.txtLastName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.txtLastName.EdgeColor = System.Drawing.Color.White;
+            this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtLastName.ForeColor = System.Drawing.Color.DimGray;
+            this.txtLastName.Location = new System.Drawing.Point(119, 186);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.ReadOnly = false;
+            this.txtLastName.Size = new System.Drawing.Size(229, 30);
+            this.txtLastName.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.txtLastName.TabIndex = 0;
+            this.txtLastName.TextBackColor = System.Drawing.Color.White;
+            this.txtLastName.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLastName.TextFont = new System.Drawing.Font("Tahoma", 10F);
+            this.txtLastName.WordWrap = true;
             // 
             // headerLabel2
             // 
@@ -112,26 +111,25 @@ namespace CaloryBoost
             this.headerLabel2.TabIndex = 1;
             this.headerLabel2.Text = "Last Name : ";
             // 
-            // richTextBoxEdit3
+            // txtEmail
             // 
-            this.richTextBoxEdit3.AutoWordSelection = false;
-            this.richTextBoxEdit3.BackColor = System.Drawing.Color.Transparent;
-            this.richTextBoxEdit3.BaseColor = System.Drawing.Color.Transparent;
-            this.richTextBoxEdit3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.richTextBoxEdit3.EdgeColor = System.Drawing.Color.White;
-            this.richTextBoxEdit3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBoxEdit3.ForeColor = System.Drawing.Color.DimGray;
-            this.richTextBoxEdit3.Location = new System.Drawing.Point(119, 241);
-            this.richTextBoxEdit3.Name = "richTextBoxEdit3";
-            this.richTextBoxEdit3.ReadOnly = false;
-            this.richTextBoxEdit3.Size = new System.Drawing.Size(229, 30);
-            this.richTextBoxEdit3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.richTextBoxEdit3.TabIndex = 0;
-            this.richTextBoxEdit3.Text = "richTextBoxEdit1";
-            this.richTextBoxEdit3.TextBackColor = System.Drawing.Color.White;
-            this.richTextBoxEdit3.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBoxEdit3.TextFont = new System.Drawing.Font("Tahoma", 10F);
-            this.richTextBoxEdit3.WordWrap = true;
+            this.txtEmail.AutoWordSelection = false;
+            this.txtEmail.BackColor = System.Drawing.Color.Transparent;
+            this.txtEmail.BaseColor = System.Drawing.Color.Transparent;
+            this.txtEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.txtEmail.EdgeColor = System.Drawing.Color.White;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtEmail.ForeColor = System.Drawing.Color.DimGray;
+            this.txtEmail.Location = new System.Drawing.Point(119, 241);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = false;
+            this.txtEmail.Size = new System.Drawing.Size(229, 30);
+            this.txtEmail.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.txtEmail.TabIndex = 0;
+            this.txtEmail.TextBackColor = System.Drawing.Color.White;
+            this.txtEmail.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.TextFont = new System.Drawing.Font("Tahoma", 10F);
+            this.txtEmail.WordWrap = true;
             // 
             // headerLabel3
             // 
@@ -145,26 +143,25 @@ namespace CaloryBoost
             this.headerLabel3.TabIndex = 1;
             this.headerLabel3.Text = "Email : ";
             // 
-            // richTextBoxEdit4
+            // txtPassword
             // 
-            this.richTextBoxEdit4.AutoWordSelection = false;
-            this.richTextBoxEdit4.BackColor = System.Drawing.Color.Transparent;
-            this.richTextBoxEdit4.BaseColor = System.Drawing.Color.Transparent;
-            this.richTextBoxEdit4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.richTextBoxEdit4.EdgeColor = System.Drawing.Color.White;
-            this.richTextBoxEdit4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBoxEdit4.ForeColor = System.Drawing.Color.DimGray;
-            this.richTextBoxEdit4.Location = new System.Drawing.Point(119, 296);
-            this.richTextBoxEdit4.Name = "richTextBoxEdit4";
-            this.richTextBoxEdit4.ReadOnly = false;
-            this.richTextBoxEdit4.Size = new System.Drawing.Size(229, 30);
-            this.richTextBoxEdit4.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.richTextBoxEdit4.TabIndex = 0;
-            this.richTextBoxEdit4.Text = "richTextBoxEdit1";
-            this.richTextBoxEdit4.TextBackColor = System.Drawing.Color.White;
-            this.richTextBoxEdit4.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBoxEdit4.TextFont = new System.Drawing.Font("Tahoma", 10F);
-            this.richTextBoxEdit4.WordWrap = true;
+            this.txtPassword.AutoWordSelection = false;
+            this.txtPassword.BackColor = System.Drawing.Color.Transparent;
+            this.txtPassword.BaseColor = System.Drawing.Color.Transparent;
+            this.txtPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.txtPassword.EdgeColor = System.Drawing.Color.White;
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPassword.Location = new System.Drawing.Point(119, 296);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.ReadOnly = false;
+            this.txtPassword.Size = new System.Drawing.Size(229, 30);
+            this.txtPassword.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.txtPassword.TabIndex = 0;
+            this.txtPassword.TextBackColor = System.Drawing.Color.White;
+            this.txtPassword.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.TextFont = new System.Drawing.Font("Tahoma", 10F);
+            this.txtPassword.WordWrap = true;
             // 
             // headerLabel4
             // 
@@ -202,26 +199,25 @@ namespace CaloryBoost
             this.headerLabel6.TabIndex = 1;
             this.headerLabel6.Text = "Gender : ";
             // 
-            // richTextBoxEdit7
+            // txtPhohe
             // 
-            this.richTextBoxEdit7.AutoWordSelection = false;
-            this.richTextBoxEdit7.BackColor = System.Drawing.Color.Transparent;
-            this.richTextBoxEdit7.BaseColor = System.Drawing.Color.Transparent;
-            this.richTextBoxEdit7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.richTextBoxEdit7.EdgeColor = System.Drawing.Color.White;
-            this.richTextBoxEdit7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBoxEdit7.ForeColor = System.Drawing.Color.DimGray;
-            this.richTextBoxEdit7.Location = new System.Drawing.Point(119, 470);
-            this.richTextBoxEdit7.Name = "richTextBoxEdit7";
-            this.richTextBoxEdit7.ReadOnly = false;
-            this.richTextBoxEdit7.Size = new System.Drawing.Size(229, 30);
-            this.richTextBoxEdit7.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.richTextBoxEdit7.TabIndex = 0;
-            this.richTextBoxEdit7.Text = "richTextBoxEdit1";
-            this.richTextBoxEdit7.TextBackColor = System.Drawing.Color.White;
-            this.richTextBoxEdit7.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBoxEdit7.TextFont = new System.Drawing.Font("Tahoma", 10F);
-            this.richTextBoxEdit7.WordWrap = true;
+            this.txtPhohe.AutoWordSelection = false;
+            this.txtPhohe.BackColor = System.Drawing.Color.Transparent;
+            this.txtPhohe.BaseColor = System.Drawing.Color.Transparent;
+            this.txtPhohe.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.txtPhohe.EdgeColor = System.Drawing.Color.White;
+            this.txtPhohe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtPhohe.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPhohe.Location = new System.Drawing.Point(119, 470);
+            this.txtPhohe.Name = "txtPhohe";
+            this.txtPhohe.ReadOnly = false;
+            this.txtPhohe.Size = new System.Drawing.Size(229, 30);
+            this.txtPhohe.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.txtPhohe.TabIndex = 0;
+            this.txtPhohe.TextBackColor = System.Drawing.Color.White;
+            this.txtPhohe.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPhohe.TextFont = new System.Drawing.Font("Tahoma", 10F);
+            this.txtPhohe.WordWrap = true;
             // 
             // headerLabel7
             // 
@@ -235,63 +231,63 @@ namespace CaloryBoost
             this.headerLabel7.TabIndex = 1;
             this.headerLabel7.Text = "Phone : ";
             // 
-            // thunderRadioButton1
+            // rdFemale
             // 
-            this.thunderRadioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.thunderRadioButton1.Checked = false;
-            this.thunderRadioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.thunderRadioButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.thunderRadioButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.thunderRadioButton1.Location = new System.Drawing.Point(119, 416);
-            this.thunderRadioButton1.Name = "thunderRadioButton1";
-            this.thunderRadioButton1.Size = new System.Drawing.Size(79, 16);
-            this.thunderRadioButton1.TabIndex = 2;
-            this.thunderRadioButton1.Text = "Female";
-            this.thunderRadioButton1.CheckedChanged += new System.EventHandler(this.thunderRadioButton1_CheckedChanged);
+            this.rdFemale.BackColor = System.Drawing.Color.Transparent;
+            this.rdFemale.Checked = true;
+            this.rdFemale.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdFemale.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rdFemale.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.rdFemale.Location = new System.Drawing.Point(119, 416);
+            this.rdFemale.Name = "rdFemale";
+            this.rdFemale.Size = new System.Drawing.Size(79, 16);
+            this.rdFemale.TabIndex = 2;
+            this.rdFemale.Text = "Female";
             // 
-            // thunderRadioButton2
+            // rdMale
             // 
-            this.thunderRadioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.thunderRadioButton2.Checked = false;
-            this.thunderRadioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.thunderRadioButton2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.thunderRadioButton2.Location = new System.Drawing.Point(204, 416);
-            this.thunderRadioButton2.Name = "thunderRadioButton2";
-            this.thunderRadioButton2.Size = new System.Drawing.Size(79, 16);
-            this.thunderRadioButton2.TabIndex = 2;
-            this.thunderRadioButton2.Text = "Male";
+            this.rdMale.BackColor = System.Drawing.Color.Transparent;
+            this.rdMale.Checked = false;
+            this.rdMale.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdMale.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.rdMale.Location = new System.Drawing.Point(204, 416);
+            this.rdMale.Name = "rdMale";
+            this.rdMale.Size = new System.Drawing.Size(79, 16);
+            this.rdMale.TabIndex = 2;
+            this.rdMale.Text = "Male";
             // 
-            // rjDatePicker1
+            // dtpcDate
             // 
-            this.rjDatePicker1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjDatePicker1.BorderSize = 0;
-            this.rjDatePicker1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rjDatePicker1.Location = new System.Drawing.Point(119, 351);
-            this.rjDatePicker1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.rjDatePicker1.Name = "rjDatePicker1";
-            this.rjDatePicker1.Size = new System.Drawing.Size(229, 35);
-            this.rjDatePicker1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
-            this.rjDatePicker1.TabIndex = 4;
-            this.rjDatePicker1.TextColor = System.Drawing.Color.White;
+            this.dtpcDate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dtpcDate.BorderSize = 0;
+            this.dtpcDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtpcDate.Location = new System.Drawing.Point(119, 351);
+            this.dtpcDate.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dtpcDate.Name = "dtpcDate";
+            this.dtpcDate.Size = new System.Drawing.Size(229, 35);
+            this.dtpcDate.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
+            this.dtpcDate.TabIndex = 4;
+            this.dtpcDate.TextColor = System.Drawing.Color.White;
             // 
-            // rjButton1
+            // btnSave
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.AliceBlue;
-            this.rjButton1.BorderRadius = 12;
-            this.rjButton1.BorderSize = 2;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(12, 530);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(336, 49);
-            this.rjButton1.TabIndex = 5;
-            this.rjButton1.Text = "Save";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
+            this.btnSave.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
+            this.btnSave.BorderColor = System.Drawing.Color.AliceBlue;
+            this.btnSave.BorderRadius = 12;
+            this.btnSave.BorderSize = 2;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(12, 530);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(336, 49);
+            this.btnSave.TabIndex = 5;
+            this.btnSave.Text = "Save";
+            this.btnSave.TextColor = System.Drawing.Color.White;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // Register
             // 
@@ -299,22 +295,22 @@ namespace CaloryBoost
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.ClientSize = new System.Drawing.Size(360, 610);
-            this.Controls.Add(this.rjButton1);
-            this.Controls.Add(this.rjDatePicker1);
-            this.Controls.Add(this.thunderRadioButton2);
-            this.Controls.Add(this.thunderRadioButton1);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.dtpcDate);
+            this.Controls.Add(this.rdMale);
+            this.Controls.Add(this.rdFemale);
             this.Controls.Add(this.headerLabel7);
             this.Controls.Add(this.headerLabel6);
-            this.Controls.Add(this.richTextBoxEdit7);
+            this.Controls.Add(this.txtPhohe);
             this.Controls.Add(this.headerLabel5);
             this.Controls.Add(this.headerLabel4);
             this.Controls.Add(this.headerLabel3);
-            this.Controls.Add(this.richTextBoxEdit4);
-            this.Controls.Add(this.richTextBoxEdit3);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.headerLabel2);
-            this.Controls.Add(this.richTextBoxEdit2);
+            this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.headerLabel1);
-            this.Controls.Add(this.richTextBoxEdit1);
+            this.Controls.Add(this.txtFirstName);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Register";
@@ -326,21 +322,21 @@ namespace CaloryBoost
 
         #endregion
 
-        private ReaLTaiizor.Controls.RichTextBoxEdit richTextBoxEdit1;
+        private ReaLTaiizor.Controls.RichTextBoxEdit txtFirstName;
         private ReaLTaiizor.Controls.HeaderLabel headerLabel1;
-        private ReaLTaiizor.Controls.RichTextBoxEdit richTextBoxEdit2;
+        private ReaLTaiizor.Controls.RichTextBoxEdit txtLastName;
         private ReaLTaiizor.Controls.HeaderLabel headerLabel2;
-        private ReaLTaiizor.Controls.RichTextBoxEdit richTextBoxEdit3;
+        private ReaLTaiizor.Controls.RichTextBoxEdit txtEmail;
         private ReaLTaiizor.Controls.HeaderLabel headerLabel3;
-        private ReaLTaiizor.Controls.RichTextBoxEdit richTextBoxEdit4;
+        private ReaLTaiizor.Controls.RichTextBoxEdit txtPassword;
         private ReaLTaiizor.Controls.HeaderLabel headerLabel4;
         private ReaLTaiizor.Controls.HeaderLabel headerLabel5;
         private ReaLTaiizor.Controls.HeaderLabel headerLabel6;
-        private ReaLTaiizor.Controls.RichTextBoxEdit richTextBoxEdit7;
+        private ReaLTaiizor.Controls.RichTextBoxEdit txtPhohe;
         private ReaLTaiizor.Controls.HeaderLabel headerLabel7;
-        private ReaLTaiizor.Controls.ThunderRadioButton thunderRadioButton1;
-        private ReaLTaiizor.Controls.ThunderRadioButton thunderRadioButton2;
-        private RJCodeAdvance.RJControls.RJDatePicker rjDatePicker1;
-        private RJCodeAdvance.RJControls.RJButton rjButton1;
+        private ReaLTaiizor.Controls.ThunderRadioButton rdFemale;
+        private ReaLTaiizor.Controls.ThunderRadioButton rdMale;
+        private RJCodeAdvance.RJControls.RJDatePicker dtpcDate;
+        private RJCodeAdvance.RJControls.RJButton btnSave;
     }
 }

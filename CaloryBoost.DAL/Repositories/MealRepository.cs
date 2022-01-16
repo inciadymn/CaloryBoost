@@ -15,27 +15,27 @@ namespace CaloryBoost.DAL.Repositories
             context = new CaloryBoostDbContext();
         }
 
-        public List<SelecedFood> GetFood(int mealID)
+        public List<SelecedFood> GetFood(int mealID,int userId)
         {
             var selecedFood = context.Foods.Join(context.UserMealFoods,
                                                  food => food.ID,
                                                  x => x.FoodID,
                                                  (food, x) => new SelecedFood
                                                  {
-                                                     Id = x.MealID,
+                                                     MealId = x.MealID,
+                                                     UserId=x.UserID,
                                                      FoodName=food.Name,
                                                      Amount=x.Portion,
                                                      Calory = x.Portion * food.Calory,
                                                      DailyCalory = x.CreatedDate
                                                
                                                  })
-                                                 .Where(a => a.Id == mealID && a.DailyCalory.Date == DateTime.Now.Date)
+                                                 .Where(a => a.MealId == mealID && a.UserId==userId && a.DailyCalory.Date == DateTime.Now.Date)
                                                  .ToList();
 
             return selecedFood;
         }
 
-        //TODO:update metodu için servis yazılmadı.
         public bool Update(UserMealFood food)
         {
             UserMealFood updatedPortion = context.UserMealFoods.SingleOrDefault(a => a.MealID == food.MealID);
@@ -50,6 +50,19 @@ namespace CaloryBoost.DAL.Repositories
             context.UserMealFoods.Remove(deletedFood);
             return context.SaveChanges() > 0;
         }
+
+        public List<Food> FoodsList()
+        {
+            List<Food> foodsList = context.Foods.ToList();
+
+            return foodsList;
+        }
+
+        public bool Insert(UserMealFood userMealFood)
+        {
+            context.UserMealFoods.Add(userMealFood);
+            return context.SaveChanges() > 0;
+        }
     }
 }
 
@@ -58,6 +71,7 @@ public class SelecedFood
     public string FoodName { get; set; }
     public double Amount { get; set; }
     public double Calory { get; set; }
-    public int Id { get; set; }
+    public int MealId { get; set; }
+    public int UserId { get; set; }
     public DateTime DailyCalory { get; set; }
 }

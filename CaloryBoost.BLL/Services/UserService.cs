@@ -1,10 +1,7 @@
 ﻿using CaloryBoost.DAL.Repositories;
 using CaloryBoost.Model.Entities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace CaloryBoost.BLL.Services
 {
@@ -22,6 +19,13 @@ namespace CaloryBoost.BLL.Services
             {
                 throw new Exception("Bilgiler boş geçilemez");
             };
+
+            //email validasyonu yapıldı
+            //Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            //if (!regex.Match(user.Email).Success) //match metodu yukarıdaki regex ile eşleşiyor mu diye bakar ve success bunu bool sonuç olarak döner
+            //{
+            //    throw new Exception("Bu email geçersizdir.");
+            //}
 
             if (userRepository.IsExistEmail(user.Email))
             {
