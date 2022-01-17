@@ -1,4 +1,5 @@
 ﻿using CaloryBoost.DAL.Repositories;
+using CaloryBoost.Model;
 using CaloryBoost.Model.Entities;
 using System;
 using System.Collections.Generic;
@@ -16,9 +17,9 @@ namespace CaloryBoost.BLL.Services
             mealRepository = new MealRepository();
         }
 
-        public List<SelecedFood> GetFood(int mealID,int userID)
+        public List<SelectedFood> GetFood(int mealID,int userID)
         {
-            List<SelecedFood> selecedFoods = new List<SelecedFood>();
+            List<SelectedFood> selecedFoods = new List<SelectedFood>();
             if (mealID > 0)
             {
                 selecedFoods = mealRepository.GetFood(mealID,userID);
@@ -39,14 +40,14 @@ namespace CaloryBoost.BLL.Services
             return mealRepository.Update(food);
         }
 
-        public bool Delete(UserMealFood food)
+        public bool Delete(int foodId)
         {
-            if (food.UserID == 0 || food.MealID == 0)
+            if (foodId<1)
             {
                 throw new Exception("Parametre değeri uygun değil");
             }
 
-            return mealRepository.Delete(food);
+            return mealRepository.Delete(foodId);
         }
 
         public List<Food> FoodsList()
@@ -58,6 +59,14 @@ namespace CaloryBoost.BLL.Services
         {
             userMealFood.CreatedDate = DateTime.Now.Date;
             return mealRepository.Insert(userMealFood);
+        }
+        public string GetMealName(int mealID)
+        {
+            if (mealID< 1)
+            {
+                throw new Exception("Parametre değeri uygun değil");
+            }
+            return mealRepository.GetMealName(mealID);
         }
     }
 }

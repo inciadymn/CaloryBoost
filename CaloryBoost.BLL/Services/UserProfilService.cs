@@ -16,19 +16,19 @@ namespace CaloryBoost.BLL.Services
             userProfilRepository = new UserProfilRepository();   
         }
 
-        public List<User> GetById(int userID)
-        {
-            List<User> users = new List<User>();
-            if (userID > 0)
-            {
-                users = userProfilRepository.GetById(userID);
-            }
-            else
-            {
-                throw new Exception("Parametre değeri uygun değil");
-            }
-            return users;
-        }
+        //public User GetById(int userID)
+        //{
+        //    User user = new User();
+        //    if (userID > 0)
+        //    {
+        //        user = userProfilRepository.GetById(userID);
+        //    }
+        //    if (user==null)
+        //    {
+        //        throw new Exception("Kullanıcı bulunamadı.");
+        //    }
+        //    return user;
+        //}
 
         public double GetByCalory(int userID)
         {
@@ -39,5 +39,6 @@ namespace CaloryBoost.BLL.Services
 
             return userProfilRepository.GetByCalory(userID);
         }
+        
     }
 }
