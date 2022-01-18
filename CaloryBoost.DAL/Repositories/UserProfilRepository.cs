@@ -1,6 +1,7 @@
 ﻿using CaloryBoost.Model.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,17 +23,19 @@ namespace CaloryBoost.DAL.Repositories
 
         public double GetByCalory(int userID)
         {
-            double totalCalory = context.Foods.Join(context.UserMealFoods,
+            var userInformations = context.Foods.Join(context.UserMealFoods,
                                                food => food.ID,
                                                x => x.FoodID,
                                                (food, x) => new UserTotalCalory
                                                {
-                                                   Id=x.UserID,
-                                                   TotalCalory= (x.Portion / food.Portion) * food.Calory,  
-                                                   DailyCalory=x.CreatedDate
-                                                   
-                                               }).Where(a=> a.Id == userID && a.DailyCalory.Date == DateTime.Now.Date).Sum(a => a.TotalCalory);
-            return totalCalory;
+                                                   Id = x.UserID,
+                                                   TotalCalory = (x.Portion / food.Portion) * food.Calory,
+                                                   DailyCalory = x.CreatedDate
+
+                                               }).Where(a => a.Id == userID && DbFunctions.TruncateTime(a.DailyCalory) == DateTime.Now).ToList();
+            //burada linq da hata aldık sum tarafını çekemedik. nullable tarzında bir hata oluştu. bizde list oalrak programa çektik hata almadık ve return olarak listlerde linq kullanarak sum metodunu bu şekilde kullandık. arz ederim.
+           
+            return userInformations.Sum(a=>a.TotalCalory);
         }
 
         

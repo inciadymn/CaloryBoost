@@ -27,6 +27,11 @@ namespace CaloryBoost.BLL.Services
                 throw new Exception("Bu email geçersizdir.");
             }
 
+            if (!CheckPassword(user))
+            {
+                throw new Exception("Password içersinde büyük-küçük harf ve sayı bulunmalıdır.Min 7 karakter şifre girilmelidir.");
+            }
+
             if (user.Phone.Length!=11)
             {
                 throw new Exception("Numarayı düzgün gir ulan.");
@@ -45,10 +50,7 @@ namespace CaloryBoost.BLL.Services
                 throw new Exception("Bu kullanıcı daha önceden kayıt olmuştur.");
             }
 
-            if (!CheckPassword(user))
-            {
-                throw new Exception("Password içersinde büyük-küçük harf ve sayı bulunmalıdır.");
-            }
+          
 
             user.CreatedDate = DateTime.Now;
 
@@ -60,7 +62,11 @@ namespace CaloryBoost.BLL.Services
             bool isCharUpper = false;
             bool isCharLower = false;
             bool isNumber = false;
-
+            bool isPasswordLength = false;
+            if (user.Password.Length>6)
+            {
+                isPasswordLength = true;
+            }
             foreach (char item in user.Password)
             {
                 if (char.IsUpper(item))
@@ -75,9 +81,10 @@ namespace CaloryBoost.BLL.Services
                 {
                     isNumber = true;
                 }
+                
             }
 
-            if (!isCharUpper || !isCharLower || !isNumber)
+            if (!isCharUpper || !isCharLower || !isNumber || !isPasswordLength)
             {
                 return false;
             }
@@ -89,14 +96,14 @@ namespace CaloryBoost.BLL.Services
         {
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
-                throw new Exception("Login bilgileri boş geçilemez ve yanlış girilmemelidir.");
+                throw new Exception("Login bilgileri boş geçilemez");
             }
 
             User user = userRepository.CheckLogin(email, password);
 
             if (user == null)
             {
-                throw new Exception("Böyle bir kullanıcı bulunamadı.");
+                throw new Exception("Bilgilerinizi kontrol ediniz veya kayıtlı değilseniz kayıt olunuz.");
             }
 
             return user;

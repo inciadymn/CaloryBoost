@@ -39,6 +39,7 @@ namespace CaloryBoost
             {
                 MessageBox.Show(ex.Message);
             }
+            this.Close();
         }
     }
 }

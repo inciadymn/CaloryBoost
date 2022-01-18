@@ -27,9 +27,9 @@ namespace CaloryBoost
         {
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text.Trim();
-            user = userService.CheckLogin(email, password);
             try
             {
+                user = userService.CheckLogin(email, password);
                 if (user != null)
                 {
                     UserProfil userProfile = new UserProfil(user);

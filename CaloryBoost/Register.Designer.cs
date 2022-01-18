@@ -93,7 +93,7 @@ namespace CaloryBoost
             this.txtLastName.ReadOnly = false;
             this.txtLastName.Size = new System.Drawing.Size(229, 30);
             this.txtLastName.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.txtLastName.TabIndex = 0;
+            this.txtLastName.TabIndex = 1;
             this.txtLastName.TextBackColor = System.Drawing.Color.White;
             this.txtLastName.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLastName.TextFont = new System.Drawing.Font("Tahoma", 10F);
@@ -125,7 +125,7 @@ namespace CaloryBoost
             this.txtEmail.ReadOnly = false;
             this.txtEmail.Size = new System.Drawing.Size(229, 30);
             this.txtEmail.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.txtEmail.TabIndex = 0;
+            this.txtEmail.TabIndex = 2;
             this.txtEmail.TextBackColor = System.Drawing.Color.White;
             this.txtEmail.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.TextFont = new System.Drawing.Font("Tahoma", 10F);
@@ -157,7 +157,7 @@ namespace CaloryBoost
             this.txtPassword.ReadOnly = false;
             this.txtPassword.Size = new System.Drawing.Size(229, 30);
             this.txtPassword.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.txtPassword.TabIndex = 0;
+            this.txtPassword.TabIndex = 3;
             this.txtPassword.TextBackColor = System.Drawing.Color.White;
             this.txtPassword.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.TextFont = new System.Drawing.Font("Tahoma", 10F);
@@ -213,7 +213,7 @@ namespace CaloryBoost
             this.txtPhohe.ReadOnly = false;
             this.txtPhohe.Size = new System.Drawing.Size(229, 30);
             this.txtPhohe.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.txtPhohe.TabIndex = 0;
+            this.txtPhohe.TabIndex = 7;
             this.txtPhohe.TextBackColor = System.Drawing.Color.White;
             this.txtPhohe.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhohe.TextFont = new System.Drawing.Font("Tahoma", 10F);
@@ -241,7 +241,7 @@ namespace CaloryBoost
             this.rdFemale.Location = new System.Drawing.Point(119, 416);
             this.rdFemale.Name = "rdFemale";
             this.rdFemale.Size = new System.Drawing.Size(79, 16);
-            this.rdFemale.TabIndex = 2;
+            this.rdFemale.TabIndex = 5;
             this.rdFemale.Text = "Female";
             // 
             // rdMale
@@ -253,7 +253,7 @@ namespace CaloryBoost
             this.rdMale.Location = new System.Drawing.Point(204, 416);
             this.rdMale.Name = "rdMale";
             this.rdMale.Size = new System.Drawing.Size(79, 16);
-            this.rdMale.TabIndex = 2;
+            this.rdMale.TabIndex = 6;
             this.rdMale.Text = "Male";
             // 
             // dtpcDate
@@ -283,7 +283,7 @@ namespace CaloryBoost
             this.btnSave.Location = new System.Drawing.Point(12, 530);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(336, 49);
-            this.btnSave.TabIndex = 5;
+            this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Save";
             this.btnSave.TextColor = System.Drawing.Color.White;
             this.btnSave.UseVisualStyleBackColor = false;
