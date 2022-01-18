@@ -1,4 +1,5 @@
-﻿using CaloryBoost.Model.Entities;
+﻿using CaloryBoost.Model;
+using CaloryBoost.Model.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,25 +16,32 @@ namespace CaloryBoost.DAL.Repositories
             context = new CaloryBoostDbContext();
         }
 
-        public List<SelecedFood> GetFood(int mealID,int userId)
+        public List<SelectedFood> GetFood(int mealID, int userId)
         {
             var selecedFood = context.Foods.Join(context.UserMealFoods,
                                                  food => food.ID,
                                                  x => x.FoodID,
-                                                 (food, x) => new SelecedFood
+                                                 (food, x) => new SelectedFood
                                                  {
                                                      MealId = x.MealID,
-                                                     UserId=x.UserID,
-                                                     FoodName=food.Name,
-                                                     Amount=x.Portion,
+                                                     UserId = x.UserID,
+                                                     FoodName = food.Name,
+                                                     FoodId = x.FoodID,
+                                                     Amount = x.Portion,
                                                      Calory = x.Portion * food.Calory,
                                                      DailyCalory = x.CreatedDate
-                                               
+
                                                  })
-                                                 .Where(a => a.MealId == mealID && a.UserId==userId && a.DailyCalory.Date == DateTime.Now.Date)
+                                                 .Where(a => a.MealId == mealID && a.UserId == userId && a.DailyCalory.Date == DateTime.Now.Date)
                                                  .ToList();
 
             return selecedFood;
+        }
+
+        
+        public string GetMealName(int mealID)
+        {
+            return context.Meals.Where(a => a.ID == mealID).Select(a => a.Name).SingleOrDefault();
         }
 
         public bool Update(UserMealFood food)
@@ -44,9 +52,9 @@ namespace CaloryBoost.DAL.Repositories
         }
 
 
-        public bool Delete(UserMealFood food)
+        public bool Delete(int foodId)
         {
-            UserMealFood deletedFood = context.UserMealFoods.SingleOrDefault(a => a.MealID == food.MealID);
+            UserMealFood deletedFood = context.UserMealFoods.SingleOrDefault(a => a.FoodID == foodId);
             context.UserMealFoods.Remove(deletedFood);
             return context.SaveChanges() > 0;
         }
@@ -66,12 +74,3 @@ namespace CaloryBoost.DAL.Repositories
     }
 }
 
-public class SelecedFood
-{
-    public string FoodName { get; set; }
-    public double Amount { get; set; }
-    public double Calory { get; set; }
-    public int MealId { get; set; }
-    public int UserId { get; set; }
-    public DateTime DailyCalory { get; set; }
-}

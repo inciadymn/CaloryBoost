@@ -15,10 +15,10 @@ namespace CaloryBoost.DAL.Repositories
             context = new CaloryBoostDbContext();
         }
 
-        public List<User> GetById(int userID)
-        {
-            return context.Users.Where(a => a.ID == userID).ToList();
-        }
+        //public User GetById(int userID)
+        //{
+        //    return context.Users.Where(a => a.ID == userID).SingleOrDefault();
+        //}
 
         public double GetByCalory(int userID)
         {
@@ -34,6 +34,8 @@ namespace CaloryBoost.DAL.Repositories
                                                }).Where(a=> a.Id == userID && a.DailyCalory.Date == DateTime.Now.Date).Sum(a => a.TotalCalory);
             return totalCalory;
         }
+
+        
     }
 }
 

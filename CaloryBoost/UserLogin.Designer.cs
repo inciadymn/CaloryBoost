@@ -31,9 +31,9 @@ namespace CaloryBoost
         {
             this.headerLabel4 = new ReaLTaiizor.Controls.HeaderLabel();
             this.headerLabel3 = new ReaLTaiizor.Controls.HeaderLabel();
-            this.richTextBoxEdit4 = new ReaLTaiizor.Controls.RichTextBoxEdit();
-            this.richTextBoxEdit3 = new ReaLTaiizor.Controls.RichTextBoxEdit();
-            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
+            this.txtPassword = new ReaLTaiizor.Controls.RichTextBoxEdit();
+            this.txtEmail = new ReaLTaiizor.Controls.RichTextBoxEdit();
+            this.btnLogin = new RJCodeAdvance.RJControls.RJButton();
             this.SuspendLayout();
             // 
             // headerLabel4
@@ -60,64 +60,65 @@ namespace CaloryBoost
             this.headerLabel3.TabIndex = 5;
             this.headerLabel3.Text = "Email : ";
             // 
-            // richTextBoxEdit4
+            // txtPassword
             // 
-            this.richTextBoxEdit4.AutoWordSelection = false;
-            this.richTextBoxEdit4.BackColor = System.Drawing.Color.Transparent;
-            this.richTextBoxEdit4.BaseColor = System.Drawing.Color.Transparent;
-            this.richTextBoxEdit4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.richTextBoxEdit4.EdgeColor = System.Drawing.Color.White;
-            this.richTextBoxEdit4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBoxEdit4.ForeColor = System.Drawing.Color.DimGray;
-            this.richTextBoxEdit4.Location = new System.Drawing.Point(107, 381);
-            this.richTextBoxEdit4.Name = "richTextBoxEdit4";
-            this.richTextBoxEdit4.ReadOnly = false;
-            this.richTextBoxEdit4.Size = new System.Drawing.Size(229, 30);
-            this.richTextBoxEdit4.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.richTextBoxEdit4.TabIndex = 2;
-            this.richTextBoxEdit4.TextBackColor = System.Drawing.Color.White;
-            this.richTextBoxEdit4.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBoxEdit4.TextFont = new System.Drawing.Font("Tahoma", 10F);
-            this.richTextBoxEdit4.WordWrap = true;
+            this.txtPassword.AutoWordSelection = false;
+            this.txtPassword.BackColor = System.Drawing.Color.Transparent;
+            this.txtPassword.BaseColor = System.Drawing.Color.Transparent;
+            this.txtPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.txtPassword.EdgeColor = System.Drawing.Color.White;
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPassword.Location = new System.Drawing.Point(107, 381);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.ReadOnly = false;
+            this.txtPassword.Size = new System.Drawing.Size(229, 30);
+            this.txtPassword.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.txtPassword.TabIndex = 2;
+            this.txtPassword.TextBackColor = System.Drawing.Color.White;
+            this.txtPassword.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.TextFont = new System.Drawing.Font("Tahoma", 10F);
+            this.txtPassword.WordWrap = true;
             // 
-            // richTextBoxEdit3
+            // txtEmail
             // 
-            this.richTextBoxEdit3.AutoWordSelection = false;
-            this.richTextBoxEdit3.BackColor = System.Drawing.Color.Transparent;
-            this.richTextBoxEdit3.BaseColor = System.Drawing.Color.Transparent;
-            this.richTextBoxEdit3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.richTextBoxEdit3.EdgeColor = System.Drawing.Color.White;
-            this.richTextBoxEdit3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBoxEdit3.ForeColor = System.Drawing.Color.DimGray;
-            this.richTextBoxEdit3.Location = new System.Drawing.Point(107, 326);
-            this.richTextBoxEdit3.Name = "richTextBoxEdit3";
-            this.richTextBoxEdit3.ReadOnly = false;
-            this.richTextBoxEdit3.Size = new System.Drawing.Size(229, 30);
-            this.richTextBoxEdit3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.richTextBoxEdit3.TabIndex = 3;
-            this.richTextBoxEdit3.TextBackColor = System.Drawing.Color.White;
-            this.richTextBoxEdit3.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBoxEdit3.TextFont = new System.Drawing.Font("Tahoma", 10F);
-            this.richTextBoxEdit3.WordWrap = true;
+            this.txtEmail.AutoWordSelection = false;
+            this.txtEmail.BackColor = System.Drawing.Color.Transparent;
+            this.txtEmail.BaseColor = System.Drawing.Color.Transparent;
+            this.txtEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.txtEmail.EdgeColor = System.Drawing.Color.White;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtEmail.ForeColor = System.Drawing.Color.DimGray;
+            this.txtEmail.Location = new System.Drawing.Point(107, 326);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = false;
+            this.txtEmail.Size = new System.Drawing.Size(229, 30);
+            this.txtEmail.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.txtEmail.TabIndex = 3;
+            this.txtEmail.TextBackColor = System.Drawing.Color.White;
+            this.txtEmail.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.TextFont = new System.Drawing.Font("Tahoma", 10F);
+            this.txtEmail.WordWrap = true;
             // 
-            // rjButton1
+            // btnLogin
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.AliceBlue;
-            this.rjButton1.BorderRadius = 12;
-            this.rjButton1.BorderSize = 2;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(12, 485);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(336, 49);
-            this.rjButton1.TabIndex = 6;
-            this.rjButton1.Text = "LOG IN";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
+            this.btnLogin.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
+            this.btnLogin.BorderColor = System.Drawing.Color.AliceBlue;
+            this.btnLogin.BorderRadius = 12;
+            this.btnLogin.BorderSize = 2;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(12, 485);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(336, 49);
+            this.btnLogin.TabIndex = 6;
+            this.btnLogin.Text = "LOG IN";
+            this.btnLogin.TextColor = System.Drawing.Color.White;
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // UserLogin
             // 
@@ -126,11 +127,11 @@ namespace CaloryBoost
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(360, 610);
-            this.Controls.Add(this.rjButton1);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.headerLabel4);
             this.Controls.Add(this.headerLabel3);
-            this.Controls.Add(this.richTextBoxEdit4);
-            this.Controls.Add(this.richTextBoxEdit3);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtEmail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserLogin";
             this.Text = "UserLogin";
@@ -143,8 +144,8 @@ namespace CaloryBoost
 
         private ReaLTaiizor.Controls.HeaderLabel headerLabel4;
         private ReaLTaiizor.Controls.HeaderLabel headerLabel3;
-        private ReaLTaiizor.Controls.RichTextBoxEdit richTextBoxEdit4;
-        private ReaLTaiizor.Controls.RichTextBoxEdit richTextBoxEdit3;
-        private RJCodeAdvance.RJControls.RJButton rjButton1;
+        private ReaLTaiizor.Controls.RichTextBoxEdit txtPassword;
+        private ReaLTaiizor.Controls.RichTextBoxEdit txtEmail;
+        private RJCodeAdvance.RJControls.RJButton btnLogin;
     }
 }

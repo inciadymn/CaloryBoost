@@ -33,24 +33,24 @@ namespace CaloryBoost
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
             this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
             this.bigLabel4 = new ReaLTaiizor.Controls.BigLabel();
-            this.bigLabel2 = new ReaLTaiizor.Controls.BigLabel();
-            this.bigLabel3 = new ReaLTaiizor.Controls.BigLabel();
-            this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
+            this.lblTotalCal = new ReaLTaiizor.Controls.BigLabel();
+            this.lblDate = new ReaLTaiizor.Controls.BigLabel();
+            this.lblFullName = new ReaLTaiizor.Controls.BigLabel();
             this.rjCircularPictureBox1 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.panel1 = new ReaLTaiizor.Controls.Panel();
-            this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnBreakfast = new RJCodeAdvance.RJControls.RJButton();
             this.headerLabel1 = new ReaLTaiizor.Controls.HeaderLabel();
             this.hopePictureBox1 = new ReaLTaiizor.Controls.HopePictureBox();
             this.panel2 = new ReaLTaiizor.Controls.Panel();
-            this.rjButton3 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnLunch = new RJCodeAdvance.RJControls.RJButton();
             this.headerLabel2 = new ReaLTaiizor.Controls.HeaderLabel();
             this.hopePictureBox2 = new ReaLTaiizor.Controls.HopePictureBox();
             this.panel3 = new ReaLTaiizor.Controls.Panel();
-            this.rjButton4 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnDinner = new RJCodeAdvance.RJControls.RJButton();
             this.headerLabel3 = new ReaLTaiizor.Controls.HeaderLabel();
             this.hopePictureBox3 = new ReaLTaiizor.Controls.HopePictureBox();
             this.panel4 = new ReaLTaiizor.Controls.Panel();
-            this.rjButton5 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnSnack = new RJCodeAdvance.RJControls.RJButton();
             this.headerLabel4 = new ReaLTaiizor.Controls.HeaderLabel();
             this.hopePictureBox4 = new ReaLTaiizor.Controls.HopePictureBox();
             this.parrotGradientPanel1.SuspendLayout();
@@ -76,9 +76,9 @@ namespace CaloryBoost
             this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
             this.parrotGradientPanel1.Controls.Add(this.rjButton1);
             this.parrotGradientPanel1.Controls.Add(this.bigLabel4);
-            this.parrotGradientPanel1.Controls.Add(this.bigLabel2);
-            this.parrotGradientPanel1.Controls.Add(this.bigLabel3);
-            this.parrotGradientPanel1.Controls.Add(this.bigLabel1);
+            this.parrotGradientPanel1.Controls.Add(this.lblTotalCal);
+            this.parrotGradientPanel1.Controls.Add(this.lblDate);
+            this.parrotGradientPanel1.Controls.Add(this.lblFullName);
             this.parrotGradientPanel1.Controls.Add(this.rjCircularPictureBox1);
             this.parrotGradientPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
             this.parrotGradientPanel1.Location = new System.Drawing.Point(-1, 0);
@@ -103,7 +103,7 @@ namespace CaloryBoost
             this.rjButton1.FlatAppearance.BorderSize = 0;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(211, 140);
+            this.rjButton1.Location = new System.Drawing.Point(211, 134);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(34, 36);
             this.rjButton1.TabIndex = 2;
@@ -116,48 +116,48 @@ namespace CaloryBoost
             this.bigLabel4.AutoSize = true;
             this.bigLabel4.BackColor = System.Drawing.Color.Transparent;
             this.bigLabel4.Font = new System.Drawing.Font("Segoe UI", 25F);
-            this.bigLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel4.Location = new System.Drawing.Point(179, 217);
+            this.bigLabel4.ForeColor = System.Drawing.Color.White;
+            this.bigLabel4.Location = new System.Drawing.Point(175, 217);
             this.bigLabel4.Name = "bigLabel4";
-            this.bigLabel4.Size = new System.Drawing.Size(79, 46);
+            this.bigLabel4.Size = new System.Drawing.Size(78, 46);
             this.bigLabel4.TabIndex = 1;
-            this.bigLabel4.Text = "CAL";
+            this.bigLabel4.Text = "kcal";
             // 
-            // bigLabel2
+            // lblTotalCal
             // 
-            this.bigLabel2.AutoSize = true;
-            this.bigLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel2.Font = new System.Drawing.Font("Segoe UI", 25F);
-            this.bigLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel2.Location = new System.Drawing.Point(99, 217);
-            this.bigLabel2.Name = "bigLabel2";
-            this.bigLabel2.Size = new System.Drawing.Size(74, 46);
-            this.bigLabel2.TabIndex = 1;
-            this.bigLabel2.Text = "100";
+            this.lblTotalCal.AutoSize = true;
+            this.lblTotalCal.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalCal.Font = new System.Drawing.Font("Segoe UI", 25F);
+            this.lblTotalCal.ForeColor = System.Drawing.Color.White;
+            this.lblTotalCal.Location = new System.Drawing.Point(102, 217);
+            this.lblTotalCal.Name = "lblTotalCal";
+            this.lblTotalCal.Size = new System.Drawing.Size(38, 46);
+            this.lblTotalCal.TabIndex = 1;
+            this.lblTotalCal.Text = "0";
             // 
-            // bigLabel3
+            // lblDate
             // 
-            this.bigLabel3.AutoSize = true;
-            this.bigLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel3.Font = new System.Drawing.Font("Segoe UI", 25F);
-            this.bigLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel3.Location = new System.Drawing.Point(159, 9);
-            this.bigLabel3.Name = "bigLabel3";
-            this.bigLabel3.Size = new System.Drawing.Size(190, 46);
-            this.bigLabel3.TabIndex = 1;
-            this.bigLabel3.Text = "2022/01/12";
+            this.lblDate.AutoSize = true;
+            this.lblDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblDate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDate.ForeColor = System.Drawing.Color.White;
+            this.lblDate.Location = new System.Drawing.Point(232, 9);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(117, 30);
+            this.lblDate.TabIndex = 1;
+            this.lblDate.Text = "2022/01/12";
             // 
-            // bigLabel1
+            // lblFullName
             // 
-            this.bigLabel1.AutoSize = true;
-            this.bigLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel1.Font = new System.Drawing.Font("Segoe UI", 25F);
-            this.bigLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel1.Location = new System.Drawing.Point(99, 162);
-            this.bigLabel1.Name = "bigLabel1";
-            this.bigLabel1.Size = new System.Drawing.Size(161, 46);
-            this.bigLabel1.TabIndex = 1;
-            this.bigLabel1.Text = "John Doe";
+            this.lblFullName.AutoSize = true;
+            this.lblFullName.BackColor = System.Drawing.Color.Transparent;
+            this.lblFullName.Font = new System.Drawing.Font("Segoe UI", 25F);
+            this.lblFullName.ForeColor = System.Drawing.Color.White;
+            this.lblFullName.Location = new System.Drawing.Point(99, 162);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(161, 46);
+            this.lblFullName.TabIndex = 1;
+            this.lblFullName.Text = "John Doe";
             // 
             // rjCircularPictureBox1
             // 
@@ -177,7 +177,7 @@ namespace CaloryBoost
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Snow;
-            this.panel1.Controls.Add(this.rjButton2);
+            this.panel1.Controls.Add(this.btnBreakfast);
             this.panel1.Controls.Add(this.headerLabel1);
             this.panel1.Controls.Add(this.hopePictureBox1);
             this.panel1.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
@@ -189,25 +189,26 @@ namespace CaloryBoost
             this.panel1.TabIndex = 3;
             this.panel1.Text = "panel1";
             // 
-            // rjButton2
+            // btnBreakfast
             // 
-            this.rjButton2.BackColor = System.Drawing.Color.AliceBlue;
-            this.rjButton2.BackgroundColor = System.Drawing.Color.AliceBlue;
-            this.rjButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjButton2.BackgroundImage")));
-            this.rjButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton2.BorderRadius = 7;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(283, 18);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(34, 35);
-            this.rjButton2.TabIndex = 2;
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
+            this.btnBreakfast.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnBreakfast.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.btnBreakfast.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBreakfast.BackgroundImage")));
+            this.btnBreakfast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBreakfast.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnBreakfast.BorderRadius = 7;
+            this.btnBreakfast.BorderSize = 0;
+            this.btnBreakfast.FlatAppearance.BorderSize = 0;
+            this.btnBreakfast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBreakfast.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBreakfast.ForeColor = System.Drawing.Color.White;
+            this.btnBreakfast.Location = new System.Drawing.Point(283, 18);
+            this.btnBreakfast.Name = "btnBreakfast";
+            this.btnBreakfast.Size = new System.Drawing.Size(34, 35);
+            this.btnBreakfast.TabIndex = 2;
+            this.btnBreakfast.TextColor = System.Drawing.Color.White;
+            this.btnBreakfast.UseVisualStyleBackColor = false;
+            this.btnBreakfast.Click += new System.EventHandler(this.btnBreakfast_Click);
             // 
             // headerLabel1
             // 
@@ -238,7 +239,7 @@ namespace CaloryBoost
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Snow;
-            this.panel2.Controls.Add(this.rjButton3);
+            this.panel2.Controls.Add(this.btnLunch);
             this.panel2.Controls.Add(this.headerLabel2);
             this.panel2.Controls.Add(this.hopePictureBox2);
             this.panel2.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
@@ -250,25 +251,26 @@ namespace CaloryBoost
             this.panel2.TabIndex = 3;
             this.panel2.Text = "panel1";
             // 
-            // rjButton3
+            // btnLunch
             // 
-            this.rjButton3.BackColor = System.Drawing.Color.AliceBlue;
-            this.rjButton3.BackgroundColor = System.Drawing.Color.AliceBlue;
-            this.rjButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjButton3.BackgroundImage")));
-            this.rjButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rjButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton3.BorderRadius = 7;
-            this.rjButton3.BorderSize = 0;
-            this.rjButton3.FlatAppearance.BorderSize = 0;
-            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rjButton3.ForeColor = System.Drawing.Color.White;
-            this.rjButton3.Location = new System.Drawing.Point(283, 16);
-            this.rjButton3.Name = "rjButton3";
-            this.rjButton3.Size = new System.Drawing.Size(34, 35);
-            this.rjButton3.TabIndex = 2;
-            this.rjButton3.TextColor = System.Drawing.Color.White;
-            this.rjButton3.UseVisualStyleBackColor = false;
+            this.btnLunch.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnLunch.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.btnLunch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLunch.BackgroundImage")));
+            this.btnLunch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLunch.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnLunch.BorderRadius = 7;
+            this.btnLunch.BorderSize = 0;
+            this.btnLunch.FlatAppearance.BorderSize = 0;
+            this.btnLunch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLunch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnLunch.ForeColor = System.Drawing.Color.White;
+            this.btnLunch.Location = new System.Drawing.Point(283, 16);
+            this.btnLunch.Name = "btnLunch";
+            this.btnLunch.Size = new System.Drawing.Size(34, 35);
+            this.btnLunch.TabIndex = 2;
+            this.btnLunch.TextColor = System.Drawing.Color.White;
+            this.btnLunch.UseVisualStyleBackColor = false;
+            this.btnLunch.Click += new System.EventHandler(this.btnLunch_Click);
             // 
             // headerLabel2
             // 
@@ -299,7 +301,7 @@ namespace CaloryBoost
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Snow;
-            this.panel3.Controls.Add(this.rjButton4);
+            this.panel3.Controls.Add(this.btnDinner);
             this.panel3.Controls.Add(this.headerLabel3);
             this.panel3.Controls.Add(this.hopePictureBox3);
             this.panel3.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
@@ -311,25 +313,26 @@ namespace CaloryBoost
             this.panel3.TabIndex = 3;
             this.panel3.Text = "panel1";
             // 
-            // rjButton4
+            // btnDinner
             // 
-            this.rjButton4.BackColor = System.Drawing.Color.AliceBlue;
-            this.rjButton4.BackgroundColor = System.Drawing.Color.AliceBlue;
-            this.rjButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjButton4.BackgroundImage")));
-            this.rjButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rjButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton4.BorderRadius = 7;
-            this.rjButton4.BorderSize = 0;
-            this.rjButton4.FlatAppearance.BorderSize = 0;
-            this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rjButton4.ForeColor = System.Drawing.Color.White;
-            this.rjButton4.Location = new System.Drawing.Point(283, 16);
-            this.rjButton4.Name = "rjButton4";
-            this.rjButton4.Size = new System.Drawing.Size(34, 35);
-            this.rjButton4.TabIndex = 2;
-            this.rjButton4.TextColor = System.Drawing.Color.White;
-            this.rjButton4.UseVisualStyleBackColor = false;
+            this.btnDinner.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnDinner.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.btnDinner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDinner.BackgroundImage")));
+            this.btnDinner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDinner.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDinner.BorderRadius = 7;
+            this.btnDinner.BorderSize = 0;
+            this.btnDinner.FlatAppearance.BorderSize = 0;
+            this.btnDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDinner.ForeColor = System.Drawing.Color.White;
+            this.btnDinner.Location = new System.Drawing.Point(283, 16);
+            this.btnDinner.Name = "btnDinner";
+            this.btnDinner.Size = new System.Drawing.Size(34, 35);
+            this.btnDinner.TabIndex = 2;
+            this.btnDinner.TextColor = System.Drawing.Color.White;
+            this.btnDinner.UseVisualStyleBackColor = false;
+            this.btnDinner.Click += new System.EventHandler(this.btnDinner_Click);
             // 
             // headerLabel3
             // 
@@ -360,7 +363,7 @@ namespace CaloryBoost
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Snow;
-            this.panel4.Controls.Add(this.rjButton5);
+            this.panel4.Controls.Add(this.btnSnack);
             this.panel4.Controls.Add(this.headerLabel4);
             this.panel4.Controls.Add(this.hopePictureBox4);
             this.panel4.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
@@ -372,25 +375,26 @@ namespace CaloryBoost
             this.panel4.TabIndex = 3;
             this.panel4.Text = "panel1";
             // 
-            // rjButton5
+            // btnSnack
             // 
-            this.rjButton5.BackColor = System.Drawing.Color.AliceBlue;
-            this.rjButton5.BackgroundColor = System.Drawing.Color.AliceBlue;
-            this.rjButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjButton5.BackgroundImage")));
-            this.rjButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rjButton5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton5.BorderRadius = 7;
-            this.rjButton5.BorderSize = 0;
-            this.rjButton5.FlatAppearance.BorderSize = 0;
-            this.rjButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rjButton5.ForeColor = System.Drawing.Color.White;
-            this.rjButton5.Location = new System.Drawing.Point(283, 16);
-            this.rjButton5.Name = "rjButton5";
-            this.rjButton5.Size = new System.Drawing.Size(34, 35);
-            this.rjButton5.TabIndex = 2;
-            this.rjButton5.TextColor = System.Drawing.Color.White;
-            this.rjButton5.UseVisualStyleBackColor = false;
+            this.btnSnack.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnSnack.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.btnSnack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSnack.BackgroundImage")));
+            this.btnSnack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSnack.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSnack.BorderRadius = 7;
+            this.btnSnack.BorderSize = 0;
+            this.btnSnack.FlatAppearance.BorderSize = 0;
+            this.btnSnack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSnack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSnack.ForeColor = System.Drawing.Color.White;
+            this.btnSnack.Location = new System.Drawing.Point(283, 16);
+            this.btnSnack.Name = "btnSnack";
+            this.btnSnack.Size = new System.Drawing.Size(34, 35);
+            this.btnSnack.TabIndex = 2;
+            this.btnSnack.TextColor = System.Drawing.Color.White;
+            this.btnSnack.UseVisualStyleBackColor = false;
+            this.btnSnack.Click += new System.EventHandler(this.btnSnack_Click);
             // 
             // headerLabel4
             // 
@@ -433,6 +437,7 @@ namespace CaloryBoost
             this.Name = "UserProfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserProfil";
+            this.Load += new System.EventHandler(this.UserProfil_Load);
             this.parrotGradientPanel1.ResumeLayout(false);
             this.parrotGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
@@ -456,14 +461,14 @@ namespace CaloryBoost
         #endregion
 
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
-        private ReaLTaiizor.Controls.BigLabel bigLabel1;
+        private ReaLTaiizor.Controls.BigLabel lblFullName;
         private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox1;
         private RJCodeAdvance.RJControls.RJButton rjButton1;
         private ReaLTaiizor.Controls.BigLabel bigLabel4;
-        private ReaLTaiizor.Controls.BigLabel bigLabel2;
-        private ReaLTaiizor.Controls.BigLabel bigLabel3;
+        private ReaLTaiizor.Controls.BigLabel lblTotalCal;
+        private ReaLTaiizor.Controls.BigLabel lblDate;
         private ReaLTaiizor.Controls.Panel panel1;
-        private RJCodeAdvance.RJControls.RJButton rjButton2;
+        private RJCodeAdvance.RJControls.RJButton btnBreakfast;
         private ReaLTaiizor.Controls.HeaderLabel headerLabel1;
         private ReaLTaiizor.Controls.HopePictureBox hopePictureBox1;
         private ReaLTaiizor.Controls.Panel panel2;
@@ -475,8 +480,8 @@ namespace CaloryBoost
         private ReaLTaiizor.Controls.Panel panel4;
         private ReaLTaiizor.Controls.HeaderLabel headerLabel4;
         private ReaLTaiizor.Controls.HopePictureBox hopePictureBox4;
-        private RJCodeAdvance.RJControls.RJButton rjButton3;
-        private RJCodeAdvance.RJControls.RJButton rjButton4;
-        private RJCodeAdvance.RJControls.RJButton rjButton5;
+        private RJCodeAdvance.RJControls.RJButton btnLunch;
+        private RJCodeAdvance.RJControls.RJButton btnDinner;
+        private RJCodeAdvance.RJControls.RJButton btnSnack;
     }
 }

@@ -30,44 +30,45 @@ namespace CaloryBoost
         private void InitializeComponent()
         {
             this.flpFoods = new System.Windows.Forms.FlowLayoutPanel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvMealDetails = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.groupBox1 = new ReaLTaiizor.Controls.GroupBox();
-            this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
-            this.headerLabel2 = new ReaLTaiizor.Controls.HeaderLabel();
+            this.grpMealName = new ReaLTaiizor.Controls.GroupBox();
+            this.btnUpdate = new RJCodeAdvance.RJControls.RJButton();
+            this.btnDelete = new RJCodeAdvance.RJControls.RJButton();
+            this.lblCalory = new ReaLTaiizor.Controls.HeaderLabel();
+            this.lblTotalCalory = new ReaLTaiizor.Controls.HeaderLabel();
+            this.txtSearch = new RJCodeAdvance.RJControls.RJTextBox();
             this.headerLabel1 = new ReaLTaiizor.Controls.HeaderLabel();
-            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.groupBox1.SuspendLayout();
+            this.txtUpdateAmount = new RJCodeAdvance.RJControls.RJTextBox();
+            this.grpMealName.SuspendLayout();
             this.SuspendLayout();
             // 
             // flpFoods
             // 
             this.flpFoods.AutoScroll = true;
             this.flpFoods.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.flpFoods.Location = new System.Drawing.Point(16, 373);
-            this.flpFoods.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flpFoods.Location = new System.Drawing.Point(12, 303);
             this.flpFoods.Name = "flpFoods";
-            this.flpFoods.Size = new System.Drawing.Size(451, 363);
+            this.flpFoods.Size = new System.Drawing.Size(338, 295);
             this.flpFoods.TabIndex = 1;
             // 
-            // listView1
+            // lvMealDetails
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvMealDetails.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(15, 38);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(447, 148);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvMealDetails.GridLines = true;
+            this.lvMealDetails.HideSelection = false;
+            this.lvMealDetails.Location = new System.Drawing.Point(11, 31);
+            this.lvMealDetails.Name = "lvMealDetails";
+            this.lvMealDetails.Size = new System.Drawing.Size(336, 121);
+            this.lvMealDetails.TabIndex = 0;
+            this.lvMealDetails.UseCompatibleStateImageBehavior = false;
+            this.lvMealDetails.View = System.Windows.Forms.View.Details;
+            this.lvMealDetails.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lvMealDetails_MouseClick);
             // 
             // columnHeader1
             // 
@@ -84,81 +85,116 @@ namespace CaloryBoost
             this.columnHeader3.Text = "Calory";
             this.columnHeader3.Width = 132;
             // 
-            // groupBox1
+            // grpMealName
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.BackGColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
-            this.groupBox1.BaseColor = System.Drawing.Color.Transparent;
-            this.groupBox1.BorderColorG = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
-            this.groupBox1.BorderColorH = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(180)))), ((int)(((byte)(186)))));
-            this.groupBox1.Controls.Add(this.rjButton2);
-            this.groupBox1.Controls.Add(this.rjButton1);
-            this.groupBox1.Controls.Add(this.headerLabel2);
-            this.groupBox1.Controls.Add(this.headerLabel1);
-            this.groupBox1.Controls.Add(this.listView1);
-            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.groupBox1.HeaderColor = System.Drawing.Color.CornflowerBlue;
-            this.groupBox1.Location = new System.Drawing.Point(1, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.MinimumSize = new System.Drawing.Size(181, 62);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(7, 34, 7, 6);
-            this.groupBox1.Size = new System.Drawing.Size(477, 274);
-            this.groupBox1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.Text = "groupBox1";
+            this.grpMealName.BackColor = System.Drawing.Color.Transparent;
+            this.grpMealName.BackGColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
+            this.grpMealName.BaseColor = System.Drawing.Color.Transparent;
+            this.grpMealName.BorderColorG = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
+            this.grpMealName.BorderColorH = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(180)))), ((int)(((byte)(186)))));
+            this.grpMealName.Controls.Add(this.txtUpdateAmount);
+            this.grpMealName.Controls.Add(this.btnUpdate);
+            this.grpMealName.Controls.Add(this.btnDelete);
+            this.grpMealName.Controls.Add(this.lblCalory);
+            this.grpMealName.Controls.Add(this.headerLabel1);
+            this.grpMealName.Controls.Add(this.lblTotalCalory);
+            this.grpMealName.Controls.Add(this.lvMealDetails);
+            this.grpMealName.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.grpMealName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.grpMealName.HeaderColor = System.Drawing.Color.CornflowerBlue;
+            this.grpMealName.Location = new System.Drawing.Point(1, 0);
+            this.grpMealName.MinimumSize = new System.Drawing.Size(136, 50);
+            this.grpMealName.Name = "grpMealName";
+            this.grpMealName.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
+            this.grpMealName.Size = new System.Drawing.Size(358, 249);
+            this.grpMealName.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.grpMealName.TabIndex = 2;
+            this.grpMealName.Text = "groupBox1";
             // 
-            // rjButton2
+            // btnUpdate
             // 
-            this.rjButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton2.BorderRadius = 15;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(243, 233);
-            this.rjButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(99, 32);
-            this.rjButton2.TabIndex = 2;
-            this.rjButton2.Text = "Update";
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnUpdate.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnUpdate.BorderRadius = 15;
+            this.btnUpdate.BorderSize = 0;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(231, 193);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(74, 26);
+            this.btnUpdate.TabIndex = 2;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.TextColor = System.Drawing.Color.White;
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // rjButton1
+            // btnDelete
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 15;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(108, 233);
-            this.rjButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(99, 32);
-            this.rjButton1.TabIndex = 2;
-            this.rjButton1.Text = "Delete";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnDelete.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDelete.BorderRadius = 15;
+            this.btnDelete.BorderSize = 0;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(68, 193);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(74, 26);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.TextColor = System.Drawing.Color.White;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // headerLabel2
+            // lblCalory
             // 
-            this.headerLabel2.AutoSize = true;
-            this.headerLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.headerLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.headerLabel2.Location = new System.Drawing.Point(167, 191);
-            this.headerLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.headerLabel2.Name = "headerLabel2";
-            this.headerLabel2.Size = new System.Drawing.Size(138, 24);
-            this.headerLabel2.TabIndex = 1;
-            this.headerLabel2.Text = "headerLabel1";
+            this.lblCalory.AutoSize = true;
+            this.lblCalory.BackColor = System.Drawing.Color.Transparent;
+            this.lblCalory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.lblCalory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblCalory.Location = new System.Drawing.Point(125, 155);
+            this.lblCalory.Name = "lblCalory";
+            this.lblCalory.Size = new System.Drawing.Size(17, 18);
+            this.lblCalory.TabIndex = 1;
+            this.lblCalory.Text = "0";
+            // 
+            // lblTotalCalory
+            // 
+            this.lblTotalCalory.AutoSize = true;
+            this.lblTotalCalory.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalCalory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.lblTotalCalory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblTotalCalory.Location = new System.Drawing.Point(11, 155);
+            this.lblTotalCalory.Name = "lblTotalCalory";
+            this.lblTotalCalory.Size = new System.Drawing.Size(110, 18);
+            this.lblTotalCalory.TabIndex = 1;
+            this.lblTotalCalory.Text = "Total Calory :";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSearch.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtSearch.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtSearch.BorderRadius = 15;
+            this.txtSearch.BorderSize = 2;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSearch.Location = new System.Drawing.Point(12, 256);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Multiline = false;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtSearch.PasswordChar = false;
+            this.txtSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtSearch.PlaceholderText = "";
+            this.txtSearch.Size = new System.Drawing.Size(245, 31);
+            this.txtSearch.TabIndex = 3;
+            this.txtSearch.Texts = "";
+            this.txtSearch.UnderlinedStyle = false;
+            this.txtSearch._TextChanged += new System.EventHandler(this.txtSearch__TextChanged);
             // 
             // headerLabel1
             // 
@@ -166,66 +202,66 @@ namespace CaloryBoost
             this.headerLabel1.BackColor = System.Drawing.Color.Transparent;
             this.headerLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.headerLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.headerLabel1.Location = new System.Drawing.Point(15, 191);
-            this.headerLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.headerLabel1.Location = new System.Drawing.Point(167, 155);
             this.headerLabel1.Name = "headerLabel1";
-            this.headerLabel1.Size = new System.Drawing.Size(133, 24);
+            this.headerLabel1.Size = new System.Drawing.Size(138, 18);
             this.headerLabel1.TabIndex = 1;
-            this.headerLabel1.Text = "Total Calory :";
+            this.headerLabel1.Text = "Update Amount : ";
             // 
-            // rjTextBox1
+            // txtUpdateAmount
             // 
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox1.BorderRadius = 15;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(16, 315);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(327, 39);
-            this.rjTextBox1.TabIndex = 3;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
+            this.txtUpdateAmount.BackColor = System.Drawing.SystemColors.Window;
+            this.txtUpdateAmount.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtUpdateAmount.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtUpdateAmount.BorderRadius = 15;
+            this.txtUpdateAmount.BorderSize = 2;
+            this.txtUpdateAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtUpdateAmount.Location = new System.Drawing.Point(298, 155);
+            this.txtUpdateAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUpdateAmount.Multiline = false;
+            this.txtUpdateAmount.Name = "txtUpdateAmount";
+            this.txtUpdateAmount.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtUpdateAmount.PasswordChar = false;
+            this.txtUpdateAmount.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtUpdateAmount.PlaceholderText = "";
+            this.txtUpdateAmount.Size = new System.Drawing.Size(51, 31);
+            this.txtUpdateAmount.TabIndex = 3;
+            this.txtUpdateAmount.Texts = "";
+            this.txtUpdateAmount.UnderlinedStyle = false;
             // 
             // Meal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 751);
-            this.Controls.Add(this.rjTextBox1);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(360, 610);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.grpMealName);
             this.Controls.Add(this.flpFoods);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Meal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Meal";
             this.Load += new System.EventHandler(this.Meal_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpMealName.ResumeLayout(false);
+            this.grpMealName.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.FlowLayoutPanel flpFoods;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvMealDetails;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private ReaLTaiizor.Controls.GroupBox groupBox1;
-        private ReaLTaiizor.Controls.HeaderLabel headerLabel2;
+        private ReaLTaiizor.Controls.GroupBox grpMealName;
+        private ReaLTaiizor.Controls.HeaderLabel lblCalory;
+        private ReaLTaiizor.Controls.HeaderLabel lblTotalCalory;
+        private RJCodeAdvance.RJControls.RJButton btnUpdate;
+        private RJCodeAdvance.RJControls.RJButton btnDelete;
+        private RJCodeAdvance.RJControls.RJTextBox txtSearch;
+        private RJCodeAdvance.RJControls.RJTextBox txtUpdateAmount;
         private ReaLTaiizor.Controls.HeaderLabel headerLabel1;
-        private RJCodeAdvance.RJControls.RJButton rjButton2;
-        private RJCodeAdvance.RJControls.RJButton rjButton1;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
     }
 }
