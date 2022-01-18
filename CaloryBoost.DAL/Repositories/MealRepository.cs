@@ -48,7 +48,7 @@ namespace CaloryBoost.DAL.Repositories
 
         public bool Update(UserMealFood food)
         {
-            UserMealFood updatedPortion = context.UserMealFoods.SingleOrDefault(a => a.MealID == food.MealID);
+            UserMealFood updatedPortion = context.UserMealFoods.SingleOrDefault(a => a.MealID == food.MealID && a.FoodID==food.FoodID);
             updatedPortion.Portion = food.Portion;
             return context.SaveChanges() > 0;
         }

@@ -28,13 +28,30 @@ namespace CaloryBoost
         }
         User user;
         int mealId;
+        double total = 0;
         private void Meal_Load(object sender, EventArgs e)
         {
             string mealName = mealService.GetMealName(mealId);
             grpMealName.Text = mealName;
+
+            FillListView();
+
+            lblTotalCalory.Text = mealService.GetMealName(mealId) + " " + "Total Calory";
+
+            //metotlaştırılıp tekrar çağırılacak
+
+            List<Food> foods = mealService.FoodsList();
+            foreach (Food item in foods)
+            {
+                AddFoodsControls(item);
+            }
+        }
+
+        private void FillListView()
+        {
             ListViewItem lvi;
             List<SelectedFood> addedFoods = mealService.GetFood(mealId, user.ID);
-            double total = 0;
+            total = 0;
             foreach (SelectedFood item in addedFoods)
             {
                 lvi = new ListViewItem();
@@ -45,20 +62,11 @@ namespace CaloryBoost
                 lvMealDetails.Items.Add(lvi);
                 total += item.Calory;
             }
-            lblTotalCalory.Text = mealService.GetMealName(mealId) + " " + "Total Calory";
+
             lblCalory.Text = total.ToString();
-
-            //metotlaştırılıp tekrar çağırılacak
-
-            List<Food> foods = mealService.FoodsList();
-            foreach (Food item in foods)
-            {
-                AddFoodsControls(item);
-            }
-
-
         }
 
+      
         private void AddFoodsControls(Food item)
         {
             Panel pnlFrame = new Panel();
@@ -69,8 +77,8 @@ namespace CaloryBoost
             pbFoodPic.BackColor = Color.Yellow;
             pbFoodPic.Height = 90;
             pbFoodPic.Width = 95;
-            pbFoodPic.Image = Image.FromFile(String.Concat(@"..\..", item.PhotoPath)); // dinamik photopath olacak!! (Configuration)
-            pbFoodPic.BackgroundImageLayout = ImageLayout.Center;
+            pbFoodPic.Image = Image.FromFile(item.PhotoPath);
+            pbFoodPic.BackgroundImageLayout = ImageLayout.Zoom;
             pbFoodPic.Location = new Point(5, 5);
 
             Label lblFoodName = new Label();
@@ -113,7 +121,7 @@ namespace CaloryBoost
             txtAmount.Tag = $"txtAmount_{item.ID}";
             txtAmount.Location = new Point(162, 42);
 
-            addButton.Click += (sender, e) => {AddClickedButton(sender, e, txtAmount.Text); };
+            addButton.Click += (sender, e) => {AddClickedButton(sender, e, txtAmount.Text,txtAmount); };
 
             pnlFrame.Controls.Add(pbFoodPic);
             pnlFrame.Controls.Add(lblFoodName);
@@ -125,7 +133,7 @@ namespace CaloryBoost
         }
 
         Button clicked;
-        private void AddClickedButton(object sender, EventArgs e, string text)
+        private void AddClickedButton(object sender, EventArgs e, string text,TextBox txtAmont)
         {
             clicked = sender as Button;
             bool check = mealService.Insert(new UserMealFood
@@ -137,7 +145,11 @@ namespace CaloryBoost
             });
             MessageBox.Show(check ? "Ekleme başarılı" : "Ekleme başarısız");
             lvMealDetails.Items.Clear();
-            //listview a ekleme yapılmalı
+
+            txtAmont.Clear();
+
+            FillListView();
+
         }
 
 
@@ -152,6 +164,9 @@ namespace CaloryBoost
         {
             bool check = mealService.Delete(foodId);
             MessageBox.Show(check ? "Silme başarılı" : "Silme başarısız");
+
+            lvMealDetails.Items.Clear();
+            FillListView();
         }
         UserMealFood userMealFood; //kullanılmamış
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -162,9 +177,12 @@ namespace CaloryBoost
                 FoodID = Convert.ToInt32(foodId),
                 MealID = mealId,
                 UserID = user.ID,
-                Portion = Convert.ToDouble(txtUpdateAmount.Text)
+                Portion = Convert.ToDouble(txtUpdateAmount.Texts)
             });
             MessageBox.Show(check ? "Güncelleme başarılı" : "Güncelleme başarısız");
+
+            lvMealDetails.Items.Clear();
+            FillListView();
         }
 
 
@@ -173,9 +191,7 @@ namespace CaloryBoost
             flpFoods.Controls.Clear();
             string searchFood = txtSearch.Texts;
             List<Food> foods = mealService.FoodsList(searchFood);
-            //List<Food> filteredFood = null;
-            //filteredFood = foods.Where(f => f.Name.Contains(searchFood)).ToList();
-
+            
             foreach (Food item in foods)
             {
                 AddFoodsControls(item);

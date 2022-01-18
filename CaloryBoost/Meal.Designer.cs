@@ -120,7 +120,7 @@ namespace CaloryBoost
             this.txtUpdateAmount.BorderSize = 2;
             this.txtUpdateAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUpdateAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtUpdateAmount.Location = new System.Drawing.Point(298, 155);
+            this.txtUpdateAmount.Location = new System.Drawing.Point(153, 193);
             this.txtUpdateAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtUpdateAmount.Multiline = false;
             this.txtUpdateAmount.Name = "txtUpdateAmount";
@@ -143,7 +143,7 @@ namespace CaloryBoost
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(231, 193);
+            this.btnUpdate.Location = new System.Drawing.Point(273, 198);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(74, 26);
             this.btnUpdate.TabIndex = 2;
@@ -162,7 +162,7 @@ namespace CaloryBoost
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(68, 193);
+            this.btnDelete.Location = new System.Drawing.Point(273, 158);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(74, 26);
             this.btnDelete.TabIndex = 2;
@@ -177,7 +177,7 @@ namespace CaloryBoost
             this.lblCalory.BackColor = System.Drawing.Color.Transparent;
             this.lblCalory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.lblCalory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblCalory.Location = new System.Drawing.Point(125, 155);
+            this.lblCalory.Location = new System.Drawing.Point(187, 155);
             this.lblCalory.Name = "lblCalory";
             this.lblCalory.Size = new System.Drawing.Size(17, 18);
             this.lblCalory.TabIndex = 1;
@@ -189,7 +189,7 @@ namespace CaloryBoost
             this.headerLabel1.BackColor = System.Drawing.Color.Transparent;
             this.headerLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.headerLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.headerLabel1.Location = new System.Drawing.Point(167, 155);
+            this.headerLabel1.Location = new System.Drawing.Point(8, 201);
             this.headerLabel1.Name = "headerLabel1";
             this.headerLabel1.Size = new System.Drawing.Size(138, 18);
             this.headerLabel1.TabIndex = 1;
