@@ -21,11 +21,24 @@ namespace CaloryBoost.BLL.Services
             };
 
             //email validasyonu yapıldı
-            //Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            //if (!regex.Match(user.Email).Success) //match metodu yukarıdaki regex ile eşleşiyor mu diye bakar ve success bunu bool sonuç olarak döner
-            //{
-            //    throw new Exception("Bu email geçersizdir.");
-            //}
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            if (!regex.Match(user.Email).Success) //match metodu yukarıdaki regex ile eşleşiyor mu diye bakar ve success bunu bool sonuç olarak döner
+            {
+                throw new Exception("Bu email geçersizdir.");
+            }
+
+            if (user.Phone.Length!=11)
+            {
+                throw new Exception("Numarayı düzgün gir ulan.");
+            }
+
+            foreach (char item in user.Phone)
+            {
+                if (!char.IsDigit(item))
+                {
+                    throw new Exception("Buraya sadece rakamlar giriniz.");
+                }
+            }
 
             if (userRepository.IsExistEmail(user.Email))
             {

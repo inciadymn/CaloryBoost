@@ -19,6 +19,7 @@ namespace CaloryBoost
         {
             try
             {
+                
                 bool check;
                 user = new User()
                 {
