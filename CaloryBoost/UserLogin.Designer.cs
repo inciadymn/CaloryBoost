@@ -94,7 +94,7 @@ namespace CaloryBoost
             this.txtEmail.ReadOnly = false;
             this.txtEmail.Size = new System.Drawing.Size(229, 30);
             this.txtEmail.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.txtEmail.TabIndex = 3;
+            this.txtEmail.TabIndex = 1;
             this.txtEmail.TextBackColor = System.Drawing.Color.White;
             this.txtEmail.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.TextFont = new System.Drawing.Font("Tahoma", 10F);
@@ -114,7 +114,7 @@ namespace CaloryBoost
             this.btnLogin.Location = new System.Drawing.Point(12, 485);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(336, 49);
-            this.btnLogin.TabIndex = 6;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "LOG IN";
             this.btnLogin.TextColor = System.Drawing.Color.White;
             this.btnLogin.UseVisualStyleBackColor = false;

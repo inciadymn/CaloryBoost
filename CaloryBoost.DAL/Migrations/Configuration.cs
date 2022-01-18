@@ -33,7 +33,7 @@ namespace CaloryBoost.DAL.Migrations
                             PortionTypes = PortionType.piece.ToString(),
                             FoodTypes = FoodType.carbohydrate.ToString(),
                             Description = "100 gr (1 piece) apple 52.1 kcal",
-                            PhotoPath = @"\Ýmages\FoodImages\food_1.jpg"
+                            PhotoPath = @"..\..\Ýmages\FoodImages\food_1.jpg"
                         },
 
                         new Food()
@@ -44,7 +44,7 @@ namespace CaloryBoost.DAL.Migrations
                             PortionTypes = PortionType.piece.ToString(),
                             FoodTypes = FoodType.carbohydrate.ToString(),
                             Description = "100 gr (1 piece) strawberry 32.5 kcal",
-                            PhotoPath = @"\Ýmages\FoodImages\food_2.jpg"
+                            PhotoPath = @"..\..\Ýmages\FoodImages\food_2.jpg"
                         },
 
                         new Food()
@@ -55,7 +55,7 @@ namespace CaloryBoost.DAL.Migrations
                             PortionTypes = PortionType.piece.ToString(),
                             FoodTypes = FoodType.carbohydrate.ToString(),
                             Description = "100 gr (1 piece) banana 88.7 kcal",
-                            PhotoPath = @"\Ýmages\FoodImages\food_3.jpg"
+                            PhotoPath = @"..\..\Ýmages\FoodImages\food_3.jpg"
                         }
                     }
                },
@@ -73,7 +73,7 @@ namespace CaloryBoost.DAL.Migrations
                             PortionTypes = PortionType.piece.ToString(),
                             FoodTypes = FoodType.carbohydrate.ToString(),
                             Description = "100 gr (1 piece) cucumber 15.5 kcal",
-                            PhotoPath = @"\Ýmages\FoodImages\food_4.jpg"
+                            PhotoPath = @"..\..\Ýmages\FoodImages\food_4.jpg"
                         },
 
                         new Food()
@@ -84,7 +84,7 @@ namespace CaloryBoost.DAL.Migrations
                             PortionTypes = PortionType.piece.ToString(),
                             FoodTypes = FoodType.carbohydrate.ToString(),
                             Description = "100 gr (1 piece) lettuce 14.8 kcal",
-                            PhotoPath = @"\Ýmages\FoodImages\food_5.jpg"
+                            PhotoPath = @"..\..\Ýmages\FoodImages\food_5.jpg"
                         },
 
                         new Food()
@@ -95,7 +95,7 @@ namespace CaloryBoost.DAL.Migrations
                             PortionTypes = PortionType.piece.ToString(),
                             FoodTypes = FoodType.carbohydrate.ToString(),
                             Description = "100 gr (1 piece) broccoli 26 kcal",
-                            PhotoPath = @"\Ýmages\FoodImages\food_6.jpg"
+                            PhotoPath = @"..\..\Ýmages\FoodImages\food_6.jpg"
                         }
                     }
                },
@@ -113,7 +113,7 @@ namespace CaloryBoost.DAL.Migrations
                             PortionTypes = PortionType.cup.ToString(),
                             FoodTypes = FoodType.carbohydrate.ToString(),
                             Description = "200 ml (1 cup) milk 128 kcal",
-                            PhotoPath = @"\Ýmages\FoodImages\food_7.jpg"
+                            PhotoPath = @"..\..\Ýmages\FoodImages\food_7.jpg"
                         },
 
                         new Food()
@@ -124,7 +124,7 @@ namespace CaloryBoost.DAL.Migrations
                             PortionTypes = PortionType.cup.ToString(),
                             FoodTypes = FoodType.carbohydrate.ToString(),
                             Description = "200 ml (1 cup) coke 122 kcal",
-                            PhotoPath = @"\Ýmages\FoodImages\food_8.jpg"
+                            PhotoPath = @"..\..\Ýmages\FoodImages\food_8.jpg"
                         },
 
                         new Food()
@@ -135,7 +135,7 @@ namespace CaloryBoost.DAL.Migrations
                             PortionTypes = PortionType.cup.ToString(),
                             FoodTypes = FoodType.carbohydrate.ToString(),
                             Description = "200 ml (1 cup) orange juice 120 kcal",
-                            PhotoPath = @"\Ýmages\FoodImages\food_9.jpg"
+                            PhotoPath = @"..\..\Ýmages\FoodImages\food_9.jpg"
                         }
                     }
                },
@@ -153,7 +153,7 @@ namespace CaloryBoost.DAL.Migrations
                             PortionTypes = PortionType.portion.ToString(),
                             FoodTypes = FoodType.carbohydrate.ToString(),
                             Description = "150 gr (1 portion) green beans 128 kcal",
-                            PhotoPath = @"\Ýmages\FoodImages\food_10.jpg"
+                            PhotoPath = @"..\..\Ýmages\FoodImages\food_10.jpg"
                         },
 
                         new Food()
@@ -164,7 +164,7 @@ namespace CaloryBoost.DAL.Migrations
                             PortionTypes = PortionType.portion.ToString(),
                             FoodTypes = FoodType.protein.ToString(),
                             Description = "150 gr (1 portion) meatball 300 kcal",
-                            PhotoPath = @"\Ýmages\FoodImages\food_11.jpg"
+                            PhotoPath = @"..\..\Ýmages\FoodImages\food_11.jpg"
                         },
 
                         new Food()
@@ -175,7 +175,7 @@ namespace CaloryBoost.DAL.Migrations
                             PortionTypes = PortionType.portion.ToString(),
                             FoodTypes = FoodType.protein.ToString(),
                             Description =  "150 gr (1 portion) chicken saute 254 kcal",
-                            PhotoPath = @"\Ýmages\FoodImages\food_12.jpg"
+                            PhotoPath = @"..\..\Ýmages\FoodImages\food_12.jpg"
                         },
                     }
                }

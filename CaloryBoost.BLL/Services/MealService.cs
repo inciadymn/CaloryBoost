@@ -55,6 +55,11 @@ namespace CaloryBoost.BLL.Services
             return mealRepository.FoodsList();
         }
 
+        public List<Food> FoodsList(string filteredFood)
+        {
+            return mealRepository.FoodsList(filteredFood);
+        }
+
         public bool Insert(UserMealFood userMealFood)
         {
             userMealFood.CreatedDate = DateTime.Now.Date;
@@ -68,6 +73,8 @@ namespace CaloryBoost.BLL.Services
             }
             return mealRepository.GetMealName(mealID);
         }
+
+
     }
 }
 

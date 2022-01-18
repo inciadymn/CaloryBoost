@@ -20,9 +20,10 @@ namespace CaloryBoost.DAL.Repositories
         //{
         //    return context.Users.Where(a => a.ID == userID).SingleOrDefault();
         //}
-
+        
         public double GetByCalory(int userID)
         {
+            var date = DateTime.Now.Date; // where içerisinde Datetime.date.now yapınca hata veriyor. biz de bunu değişkene atadık
             var userInformations = context.Foods.Join(context.UserMealFoods,
                                                food => food.ID,
                                                x => x.FoodID,
@@ -32,10 +33,10 @@ namespace CaloryBoost.DAL.Repositories
                                                    TotalCalory = (x.Portion / food.Portion) * food.Calory,
                                                    DailyCalory = x.CreatedDate
 
-                                               }).Where(a => a.Id == userID && DbFunctions.TruncateTime(a.DailyCalory) == DateTime.Now).ToList();
-            //burada linq da hata aldık sum tarafını çekemedik. nullable tarzında bir hata oluştu. bizde list oalrak programa çektik hata almadık ve return olarak listlerde linq kullanarak sum metodunu bu şekilde kullandık. arz ederim.
+                                               }).Where(a => a.Id == userID && DbFunctions.TruncateTime(a.DailyCalory) == date).ToList(); 
            
-            return userInformations.Sum(a=>a.TotalCalory);
+
+            return userInformations.Sum(a=>a.TotalCalory); //burada linq da hata aldık sum tarafını çekemedik. nullable tarzında bir hata oluştu. bizde list oalrak programa çektik hata almadık ve return olarak listlerde linq kullanarak sum metodunu bu şekilde kullandık. arz ederim.
         }
 
         

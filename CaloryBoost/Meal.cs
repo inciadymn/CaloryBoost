@@ -47,12 +47,15 @@ namespace CaloryBoost
             }
             lblTotalCalory.Text = mealService.GetMealName(mealId) + " " + "Total Calory";
             lblCalory.Text = total.ToString();
+
+            //metotlaştırılıp tekrar çağırılacak
+
             List<Food> foods = mealService.FoodsList();
             foreach (Food item in foods)
             {
                 AddFoodsControls(item);
             }
-            
+
 
         }
 
@@ -66,7 +69,8 @@ namespace CaloryBoost
             pbFoodPic.BackColor = Color.Yellow;
             pbFoodPic.Height = 90;
             pbFoodPic.Width = 95;
-            pbFoodPic.Image = Image.FromFile(item.PhotoPath);
+            pbFoodPic.Image = Image.FromFile(String.Concat(@"..\..", item.PhotoPath)); // dinamik photopath olacak!! (Configuration)
+            pbFoodPic.BackgroundImageLayout = ImageLayout.Center;
             pbFoodPic.Location = new Point(5, 5);
 
             Label lblFoodName = new Label();
@@ -91,6 +95,7 @@ namespace CaloryBoost
             //addButton.Image = Image.FromFile(@"..\..\İmages\plus_icon.jpg");
             //addButton2.BackgroundImageLayout = ImageLayout.Center;
             addButton.Location = new Point(270, 20);
+            
 
 
             Label lblAmount = new Label();
@@ -103,9 +108,12 @@ namespace CaloryBoost
             lblAmount.Location = new Point(110, 45);
 
 
+            TextBox txtAmount = new TextBox();
             txtAmount.BackColor = Color.White;
             txtAmount.Tag = $"txtAmount_{item.ID}";
             txtAmount.Location = new Point(162, 42);
+
+            addButton.Click += (sender, e) => {AddClickedButton(sender, e, txtAmount.Text); };
 
             pnlFrame.Controls.Add(pbFoodPic);
             pnlFrame.Controls.Add(lblFoodName);
@@ -116,9 +124,8 @@ namespace CaloryBoost
             flpFoods.Controls.Add(pnlFrame);
         }
 
-        TextBox txtAmount = new TextBox();
         Button clicked;
-        private void addButton_Click(object sender, EventArgs e)
+        private void AddClickedButton(object sender, EventArgs e, string text)
         {
             clicked = sender as Button;
             bool check = mealService.Insert(new UserMealFood
@@ -126,12 +133,15 @@ namespace CaloryBoost
                 FoodID = Convert.ToInt32(clicked.Tag),
                 MealID = mealId,
                 UserID = user.ID,
-                Portion = Convert.ToDouble(txtAmount.Text)
+                Portion = Convert.ToDouble(text)
             });
             MessageBox.Show(check ? "Ekleme başarılı" : "Ekleme başarısız");
             lvMealDetails.Items.Clear();
-
+            //listview a ekleme yapılmalı
         }
+
+
+
         int foodId;
         private void lvMealDetails_MouseClick(object sender, MouseEventArgs e)
         {
@@ -143,7 +153,7 @@ namespace CaloryBoost
             bool check = mealService.Delete(foodId);
             MessageBox.Show(check ? "Silme başarılı" : "Silme başarısız");
         }
-        UserMealFood userMealFood;
+        UserMealFood userMealFood; //kullanılmamış
         private void btnUpdate_Click(object sender, EventArgs e)
         {
 
@@ -157,17 +167,19 @@ namespace CaloryBoost
             MessageBox.Show(check ? "Güncelleme başarılı" : "Güncelleme başarısız");
         }
 
+
         private void txtSearch__TextChanged(object sender, EventArgs e)
         {
-
             flpFoods.Controls.Clear();
-            List<Food> foods = mealService.FoodsList();
-            foreach (Food item in foods.Where(f => f.Name.Contains(txtSearch.Text)))
+            string searchFood = txtSearch.Texts;
+            List<Food> foods = mealService.FoodsList(searchFood);
+            //List<Food> filteredFood = null;
+            //filteredFood = foods.Where(f => f.Name.Contains(searchFood)).ToList();
+
+            foreach (Food item in foods)
             {
                 AddFoodsControls(item);
             }
-
-
         }
     }
 

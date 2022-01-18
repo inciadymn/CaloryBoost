@@ -3,6 +3,7 @@ using CaloryBoost.Model.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,6 +19,7 @@ namespace CaloryBoost.DAL.Repositories
 
         public List<SelectedFood> GetFood(int mealID, int userId)
         {
+            var date = DateTime.Now.Date;
             var selecedFood = context.Foods.Join(context.UserMealFoods,
                                                  food => food.ID,
                                                  x => x.FoodID,
@@ -32,7 +34,7 @@ namespace CaloryBoost.DAL.Repositories
                                                      DailyCalory = x.CreatedDate
 
                                                  })
-                                                 .Where(a => a.MealId == mealID && a.UserId == userId && a.DailyCalory.Date == DateTime.Now.Date)
+                                                 .Where(a => a.MealId == mealID && a.UserId == userId && DbFunctions.TruncateTime(a.DailyCalory) == date)
                                                  .ToList();
 
             return selecedFood;
@@ -66,11 +68,20 @@ namespace CaloryBoost.DAL.Repositories
             return foodsList;
         }
 
+        public List<Food> FoodsList(string filteredFood)
+        {
+            List<Food> foodsList = context.Foods.Where(f=>f.Name.Contains(filteredFood)).ToList();
+
+            return foodsList;
+        }
+
         public bool Insert(UserMealFood userMealFood)
         {
             context.UserMealFoods.Add(userMealFood);
             return context.SaveChanges() > 0;
         }
+
+
     }
 }
 

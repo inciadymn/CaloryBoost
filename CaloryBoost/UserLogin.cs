@@ -33,8 +33,8 @@ namespace CaloryBoost
                 if (user != null)
                 {
                     UserProfil userProfile = new UserProfil(user);
-                    this.Close();
                     userProfile.ShowDialog();
+                    this.Close();
                 }
             }
             catch (Exception ex)
@@ -43,6 +43,7 @@ namespace CaloryBoost
                 MessageBox.Show(ex.Message);
 
             }
+            
 
         }
     }

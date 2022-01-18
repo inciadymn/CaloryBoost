@@ -35,13 +35,13 @@ namespace CaloryBoost
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.grpMealName = new ReaLTaiizor.Controls.GroupBox();
+            this.txtUpdateAmount = new RJCodeAdvance.RJControls.RJTextBox();
             this.btnUpdate = new RJCodeAdvance.RJControls.RJButton();
             this.btnDelete = new RJCodeAdvance.RJControls.RJButton();
             this.lblCalory = new ReaLTaiizor.Controls.HeaderLabel();
+            this.headerLabel1 = new ReaLTaiizor.Controls.HeaderLabel();
             this.lblTotalCalory = new ReaLTaiizor.Controls.HeaderLabel();
             this.txtSearch = new RJCodeAdvance.RJControls.RJTextBox();
-            this.headerLabel1 = new ReaLTaiizor.Controls.HeaderLabel();
-            this.txtUpdateAmount = new RJCodeAdvance.RJControls.RJTextBox();
             this.grpMealName.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,6 +111,28 @@ namespace CaloryBoost
             this.grpMealName.TabIndex = 2;
             this.grpMealName.Text = "groupBox1";
             // 
+            // txtUpdateAmount
+            // 
+            this.txtUpdateAmount.BackColor = System.Drawing.SystemColors.Window;
+            this.txtUpdateAmount.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtUpdateAmount.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtUpdateAmount.BorderRadius = 15;
+            this.txtUpdateAmount.BorderSize = 2;
+            this.txtUpdateAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtUpdateAmount.Location = new System.Drawing.Point(298, 155);
+            this.txtUpdateAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUpdateAmount.Multiline = false;
+            this.txtUpdateAmount.Name = "txtUpdateAmount";
+            this.txtUpdateAmount.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtUpdateAmount.PasswordChar = false;
+            this.txtUpdateAmount.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtUpdateAmount.PlaceholderText = "";
+            this.txtUpdateAmount.Size = new System.Drawing.Size(51, 31);
+            this.txtUpdateAmount.TabIndex = 3;
+            this.txtUpdateAmount.Texts = "";
+            this.txtUpdateAmount.UnderlinedStyle = false;
+            // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -161,6 +183,18 @@ namespace CaloryBoost
             this.lblCalory.TabIndex = 1;
             this.lblCalory.Text = "0";
             // 
+            // headerLabel1
+            // 
+            this.headerLabel1.AutoSize = true;
+            this.headerLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.headerLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.headerLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.headerLabel1.Location = new System.Drawing.Point(167, 155);
+            this.headerLabel1.Name = "headerLabel1";
+            this.headerLabel1.Size = new System.Drawing.Size(138, 18);
+            this.headerLabel1.TabIndex = 1;
+            this.headerLabel1.Text = "Update Amount : ";
+            // 
             // lblTotalCalory
             // 
             this.lblTotalCalory.AutoSize = true;
@@ -195,40 +229,6 @@ namespace CaloryBoost
             this.txtSearch.Texts = "";
             this.txtSearch.UnderlinedStyle = false;
             this.txtSearch._TextChanged += new System.EventHandler(this.txtSearch__TextChanged);
-            // 
-            // headerLabel1
-            // 
-            this.headerLabel1.AutoSize = true;
-            this.headerLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.headerLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.headerLabel1.Location = new System.Drawing.Point(167, 155);
-            this.headerLabel1.Name = "headerLabel1";
-            this.headerLabel1.Size = new System.Drawing.Size(138, 18);
-            this.headerLabel1.TabIndex = 1;
-            this.headerLabel1.Text = "Update Amount : ";
-            // 
-            // txtUpdateAmount
-            // 
-            this.txtUpdateAmount.BackColor = System.Drawing.SystemColors.Window;
-            this.txtUpdateAmount.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtUpdateAmount.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtUpdateAmount.BorderRadius = 15;
-            this.txtUpdateAmount.BorderSize = 2;
-            this.txtUpdateAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUpdateAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtUpdateAmount.Location = new System.Drawing.Point(298, 155);
-            this.txtUpdateAmount.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUpdateAmount.Multiline = false;
-            this.txtUpdateAmount.Name = "txtUpdateAmount";
-            this.txtUpdateAmount.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtUpdateAmount.PasswordChar = false;
-            this.txtUpdateAmount.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtUpdateAmount.PlaceholderText = "";
-            this.txtUpdateAmount.Size = new System.Drawing.Size(51, 31);
-            this.txtUpdateAmount.TabIndex = 3;
-            this.txtUpdateAmount.Texts = "";
-            this.txtUpdateAmount.UnderlinedStyle = false;
             // 
             // Meal
             // 
