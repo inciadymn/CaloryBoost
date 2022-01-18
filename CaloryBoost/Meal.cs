@@ -47,74 +47,73 @@ namespace CaloryBoost
             }
             lblTotalCalory.Text = mealService.GetMealName(mealId) + " " + "Total Calory";
             lblCalory.Text = total.ToString();
-            
-            AddFoodsControls();
-
-        }
-
-        private void AddFoodsControls()
-        {
-            
             List<Food> foods = mealService.FoodsList();
             foreach (Food item in foods)
             {
-                Panel pnlFrame = new Panel();
-                pnlFrame.BackColor = Color.Green;
-                pnlFrame.Width = 310;
-
-                PictureBox pbFoodPic = new PictureBox();
-                pbFoodPic.BackColor = Color.Yellow;
-                pbFoodPic.Height = 90;
-                pbFoodPic.Width = 95;
-                pbFoodPic.Image = Image.FromFile(item.PhotoPath);
-                pbFoodPic.Location = new Point(5, 5);
-
-                Label lblFoodName = new Label();
-                lblFoodName.BackColor = Color.White;
-                lblFoodName.Width = 150;
-                lblFoodName.Text = item.Name;
-                lblFoodName.Tag = $"lblFoodName_{item.ID}";
-                lblFoodName.Location = new Point(110, 10);
-
-                Label lblDescription = new Label();
-                lblDescription.BackColor = Color.White;
-                lblDescription.Width = 190;
-                lblDescription.Text = item.Description;
-                lblDescription.Location = new Point(110, 70);
-
-                RJButton addButton = new RJButton();
-                addButton.BackColor = Color.Blue;
-                addButton.Width = 30;
-                addButton.Height = 30;
-                addButton.BorderRadius = 15;
-                addButton.Tag = $"{item.ID}";
-                //addButton.Image = Image.FromFile(@"..\..\İmages\plus_icon.jpg");
-                //addButton2.BackgroundImageLayout = ImageLayout.Center;
-                addButton.Location = new Point(270, 20);
-
-
-                Label lblAmount = new Label();
-                lblAmount.BackColor = Color.White;
-                lblAmount.Text = "Amount :";
-                lblAmount.ForeColor = Color.Black;
-                lblAmount.Width = 50;
-                lblAmount.Height = 15;
-                lblAmount.Tag = $"lblAmount_{item.ID}";
-                lblAmount.Location = new Point(110, 45);
-
-
-                txtAmount.BackColor = Color.White;
-                txtAmount.Tag = $"txtAmount_{item.ID}";
-                txtAmount.Location = new Point(162, 42);
-
-                pnlFrame.Controls.Add(pbFoodPic);
-                pnlFrame.Controls.Add(lblFoodName);
-                pnlFrame.Controls.Add(lblDescription);
-                pnlFrame.Controls.Add(addButton);
-                pnlFrame.Controls.Add(lblAmount);
-                pnlFrame.Controls.Add(txtAmount);
-                flpFoods.Controls.Add(pnlFrame);
+                AddFoodsControls(item);
             }
+            
+
+        }
+
+        private void AddFoodsControls(Food item)
+        {
+            Panel pnlFrame = new Panel();
+            pnlFrame.BackColor = Color.Green;
+            pnlFrame.Width = 310;
+
+            PictureBox pbFoodPic = new PictureBox();
+            pbFoodPic.BackColor = Color.Yellow;
+            pbFoodPic.Height = 90;
+            pbFoodPic.Width = 95;
+            pbFoodPic.Image = Image.FromFile(item.PhotoPath);
+            pbFoodPic.Location = new Point(5, 5);
+
+            Label lblFoodName = new Label();
+            lblFoodName.BackColor = Color.White;
+            lblFoodName.Width = 150;
+            lblFoodName.Text = item.Name;
+            lblFoodName.Tag = $"lblFoodName_{item.ID}";
+            lblFoodName.Location = new Point(110, 10);
+
+            Label lblDescription = new Label();
+            lblDescription.BackColor = Color.White;
+            lblDescription.Width = 190;
+            lblDescription.Text = item.Description;
+            lblDescription.Location = new Point(110, 70);
+
+            RJButton addButton = new RJButton();
+            addButton.BackColor = Color.Blue;
+            addButton.Width = 30;
+            addButton.Height = 30;
+            addButton.BorderRadius = 15;
+            addButton.Tag = $"{item.ID}";
+            //addButton.Image = Image.FromFile(@"..\..\İmages\plus_icon.jpg");
+            //addButton2.BackgroundImageLayout = ImageLayout.Center;
+            addButton.Location = new Point(270, 20);
+
+
+            Label lblAmount = new Label();
+            lblAmount.BackColor = Color.White;
+            lblAmount.Text = "Amount :";
+            lblAmount.ForeColor = Color.Black;
+            lblAmount.Width = 50;
+            lblAmount.Height = 15;
+            lblAmount.Tag = $"lblAmount_{item.ID}";
+            lblAmount.Location = new Point(110, 45);
+
+
+            txtAmount.BackColor = Color.White;
+            txtAmount.Tag = $"txtAmount_{item.ID}";
+            txtAmount.Location = new Point(162, 42);
+
+            pnlFrame.Controls.Add(pbFoodPic);
+            pnlFrame.Controls.Add(lblFoodName);
+            pnlFrame.Controls.Add(lblDescription);
+            pnlFrame.Controls.Add(addButton);
+            pnlFrame.Controls.Add(lblAmount);
+            pnlFrame.Controls.Add(txtAmount);
+            flpFoods.Controls.Add(pnlFrame);
         }
 
         TextBox txtAmount = new TextBox();
@@ -163,16 +162,9 @@ namespace CaloryBoost
 
             flpFoods.Controls.Clear();
             List<Food> foods = mealService.FoodsList();
-            ListViewItem lvi;
             foreach (Food item in foods.Where(f => f.Name.Contains(txtSearch.Text)))
             {
-                //lvi = new ListViewItem();
-                //lvi.Text = item.UserId.ToString();
-                //lvi.SubItems.Add(item.FirstName);
-                //lvi.SubItems.Add(item.LastName);
-                //lvi.SubItems.Add(item.Phone);
-                ///lvi.Tag = item;
-                //flpFoods.Controls.Add(lvi);
+                AddFoodsControls(item);
             }
 
 
