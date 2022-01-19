@@ -159,6 +159,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="İmages\close.jpg" />
     <Content Include="İmages\FoodImages\food_1.jpg" />
     <Content Include="İmages\FoodImages\food_10.jpg" />
     <Content Include="İmages\FoodImages\food_11.jpg" />
