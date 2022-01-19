@@ -8,6 +8,7 @@ namespace CaloryBoost.Model.Entities
 {
     public class UserMealFood
     {
+        public int ID { get; set; }
         public DateTime CreatedDate { get; set; }
         public double Portion { get; set; }
 

@@ -1,10 +1,7 @@
 ﻿using CaloryBoost.Model;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CaloryBoost.DAL.Repositories
 {
@@ -26,11 +23,11 @@ namespace CaloryBoost.DAL.Repositories
                                                      MealId = x.MealID,
                                                      UserId = x.UserID,
                                                      FoodId = x.FoodID,
-                                                     Amount=x.Portion,
+                                                     Amount = x.Portion,
                                                      FoodName = food.Name
                                                  })
                                                  .Where(a => a.MealId == mealId && a.UserId == userId)
-                                                 .OrderByDescending(a => a.Amount).Take(1).Select(a=>a.FoodName).FirstOrDefault();
+                                                 .OrderByDescending(a => a.Amount).Take(1).Select(a => a.FoodName).FirstOrDefault();
 
             return foodName;
         }
@@ -39,7 +36,8 @@ namespace CaloryBoost.DAL.Repositories
         {
             var dateNow = DateTime.Now.Date;
             var dateBack = DateTime.Now.Date.AddDays(-7);
-            double weeklyAverageCalory = context.Foods.Join(context.UserMealFoods,
+            var usersMeals = context.Foods
+                                    .Join(context.UserMealFoods,
                                                  food => food.ID,
                                                  x => x.FoodID,
                                                  (food, x) => new SelectedFood
@@ -53,17 +51,19 @@ namespace CaloryBoost.DAL.Repositories
                                                      DailyCalory = x.CreatedDate
 
                                                  })
-                                                 .Where(a => a.UserId != userId && DbFunctions.TruncateTime(a.DailyCalory) < dateNow && DbFunctions.TruncateTime(a.DailyCalory)> dateBack)
-                                                 .Average(a => a.Calory);
+                                                 .Where(a => a.UserId != userId &&
+                                                              DbFunctions.TruncateTime(a.DailyCalory) <= dateNow &&
+                                                              DbFunctions.TruncateTime(a.DailyCalory) > dateBack)
+                                                 .ToList();
 
-            return weeklyAverageCalory;
+            return usersMeals.Count > 0 ? usersMeals.Average(x => x.Calory) : 0;
         }
 
         public double GetMonthlyAverageCalory(int userId)
         {
             var dateNow = DateTime.Now.Date;
             var dateBack = DateTime.Now.Date.AddDays(-30);
-            double monthlyAverageCalory = context.Foods.Join(context.UserMealFoods,
+            var usersMeals = context.Foods.Join(context.UserMealFoods,
                                                  food => food.ID,
                                                  x => x.FoodID,
                                                  (food, x) => new SelectedFood
@@ -77,10 +77,9 @@ namespace CaloryBoost.DAL.Repositories
                                                      DailyCalory = x.CreatedDate
 
                                                  })
-                                                 .Where(a => a.UserId != userId && DbFunctions.TruncateTime(a.DailyCalory) < dateNow && DbFunctions.TruncateTime(a.DailyCalory) > dateBack)
-                                                 .Average(a => a.Calory);
+                                                 .Where(a => a.UserId != userId && DbFunctions.TruncateTime(a.DailyCalory) <= dateNow && DbFunctions.TruncateTime(a.DailyCalory) > dateBack).ToList();
 
-            return monthlyAverageCalory;
+            return usersMeals.Count > 0 ? usersMeals.Average(x => x.Calory) : 0;
         }
 
         public double GetWeeklyAverageCaloryByUser(int userId)
@@ -101,7 +100,7 @@ namespace CaloryBoost.DAL.Repositories
                                                      DailyCalory = x.CreatedDate
 
                                                  })
-                                                 .Where(a => a.UserId == userId && DbFunctions.TruncateTime(a.DailyCalory) < dateNow && DbFunctions.TruncateTime(a.DailyCalory) > dateBack)
+                                                 .Where(a => a.UserId == userId && DbFunctions.TruncateTime(a.DailyCalory) <= dateNow && DbFunctions.TruncateTime(a.DailyCalory) > dateBack)
                                                  .Average(a => a.Calory);
 
             return weeklyAverageCalory;
@@ -125,7 +124,7 @@ namespace CaloryBoost.DAL.Repositories
                                                      DailyCalory = x.CreatedDate
 
                                                  })
-                                                 .Where(a => a.UserId == userId && DbFunctions.TruncateTime(a.DailyCalory) < dateNow && DbFunctions.TruncateTime(a.DailyCalory) > dateBack)
+                                                 .Where(a => a.UserId == userId && DbFunctions.TruncateTime(a.DailyCalory) <= dateNow && DbFunctions.TruncateTime(a.DailyCalory) > dateBack)
                                                  .Average(a => a.Calory);
 
             return monthlyAverageCalory;

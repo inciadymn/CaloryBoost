@@ -65,13 +65,9 @@
     <Compile Include="Migrations\202201131038414_Data_Added.designer.cs">
       <DependentUpon>202201131038414_Data_Added.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202201131052505_Data_Added_2.cs" />
-    <Compile Include="Migrations\202201131052505_Data_Added_2.designer.cs">
-      <DependentUpon>202201131052505_Data_Added_2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202201131101330_Data_Added_Meals.cs" />
-    <Compile Include="Migrations\202201131101330_Data_Added_Meals.designer.cs">
-      <DependentUpon>202201131101330_Data_Added_Meals.cs</DependentUpon>
+    <Compile Include="Migrations\202201191722598_UserMealFoodID.cs" />
+    <Compile Include="Migrations\202201191722598_UserMealFoodID.designer.cs">
+      <DependentUpon>202201191722598_UserMealFoodID.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,11 +93,8 @@
     <EmbeddedResource Include="Migrations\202201131038414_Data_Added.resx">
       <DependentUpon>202201131038414_Data_Added.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202201131052505_Data_Added_2.resx">
-      <DependentUpon>202201131052505_Data_Added_2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202201131101330_Data_Added_Meals.resx">
-      <DependentUpon>202201131101330_Data_Added_Meals.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202201191722598_UserMealFoodID.resx">
+      <DependentUpon>202201191722598_UserMealFoodID.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

@@ -131,7 +131,7 @@ namespace CaloryBoost
             txtAmount.Tag = $"txtAmount_{item.ID}";
             txtAmount.Location = new Point(162, 42);
 
-            addButton.Click += (sender, e) => {AddClickedButton(sender, e, txtAmount.Text,txtAmount); };
+            addButton.Click += (sender, e) => {AddClickedButton(sender, e, txtAmount); };
 
             pnlFrame.Controls.Add(pbFoodPic);
             pnlFrame.Controls.Add(lblFoodName);
@@ -143,22 +143,29 @@ namespace CaloryBoost
         }
 
         Button clicked;
-        private void AddClickedButton(object sender, EventArgs e, string text,TextBox txtAmont)
+        private void AddClickedButton(object sender, EventArgs e, TextBox txtAmont)
         {
-            clicked = sender as Button;
-            bool check = mealService.Insert(new UserMealFood
+            try
             {
-                FoodID = Convert.ToInt32(clicked.Tag),
-                MealID = mealId,
-                UserID = user.ID,
-                Portion = Convert.ToDouble(text)
-            });
-            MessageBox.Show(check ? "Ekleme başarılı" : "Ekleme başarısız");
-            lvMealDetails.Items.Clear();
+                clicked = sender as Button;
+                bool check = mealService.Insert(new UserMealFood
+                {
+                    FoodID = Convert.ToInt32(clicked.Tag),
+                    MealID = mealId,
+                    UserID = user.ID,
+                    Portion = Convert.ToDouble(txtAmont.Text)
+                });
+                MessageBox.Show(check ? "Ekleme başarılı" : "Ekleme başarısız");
+                lvMealDetails.Items.Clear();
 
-            txtAmont.Clear();
+                txtAmont.Clear();
 
-            FillListView();
+                FillListView();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 

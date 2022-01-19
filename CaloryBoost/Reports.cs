@@ -34,7 +34,20 @@ namespace CaloryBoost
             lblDinnerFoodName.Text = reportService.GetFoodName(user.ID, dinnerMealID);
             lblSnackFoodName.Text = reportService.GetFoodName(user.ID, snackMealID);
 
+            lblWeeklyCaloryAverage.Text = Math.Round(reportService.GetWeeklyAverageCalory(user.ID),2).ToString();
 
+            lblMonhtlyCaloryAverage.Text= Math.Round(reportService.GetMonthlyAverageCalory(user.ID), 2).ToString();
+
+            lblUserWeeklyCalory.Text= Math.Round(reportService.GetWeeklyAverageCaloryByUser(user.ID),2).ToString();
+
+            lblUserMonhtlyCalory.Text= Math.Round(reportService.GetMonthlyAverageCaloryByUser(user.ID), 2).ToString();
+
+            grpFullName.Text = user.FirstName + " " + user.LastName;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

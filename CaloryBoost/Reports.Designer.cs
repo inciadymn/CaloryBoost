@@ -29,6 +29,7 @@ namespace CaloryBoost
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reports));
             this.panel1 = new ReaLTaiizor.Controls.Panel();
             this.lblBreakFastFoodName = new ReaLTaiizor.Controls.HeaderLabel();
             this.headerLabel1 = new ReaLTaiizor.Controls.HeaderLabel();
@@ -43,17 +44,18 @@ namespace CaloryBoost
             this.lblLunchFoodName = new ReaLTaiizor.Controls.HeaderLabel();
             this.headerLabel2 = new ReaLTaiizor.Controls.HeaderLabel();
             this.groupBox2 = new ReaLTaiizor.Controls.GroupBox();
+            this.lblMonhtlyCaloryAverage = new ReaLTaiizor.Controls.HeaderLabel();
             this.headerLabel10 = new ReaLTaiizor.Controls.HeaderLabel();
             this.grpFullName = new ReaLTaiizor.Controls.GroupBox();
-            this.groupBox4 = new ReaLTaiizor.Controls.GroupBox();
-            this.headerLabel9 = new ReaLTaiizor.Controls.HeaderLabel();
-            this.headerLabel5 = new ReaLTaiizor.Controls.HeaderLabel();
-            this.headerLabel6 = new ReaLTaiizor.Controls.HeaderLabel();
-            this.lblUserWeeklyCalory = new ReaLTaiizor.Controls.HeaderLabel();
             this.lblUserMonhtlyCalory = new ReaLTaiizor.Controls.HeaderLabel();
+            this.lblUserWeeklyCalory = new ReaLTaiizor.Controls.HeaderLabel();
+            this.headerLabel6 = new ReaLTaiizor.Controls.HeaderLabel();
+            this.headerLabel5 = new ReaLTaiizor.Controls.HeaderLabel();
+            this.groupBox4 = new ReaLTaiizor.Controls.GroupBox();
             this.lblWeeklyCaloryAverage = new ReaLTaiizor.Controls.HeaderLabel();
-            this.lblMonhtlyCaloryAverage = new ReaLTaiizor.Controls.HeaderLabel();
+            this.headerLabel9 = new ReaLTaiizor.Controls.HeaderLabel();
             this.groupBox3 = new ReaLTaiizor.Controls.GroupBox();
+            this.btnClose = new RJCodeAdvance.RJControls.RJButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -261,6 +263,18 @@ namespace CaloryBoost
             this.groupBox2.TabIndex = 9;
             this.groupBox2.Text = "Monthly";
             // 
+            // lblMonhtlyCaloryAverage
+            // 
+            this.lblMonhtlyCaloryAverage.BackColor = System.Drawing.Color.Transparent;
+            this.lblMonhtlyCaloryAverage.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMonhtlyCaloryAverage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblMonhtlyCaloryAverage.Location = new System.Drawing.Point(8, 91);
+            this.lblMonhtlyCaloryAverage.Name = "lblMonhtlyCaloryAverage";
+            this.lblMonhtlyCaloryAverage.Size = new System.Drawing.Size(158, 19);
+            this.lblMonhtlyCaloryAverage.TabIndex = 11;
+            this.lblMonhtlyCaloryAverage.Text = "0";
+            this.lblMonhtlyCaloryAverage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // headerLabel10
             // 
             this.headerLabel10.AutoSize = true;
@@ -296,6 +310,54 @@ namespace CaloryBoost
             this.grpFullName.TabIndex = 10;
             this.grpFullName.Text = "groupBox3";
             // 
+            // lblUserMonhtlyCalory
+            // 
+            this.lblUserMonhtlyCalory.BackColor = System.Drawing.Color.Transparent;
+            this.lblUserMonhtlyCalory.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUserMonhtlyCalory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblUserMonhtlyCalory.Location = new System.Drawing.Point(236, 81);
+            this.lblUserMonhtlyCalory.Name = "lblUserMonhtlyCalory";
+            this.lblUserMonhtlyCalory.Size = new System.Drawing.Size(113, 19);
+            this.lblUserMonhtlyCalory.TabIndex = 10;
+            this.lblUserMonhtlyCalory.Text = "0";
+            this.lblUserMonhtlyCalory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblUserWeeklyCalory
+            // 
+            this.lblUserWeeklyCalory.BackColor = System.Drawing.Color.Transparent;
+            this.lblUserWeeklyCalory.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUserWeeklyCalory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblUserWeeklyCalory.Location = new System.Drawing.Point(231, 46);
+            this.lblUserWeeklyCalory.Name = "lblUserWeeklyCalory";
+            this.lblUserWeeklyCalory.Size = new System.Drawing.Size(113, 19);
+            this.lblUserWeeklyCalory.TabIndex = 9;
+            this.lblUserWeeklyCalory.Text = "0";
+            this.lblUserWeeklyCalory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // headerLabel6
+            // 
+            this.headerLabel6.AutoSize = true;
+            this.headerLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.headerLabel6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.headerLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.headerLabel6.Location = new System.Drawing.Point(15, 81);
+            this.headerLabel6.Name = "headerLabel6";
+            this.headerLabel6.Size = new System.Drawing.Size(215, 19);
+            this.headerLabel6.TabIndex = 8;
+            this.headerLabel6.Text = "Monthly Average Calory :";
+            // 
+            // headerLabel5
+            // 
+            this.headerLabel5.AutoSize = true;
+            this.headerLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.headerLabel5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.headerLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.headerLabel5.Location = new System.Drawing.Point(15, 46);
+            this.headerLabel5.Name = "headerLabel5";
+            this.headerLabel5.Size = new System.Drawing.Size(210, 19);
+            this.headerLabel5.TabIndex = 7;
+            this.headerLabel5.Text = "Weekly Average Calory :";
+            // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Transparent;
@@ -317,66 +379,6 @@ namespace CaloryBoost
             this.groupBox4.TabIndex = 11;
             this.groupBox4.Text = "Weekly";
             // 
-            // headerLabel9
-            // 
-            this.headerLabel9.AutoSize = true;
-            this.headerLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.headerLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.headerLabel9.Location = new System.Drawing.Point(16, 53);
-            this.headerLabel9.Name = "headerLabel9";
-            this.headerLabel9.Size = new System.Drawing.Size(145, 19);
-            this.headerLabel9.TabIndex = 6;
-            this.headerLabel9.Text = "Calorie Average ";
-            // 
-            // headerLabel5
-            // 
-            this.headerLabel5.AutoSize = true;
-            this.headerLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.headerLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.headerLabel5.Location = new System.Drawing.Point(15, 46);
-            this.headerLabel5.Name = "headerLabel5";
-            this.headerLabel5.Size = new System.Drawing.Size(210, 19);
-            this.headerLabel5.TabIndex = 7;
-            this.headerLabel5.Text = "Weekly Average Calory :";
-            // 
-            // headerLabel6
-            // 
-            this.headerLabel6.AutoSize = true;
-            this.headerLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.headerLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.headerLabel6.Location = new System.Drawing.Point(15, 81);
-            this.headerLabel6.Name = "headerLabel6";
-            this.headerLabel6.Size = new System.Drawing.Size(215, 19);
-            this.headerLabel6.TabIndex = 8;
-            this.headerLabel6.Text = "Monthly Average Calory :";
-            // 
-            // lblUserWeeklyCalory
-            // 
-            this.lblUserWeeklyCalory.BackColor = System.Drawing.Color.Transparent;
-            this.lblUserWeeklyCalory.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUserWeeklyCalory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblUserWeeklyCalory.Location = new System.Drawing.Point(231, 46);
-            this.lblUserWeeklyCalory.Name = "lblUserWeeklyCalory";
-            this.lblUserWeeklyCalory.Size = new System.Drawing.Size(113, 19);
-            this.lblUserWeeklyCalory.TabIndex = 9;
-            this.lblUserWeeklyCalory.Text = "0";
-            this.lblUserWeeklyCalory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblUserMonhtlyCalory
-            // 
-            this.lblUserMonhtlyCalory.BackColor = System.Drawing.Color.Transparent;
-            this.lblUserMonhtlyCalory.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUserMonhtlyCalory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblUserMonhtlyCalory.Location = new System.Drawing.Point(236, 81);
-            this.lblUserMonhtlyCalory.Name = "lblUserMonhtlyCalory";
-            this.lblUserMonhtlyCalory.Size = new System.Drawing.Size(113, 19);
-            this.lblUserMonhtlyCalory.TabIndex = 10;
-            this.lblUserMonhtlyCalory.Text = "0";
-            this.lblUserMonhtlyCalory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lblWeeklyCaloryAverage
             // 
             this.lblWeeklyCaloryAverage.BackColor = System.Drawing.Color.Transparent;
@@ -389,17 +391,17 @@ namespace CaloryBoost
             this.lblWeeklyCaloryAverage.Text = "0";
             this.lblWeeklyCaloryAverage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblMonhtlyCaloryAverage
+            // headerLabel9
             // 
-            this.lblMonhtlyCaloryAverage.BackColor = System.Drawing.Color.Transparent;
-            this.lblMonhtlyCaloryAverage.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMonhtlyCaloryAverage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblMonhtlyCaloryAverage.Location = new System.Drawing.Point(8, 91);
-            this.lblMonhtlyCaloryAverage.Name = "lblMonhtlyCaloryAverage";
-            this.lblMonhtlyCaloryAverage.Size = new System.Drawing.Size(158, 19);
-            this.lblMonhtlyCaloryAverage.TabIndex = 11;
-            this.lblMonhtlyCaloryAverage.Text = "0";
-            this.lblMonhtlyCaloryAverage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.headerLabel9.AutoSize = true;
+            this.headerLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.headerLabel9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.headerLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.headerLabel9.Location = new System.Drawing.Point(16, 53);
+            this.headerLabel9.Name = "headerLabel9";
+            this.headerLabel9.Size = new System.Drawing.Size(145, 19);
+            this.headerLabel9.TabIndex = 6;
+            this.headerLabel9.Text = "Calorie Average ";
             // 
             // groupBox3
             // 
@@ -422,11 +424,32 @@ namespace CaloryBoost
             this.groupBox3.TabIndex = 12;
             this.groupBox3.Text = "Other Users";
             // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnClose.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnClose.BorderRadius = 15;
+            this.btnClose.BorderSize = 0;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(318, 1);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(35, 30);
+            this.btnClose.TabIndex = 13;
+            this.btnClose.TextColor = System.Drawing.Color.White;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(360, 610);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.grpFullName);
             this.Controls.Add(this.groupBox1);
@@ -481,5 +504,6 @@ namespace CaloryBoost
         private ReaLTaiizor.Controls.HeaderLabel headerLabel5;
         private ReaLTaiizor.Controls.HeaderLabel lblWeeklyCaloryAverage;
         private ReaLTaiizor.Controls.GroupBox groupBox3;
+        private RJCodeAdvance.RJControls.RJButton btnClose;
     }
 }

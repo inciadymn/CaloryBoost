@@ -7,13 +7,13 @@ namespace CaloryBoost.DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Data_Added_Meals : IMigrationMetadata
+    public sealed partial class UserMealFoodID : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Data_Added_Meals));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UserMealFoodID));
         
         string IMigrationMetadata.Id
         {
-            get { return "202201131101330_Data_Added_Meals"; }
+            get { return "202201191722598_UserMealFoodID"; }
         }
         
         string IMigrationMetadata.Source

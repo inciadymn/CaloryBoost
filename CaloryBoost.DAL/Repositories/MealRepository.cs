@@ -2,10 +2,8 @@
 using CaloryBoost.Model.Entities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Data.Entity;
-using System.Text;
-using System.Threading.Tasks;
+using System.Linq;
 
 namespace CaloryBoost.DAL.Repositories
 {
@@ -40,7 +38,7 @@ namespace CaloryBoost.DAL.Repositories
             return selecedFood;
         }
 
-        
+
         public string GetMealName(int mealID)
         {
             return context.Meals.Where(a => a.ID == mealID).Select(a => a.Name).SingleOrDefault();
@@ -48,7 +46,7 @@ namespace CaloryBoost.DAL.Repositories
 
         public bool Update(UserMealFood food)
         {
-            UserMealFood updatedPortion = context.UserMealFoods.SingleOrDefault(a => a.MealID == food.MealID && a.FoodID==food.FoodID);
+            UserMealFood updatedPortion = context.UserMealFoods.SingleOrDefault(a => a.MealID == food.MealID && a.FoodID == food.FoodID);
             updatedPortion.Portion = food.Portion;
             return context.SaveChanges() > 0;
         }
@@ -70,13 +68,25 @@ namespace CaloryBoost.DAL.Repositories
 
         public List<Food> FoodsList(string filteredFood)
         {
-            List<Food> foodsList = context.Foods.Where(f=>f.Name.Contains(filteredFood)).ToList();
+            List<Food> foodsList = context.Foods.Where(f => f.Name.Contains(filteredFood)).ToList();
 
             return foodsList;
         }
 
         public bool Insert(UserMealFood userMealFood)
         {
+            var date = userMealFood.CreatedDate.Date;
+            var isExist = context.UserMealFoods
+                              .Any(x => x.UserID == userMealFood.UserID &&
+                                        x.FoodID == userMealFood.FoodID &&
+                                        x.MealID == userMealFood.MealID &&
+                                        DbFunctions.TruncateTime(x.CreatedDate) == date);
+
+            if (isExist)
+            {
+                throw new Exception("Bu ürün daha önceden eklenmiştir. Miktarını değiştirmek isterseniz güncelleyiniz.");
+            }
+
             context.UserMealFoods.Add(userMealFood);
             return context.SaveChanges() > 0;
         }
