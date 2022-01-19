@@ -29,6 +29,7 @@ namespace CaloryBoost
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Meal));
             this.flpFoods = new System.Windows.Forms.FlowLayoutPanel();
             this.lvMealDetails = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -42,6 +43,8 @@ namespace CaloryBoost
             this.headerLabel1 = new ReaLTaiizor.Controls.HeaderLabel();
             this.lblTotalCalory = new ReaLTaiizor.Controls.HeaderLabel();
             this.txtSearch = new RJCodeAdvance.RJControls.RJTextBox();
+            this.headerLabel2 = new ReaLTaiizor.Controls.HeaderLabel();
+            this.btnClose = new RJCodeAdvance.RJControls.RJButton();
             this.grpMealName.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,7 +91,7 @@ namespace CaloryBoost
             // grpMealName
             // 
             this.grpMealName.BackColor = System.Drawing.Color.Transparent;
-            this.grpMealName.BackGColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
+            this.grpMealName.BackGColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.grpMealName.BaseColor = System.Drawing.Color.Transparent;
             this.grpMealName.BorderColorG = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
             this.grpMealName.BorderColorH = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(180)))), ((int)(((byte)(186)))));
@@ -101,12 +104,12 @@ namespace CaloryBoost
             this.grpMealName.Controls.Add(this.lvMealDetails);
             this.grpMealName.Font = new System.Drawing.Font("Tahoma", 9F);
             this.grpMealName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.grpMealName.HeaderColor = System.Drawing.Color.CornflowerBlue;
-            this.grpMealName.Location = new System.Drawing.Point(1, 0);
+            this.grpMealName.HeaderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
+            this.grpMealName.Location = new System.Drawing.Point(1, 32);
             this.grpMealName.MinimumSize = new System.Drawing.Size(136, 50);
             this.grpMealName.Name = "grpMealName";
             this.grpMealName.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.grpMealName.Size = new System.Drawing.Size(358, 249);
+            this.grpMealName.Size = new System.Drawing.Size(358, 231);
             this.grpMealName.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.grpMealName.TabIndex = 2;
             this.grpMealName.Text = "groupBox1";
@@ -114,11 +117,11 @@ namespace CaloryBoost
             // txtUpdateAmount
             // 
             this.txtUpdateAmount.BackColor = System.Drawing.SystemColors.Window;
-            this.txtUpdateAmount.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtUpdateAmount.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtUpdateAmount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.txtUpdateAmount.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.txtUpdateAmount.BorderRadius = 15;
             this.txtUpdateAmount.BorderSize = 2;
-            this.txtUpdateAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdateAmount.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtUpdateAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtUpdateAmount.Location = new System.Drawing.Point(153, 193);
             this.txtUpdateAmount.Margin = new System.Windows.Forms.Padding(4);
@@ -135,8 +138,8 @@ namespace CaloryBoost
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnUpdate.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
+            this.btnUpdate.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
             this.btnUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnUpdate.BorderRadius = 15;
             this.btnUpdate.BorderSize = 0;
@@ -154,8 +157,8 @@ namespace CaloryBoost
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnDelete.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
+            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
             this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnDelete.BorderRadius = 15;
             this.btnDelete.BorderSize = 0;
@@ -175,11 +178,11 @@ namespace CaloryBoost
             // 
             this.lblCalory.AutoSize = true;
             this.lblCalory.BackColor = System.Drawing.Color.Transparent;
-            this.lblCalory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.lblCalory.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblCalory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lblCalory.Location = new System.Drawing.Point(187, 155);
             this.lblCalory.Name = "lblCalory";
-            this.lblCalory.Size = new System.Drawing.Size(17, 18);
+            this.lblCalory.Size = new System.Drawing.Size(18, 18);
             this.lblCalory.TabIndex = 1;
             this.lblCalory.Text = "0";
             // 
@@ -187,11 +190,11 @@ namespace CaloryBoost
             // 
             this.headerLabel1.AutoSize = true;
             this.headerLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.headerLabel1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.headerLabel1.Location = new System.Drawing.Point(8, 201);
             this.headerLabel1.Name = "headerLabel1";
-            this.headerLabel1.Size = new System.Drawing.Size(138, 18);
+            this.headerLabel1.Size = new System.Drawing.Size(134, 18);
             this.headerLabel1.TabIndex = 1;
             this.headerLabel1.Text = "Update Amount : ";
             // 
@@ -199,24 +202,24 @@ namespace CaloryBoost
             // 
             this.lblTotalCalory.AutoSize = true;
             this.lblTotalCalory.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotalCalory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.lblTotalCalory.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTotalCalory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lblTotalCalory.Location = new System.Drawing.Point(11, 155);
             this.lblTotalCalory.Name = "lblTotalCalory";
-            this.lblTotalCalory.Size = new System.Drawing.Size(110, 18);
+            this.lblTotalCalory.Size = new System.Drawing.Size(108, 18);
             this.lblTotalCalory.TabIndex = 1;
             this.lblTotalCalory.Text = "Total Calory :";
             // 
             // txtSearch
             // 
             this.txtSearch.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSearch.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtSearch.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.txtSearch.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.txtSearch.BorderRadius = 15;
             this.txtSearch.BorderSize = 2;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSearch.Location = new System.Drawing.Point(12, 256);
+            this.txtSearch.Location = new System.Drawing.Point(105, 265);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Multiline = false;
             this.txtSearch.Name = "txtSearch";
@@ -230,14 +233,48 @@ namespace CaloryBoost
             this.txtSearch.UnderlinedStyle = false;
             this.txtSearch._TextChanged += new System.EventHandler(this.txtSearch__TextChanged);
             // 
+            // headerLabel2
+            // 
+            this.headerLabel2.AutoSize = true;
+            this.headerLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.headerLabel2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.headerLabel2.ForeColor = System.Drawing.Color.Black;
+            this.headerLabel2.Location = new System.Drawing.Point(31, 271);
+            this.headerLabel2.Name = "headerLabel2";
+            this.headerLabel2.Size = new System.Drawing.Size(69, 18);
+            this.headerLabel2.TabIndex = 1;
+            this.headerLabel2.Text = "Search :";
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnClose.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnClose.BorderRadius = 15;
+            this.btnClose.BorderSize = 0;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(315, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(36, 37);
+            this.btnClose.TabIndex = 4;
+            this.btnClose.TextColor = System.Drawing.Color.White;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // Meal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(360, 610);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.grpMealName);
             this.Controls.Add(this.flpFoods);
+            this.Controls.Add(this.headerLabel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Meal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -246,6 +283,7 @@ namespace CaloryBoost
             this.grpMealName.ResumeLayout(false);
             this.grpMealName.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -263,5 +301,7 @@ namespace CaloryBoost
         private RJCodeAdvance.RJControls.RJTextBox txtSearch;
         private RJCodeAdvance.RJControls.RJTextBox txtUpdateAmount;
         private ReaLTaiizor.Controls.HeaderLabel headerLabel1;
+        private ReaLTaiizor.Controls.HeaderLabel headerLabel2;
+        private RJCodeAdvance.RJControls.RJButton btnClose;
     }
 }

@@ -26,8 +26,8 @@ namespace CaloryBoost
         {
 
             lblFullName.Text = user.FirstName + " " + user.LastName;
-            lblDate.Text = DateTime.Now.Date.ToString();
-            lblTotalCal.Text = userProfileService.GetByCalory(user.ID).ToString();
+            lblDate.Text = DateTime.Now.ToShortDateString();
+            lblTotalCal.Text = userProfileService.GetByCalory(user.ID).ToString()+" "+"kcal";
         }
         
         private void btnBreakfast_Click(object sender, EventArgs e)
@@ -64,6 +64,12 @@ namespace CaloryBoost
             this.Hide();
             meal.ShowDialog();
             this.Show();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            
+            Application.Exit();
         }
     }
 }

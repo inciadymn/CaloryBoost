@@ -56,7 +56,7 @@ namespace CaloryBoost
             this.btnGetStarted.BorderSize = 2;
             this.btnGetStarted.FlatAppearance.BorderSize = 0;
             this.btnGetStarted.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGetStarted.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGetStarted.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGetStarted.ForeColor = System.Drawing.Color.White;
             this.btnGetStarted.Location = new System.Drawing.Point(49, 387);
             this.btnGetStarted.Name = "btnGetStarted";
@@ -76,7 +76,7 @@ namespace CaloryBoost
             this.btnLogin.BorderSize = 2;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnLogin.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(49, 463);
             this.btnLogin.Name = "btnLogin";
