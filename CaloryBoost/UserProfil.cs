@@ -37,6 +37,8 @@ namespace CaloryBoost
             this.Hide();
             meal.ShowDialog();
             this.Show();
+
+            lblTotalCal.Text = userProfileService.GetByCalory(user.ID).ToString() + " " + "kcal";
         }
 
         private void btnLunch_Click(object sender, EventArgs e)
@@ -46,6 +48,8 @@ namespace CaloryBoost
             this.Hide();
             meal.ShowDialog();
             this.Show();
+
+            lblTotalCal.Text = userProfileService.GetByCalory(user.ID).ToString() + " " + "kcal";
         }
 
         private void btnDinner_Click(object sender, EventArgs e)
@@ -55,6 +59,8 @@ namespace CaloryBoost
             this.Hide();
             meal.ShowDialog();
             this.Show();
+
+            lblTotalCal.Text = userProfileService.GetByCalory(user.ID).ToString() + " " + "kcal";
         }
 
         private void btnSnack_Click(object sender, EventArgs e)
@@ -64,12 +70,24 @@ namespace CaloryBoost
             this.Hide();
             meal.ShowDialog();
             this.Show();
+
+            lblTotalCal.Text = userProfileService.GetByCalory(user.ID).ToString() + " " + "kcal";
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             
             Application.Exit();
+        }
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            Reports reports = new Reports(user);
+            this.Hide();
+            reports.ShowDialog();
+            this.Show();
+
+
         }
     }
 }

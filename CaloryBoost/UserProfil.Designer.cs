@@ -31,6 +31,7 @@ namespace CaloryBoost
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserProfil));
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.btnClose = new RJCodeAdvance.RJControls.RJButton();
             this.lblTotalCal = new ReaLTaiizor.Controls.BigLabel();
             this.lblDate = new ReaLTaiizor.Controls.BigLabel();
             this.lblFullName = new ReaLTaiizor.Controls.BigLabel();
@@ -51,7 +52,7 @@ namespace CaloryBoost
             this.btnSnack = new RJCodeAdvance.RJControls.RJButton();
             this.headerLabel4 = new ReaLTaiizor.Controls.HeaderLabel();
             this.hopePictureBox4 = new ReaLTaiizor.Controls.HopePictureBox();
-            this.btnClose = new RJCodeAdvance.RJControls.RJButton();
+            this.btnReports = new RJCodeAdvance.RJControls.RJButton();
             this.parrotGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -73,6 +74,7 @@ namespace CaloryBoost
             this.parrotGradientPanel1.BottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.parrotGradientPanel1.BottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.parrotGradientPanel1.Controls.Add(this.btnReports);
             this.parrotGradientPanel1.Controls.Add(this.btnClose);
             this.parrotGradientPanel1.Controls.Add(this.lblTotalCal);
             this.parrotGradientPanel1.Controls.Add(this.lblDate);
@@ -90,6 +92,26 @@ namespace CaloryBoost
             this.parrotGradientPanel1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.parrotGradientPanel1.TopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.parrotGradientPanel1.TopRight = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.BorderColor = System.Drawing.Color.Transparent;
+            this.btnClose.BorderRadius = 15;
+            this.btnClose.BorderSize = 0;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(314, 10);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(36, 37);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.TextColor = System.Drawing.Color.White;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lblTotalCal
             // 
@@ -390,25 +412,26 @@ namespace CaloryBoost
             this.hopePictureBox4.TabStop = false;
             this.hopePictureBox4.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             // 
-            // btnClose
+            // btnReports
             // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClose.BorderColor = System.Drawing.Color.Transparent;
-            this.btnClose.BorderRadius = 15;
-            this.btnClose.BorderSize = 0;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(314, 10);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(36, 37);
-            this.btnClose.TabIndex = 5;
-            this.btnClose.TextColor = System.Drawing.Color.White;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnReports.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnReports.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.btnReports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnReports.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnReports.BorderRadius = 7;
+            this.btnReports.BorderSize = 0;
+            this.btnReports.FlatAppearance.BorderSize = 0;
+            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnReports.ForeColor = System.Drawing.Color.Black;
+            this.btnReports.Location = new System.Drawing.Point(5, 6);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(96, 35);
+            this.btnReports.TabIndex = 6;
+            this.btnReports.Text = "Reports";
+            this.btnReports.TextColor = System.Drawing.Color.Black;
+            this.btnReports.UseVisualStyleBackColor = false;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // UserProfil
             // 
@@ -469,5 +492,6 @@ namespace CaloryBoost
         private RJCodeAdvance.RJControls.RJButton btnDinner;
         private RJCodeAdvance.RJControls.RJButton btnSnack;
         private RJCodeAdvance.RJControls.RJButton btnClose;
+        public RJCodeAdvance.RJControls.RJButton btnReports;
     }
 }

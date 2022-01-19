@@ -76,6 +76,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\MealRepository.cs" />
+    <Compile Include="Repositories\ReportRepository.cs" />
     <Compile Include="Repositories\UserProfilRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
