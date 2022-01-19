@@ -34,8 +34,9 @@ namespace CaloryBoost
                 {
                     UserProfil userProfile = new UserProfil(user);
                     userProfile.ShowDialog();
-                    this.Close();
+                    
                 }
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -45,6 +46,14 @@ namespace CaloryBoost
             }
             
 
+        }
+
+        private void lbkToRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+            Register register = new Register();
+            this.Hide();
+            register.ShowDialog();
         }
     }
 }

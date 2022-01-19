@@ -54,7 +54,7 @@ namespace CaloryBoost
             this.txtFirstName.BaseColor = System.Drawing.Color.Transparent;
             this.txtFirstName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.txtFirstName.EdgeColor = System.Drawing.Color.White;
-            this.txtFirstName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtFirstName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtFirstName.ForeColor = System.Drawing.Color.DimGray;
             this.txtFirstName.Location = new System.Drawing.Point(119, 131);
             this.txtFirstName.Name = "txtFirstName";
@@ -71,11 +71,11 @@ namespace CaloryBoost
             // 
             this.headerLabel1.AutoSize = true;
             this.headerLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.headerLabel1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.headerLabel1.Location = new System.Drawing.Point(12, 131);
             this.headerLabel1.Name = "headerLabel1";
-            this.headerLabel1.Size = new System.Drawing.Size(101, 21);
+            this.headerLabel1.Size = new System.Drawing.Size(101, 19);
             this.headerLabel1.TabIndex = 1;
             this.headerLabel1.Text = "First Name : ";
             // 
@@ -86,7 +86,7 @@ namespace CaloryBoost
             this.txtLastName.BaseColor = System.Drawing.Color.Transparent;
             this.txtLastName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.txtLastName.EdgeColor = System.Drawing.Color.White;
-            this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtLastName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtLastName.ForeColor = System.Drawing.Color.DimGray;
             this.txtLastName.Location = new System.Drawing.Point(119, 186);
             this.txtLastName.Name = "txtLastName";
@@ -103,11 +103,11 @@ namespace CaloryBoost
             // 
             this.headerLabel2.AutoSize = true;
             this.headerLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.headerLabel2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.headerLabel2.Location = new System.Drawing.Point(14, 186);
             this.headerLabel2.Name = "headerLabel2";
-            this.headerLabel2.Size = new System.Drawing.Size(99, 21);
+            this.headerLabel2.Size = new System.Drawing.Size(99, 19);
             this.headerLabel2.TabIndex = 1;
             this.headerLabel2.Text = "Last Name : ";
             // 
@@ -118,7 +118,7 @@ namespace CaloryBoost
             this.txtEmail.BaseColor = System.Drawing.Color.Transparent;
             this.txtEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.txtEmail.EdgeColor = System.Drawing.Color.White;
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtEmail.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtEmail.ForeColor = System.Drawing.Color.DimGray;
             this.txtEmail.Location = new System.Drawing.Point(119, 241);
             this.txtEmail.Name = "txtEmail";
@@ -135,11 +135,11 @@ namespace CaloryBoost
             // 
             this.headerLabel3.AutoSize = true;
             this.headerLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.headerLabel3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.headerLabel3.Location = new System.Drawing.Point(50, 241);
             this.headerLabel3.Name = "headerLabel3";
-            this.headerLabel3.Size = new System.Drawing.Size(63, 21);
+            this.headerLabel3.Size = new System.Drawing.Size(64, 19);
             this.headerLabel3.TabIndex = 1;
             this.headerLabel3.Text = "Email : ";
             // 
@@ -150,7 +150,7 @@ namespace CaloryBoost
             this.txtPassword.BaseColor = System.Drawing.Color.Transparent;
             this.txtPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.txtPassword.EdgeColor = System.Drawing.Color.White;
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtPassword.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
             this.txtPassword.Location = new System.Drawing.Point(119, 296);
             this.txtPassword.Name = "txtPassword";
@@ -167,11 +167,11 @@ namespace CaloryBoost
             // 
             this.headerLabel4.AutoSize = true;
             this.headerLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.headerLabel4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.headerLabel4.Location = new System.Drawing.Point(22, 296);
             this.headerLabel4.Name = "headerLabel4";
-            this.headerLabel4.Size = new System.Drawing.Size(91, 21);
+            this.headerLabel4.Size = new System.Drawing.Size(92, 19);
             this.headerLabel4.TabIndex = 1;
             this.headerLabel4.Text = "Password : ";
             // 
@@ -179,11 +179,11 @@ namespace CaloryBoost
             // 
             this.headerLabel5.AutoSize = true;
             this.headerLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.headerLabel5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.headerLabel5.Location = new System.Drawing.Point(27, 351);
             this.headerLabel5.Name = "headerLabel5";
-            this.headerLabel5.Size = new System.Drawing.Size(86, 21);
+            this.headerLabel5.Size = new System.Drawing.Size(83, 19);
             this.headerLabel5.TabIndex = 1;
             this.headerLabel5.Text = "Birthdate :";
             // 
@@ -191,11 +191,11 @@ namespace CaloryBoost
             // 
             this.headerLabel6.AutoSize = true;
             this.headerLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.headerLabel6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.headerLabel6.Location = new System.Drawing.Point(40, 411);
             this.headerLabel6.Name = "headerLabel6";
-            this.headerLabel6.Size = new System.Drawing.Size(73, 21);
+            this.headerLabel6.Size = new System.Drawing.Size(76, 19);
             this.headerLabel6.TabIndex = 1;
             this.headerLabel6.Text = "Gender : ";
             // 
@@ -206,7 +206,7 @@ namespace CaloryBoost
             this.txtPhohe.BaseColor = System.Drawing.Color.Transparent;
             this.txtPhohe.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.txtPhohe.EdgeColor = System.Drawing.Color.White;
-            this.txtPhohe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtPhohe.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPhohe.ForeColor = System.Drawing.Color.DimGray;
             this.txtPhohe.Location = new System.Drawing.Point(119, 470);
             this.txtPhohe.Name = "txtPhohe";
@@ -223,11 +223,11 @@ namespace CaloryBoost
             // 
             this.headerLabel7.AutoSize = true;
             this.headerLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.headerLabel7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.headerLabel7.Location = new System.Drawing.Point(46, 470);
             this.headerLabel7.Name = "headerLabel7";
-            this.headerLabel7.Size = new System.Drawing.Size(67, 21);
+            this.headerLabel7.Size = new System.Drawing.Size(69, 19);
             this.headerLabel7.TabIndex = 1;
             this.headerLabel7.Text = "Phone : ";
             // 
@@ -278,7 +278,7 @@ namespace CaloryBoost
             this.btnSave.BorderSize = 2;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSave.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(12, 530);
             this.btnSave.Name = "btnSave";

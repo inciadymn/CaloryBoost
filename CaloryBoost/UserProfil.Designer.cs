@@ -31,8 +31,6 @@ namespace CaloryBoost
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserProfil));
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
-            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
-            this.bigLabel4 = new ReaLTaiizor.Controls.BigLabel();
             this.lblTotalCal = new ReaLTaiizor.Controls.BigLabel();
             this.lblDate = new ReaLTaiizor.Controls.BigLabel();
             this.lblFullName = new ReaLTaiizor.Controls.BigLabel();
@@ -53,6 +51,7 @@ namespace CaloryBoost
             this.btnSnack = new RJCodeAdvance.RJControls.RJButton();
             this.headerLabel4 = new ReaLTaiizor.Controls.HeaderLabel();
             this.hopePictureBox4 = new ReaLTaiizor.Controls.HopePictureBox();
+            this.btnClose = new RJCodeAdvance.RJControls.RJButton();
             this.parrotGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -74,8 +73,7 @@ namespace CaloryBoost
             this.parrotGradientPanel1.BottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.parrotGradientPanel1.BottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-            this.parrotGradientPanel1.Controls.Add(this.rjButton1);
-            this.parrotGradientPanel1.Controls.Add(this.bigLabel4);
+            this.parrotGradientPanel1.Controls.Add(this.btnClose);
             this.parrotGradientPanel1.Controls.Add(this.lblTotalCal);
             this.parrotGradientPanel1.Controls.Add(this.lblDate);
             this.parrotGradientPanel1.Controls.Add(this.lblFullName);
@@ -93,71 +91,41 @@ namespace CaloryBoost
             this.parrotGradientPanel1.TopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.parrotGradientPanel1.TopRight = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 15;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(211, 134);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(34, 36);
-            this.rjButton1.TabIndex = 2;
-            this.rjButton1.Text = "rjButton1";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            // 
-            // bigLabel4
-            // 
-            this.bigLabel4.AutoSize = true;
-            this.bigLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel4.Font = new System.Drawing.Font("Segoe UI", 25F);
-            this.bigLabel4.ForeColor = System.Drawing.Color.White;
-            this.bigLabel4.Location = new System.Drawing.Point(175, 217);
-            this.bigLabel4.Name = "bigLabel4";
-            this.bigLabel4.Size = new System.Drawing.Size(78, 46);
-            this.bigLabel4.TabIndex = 1;
-            this.bigLabel4.Text = "kcal";
-            // 
             // lblTotalCal
             // 
-            this.lblTotalCal.AutoSize = true;
             this.lblTotalCal.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotalCal.Font = new System.Drawing.Font("Segoe UI", 25F);
+            this.lblTotalCal.Font = new System.Drawing.Font("Tahoma", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTotalCal.ForeColor = System.Drawing.Color.White;
-            this.lblTotalCal.Location = new System.Drawing.Point(102, 217);
+            this.lblTotalCal.Location = new System.Drawing.Point(13, 208);
             this.lblTotalCal.Name = "lblTotalCal";
-            this.lblTotalCal.Size = new System.Drawing.Size(38, 46);
+            this.lblTotalCal.Size = new System.Drawing.Size(337, 46);
             this.lblTotalCal.TabIndex = 1;
             this.lblTotalCal.Text = "0";
+            this.lblTotalCal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDate
             // 
-            this.lblDate.AutoSize = true;
             this.lblDate.BackColor = System.Drawing.Color.Transparent;
             this.lblDate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(232, 9);
+            this.lblDate.Location = new System.Drawing.Point(13, 9);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(117, 30);
+            this.lblDate.Size = new System.Drawing.Size(336, 30);
             this.lblDate.TabIndex = 1;
             this.lblDate.Text = "2022/01/12";
+            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblFullName
             // 
-            this.lblFullName.AutoSize = true;
             this.lblFullName.BackColor = System.Drawing.Color.Transparent;
-            this.lblFullName.Font = new System.Drawing.Font("Segoe UI", 25F);
+            this.lblFullName.Font = new System.Drawing.Font("Tahoma", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblFullName.ForeColor = System.Drawing.Color.White;
-            this.lblFullName.Location = new System.Drawing.Point(99, 162);
+            this.lblFullName.Location = new System.Drawing.Point(14, 162);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(161, 46);
+            this.lblFullName.Size = new System.Drawing.Size(336, 46);
             this.lblFullName.TabIndex = 1;
             this.lblFullName.Text = "John Doe";
+            this.lblFullName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rjCircularPictureBox1
             // 
@@ -214,11 +182,11 @@ namespace CaloryBoost
             // 
             this.headerLabel1.AutoSize = true;
             this.headerLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.headerLabel1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.headerLabel1.Location = new System.Drawing.Point(124, 26);
             this.headerLabel1.Name = "headerLabel1";
-            this.headerLabel1.Size = new System.Drawing.Size(81, 21);
+            this.headerLabel1.Size = new System.Drawing.Size(88, 19);
             this.headerLabel1.TabIndex = 5;
             this.headerLabel1.Text = "Breakfast";
             // 
@@ -276,11 +244,11 @@ namespace CaloryBoost
             // 
             this.headerLabel2.AutoSize = true;
             this.headerLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.headerLabel2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.headerLabel2.Location = new System.Drawing.Point(124, 26);
             this.headerLabel2.Name = "headerLabel2";
-            this.headerLabel2.Size = new System.Drawing.Size(56, 21);
+            this.headerLabel2.Size = new System.Drawing.Size(56, 19);
             this.headerLabel2.TabIndex = 5;
             this.headerLabel2.Text = "Lunch";
             // 
@@ -338,11 +306,11 @@ namespace CaloryBoost
             // 
             this.headerLabel3.AutoSize = true;
             this.headerLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.headerLabel3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.headerLabel3.Location = new System.Drawing.Point(124, 26);
             this.headerLabel3.Name = "headerLabel3";
-            this.headerLabel3.Size = new System.Drawing.Size(62, 21);
+            this.headerLabel3.Size = new System.Drawing.Size(63, 19);
             this.headerLabel3.TabIndex = 5;
             this.headerLabel3.Text = "Dinner";
             // 
@@ -400,11 +368,11 @@ namespace CaloryBoost
             // 
             this.headerLabel4.AutoSize = true;
             this.headerLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.headerLabel4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.headerLabel4.Location = new System.Drawing.Point(124, 26);
             this.headerLabel4.Name = "headerLabel4";
-            this.headerLabel4.Size = new System.Drawing.Size(55, 21);
+            this.headerLabel4.Size = new System.Drawing.Size(57, 19);
             this.headerLabel4.TabIndex = 5;
             this.headerLabel4.Text = "Snack";
             // 
@@ -421,6 +389,26 @@ namespace CaloryBoost
             this.hopePictureBox4.TabIndex = 4;
             this.hopePictureBox4.TabStop = false;
             this.hopePictureBox4.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.BorderColor = System.Drawing.Color.Transparent;
+            this.btnClose.BorderRadius = 15;
+            this.btnClose.BorderSize = 0;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(314, 10);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(36, 37);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.TextColor = System.Drawing.Color.White;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // UserProfil
             // 
@@ -439,7 +427,6 @@ namespace CaloryBoost
             this.Text = "UserProfil";
             this.Load += new System.EventHandler(this.UserProfil_Load);
             this.parrotGradientPanel1.ResumeLayout(false);
-            this.parrotGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -463,8 +450,6 @@ namespace CaloryBoost
         private ReaLTaiizor.Controls.ParrotGradientPanel parrotGradientPanel1;
         private ReaLTaiizor.Controls.BigLabel lblFullName;
         private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox1;
-        private RJCodeAdvance.RJControls.RJButton rjButton1;
-        private ReaLTaiizor.Controls.BigLabel bigLabel4;
         private ReaLTaiizor.Controls.BigLabel lblTotalCal;
         private ReaLTaiizor.Controls.BigLabel lblDate;
         private ReaLTaiizor.Controls.Panel panel1;
@@ -483,5 +468,6 @@ namespace CaloryBoost
         private RJCodeAdvance.RJControls.RJButton btnLunch;
         private RJCodeAdvance.RJControls.RJButton btnDinner;
         private RJCodeAdvance.RJControls.RJButton btnSnack;
+        private RJCodeAdvance.RJControls.RJButton btnClose;
     }
 }

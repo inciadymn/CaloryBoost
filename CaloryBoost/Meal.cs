@@ -70,46 +70,56 @@ namespace CaloryBoost
         private void AddFoodsControls(Food item)
         {
             Panel pnlFrame = new Panel();
-            pnlFrame.BackColor = Color.Green;
+            pnlFrame.BackColor = Color.Transparent;
             pnlFrame.Width = 310;
 
             PictureBox pbFoodPic = new PictureBox();
-            pbFoodPic.BackColor = Color.Yellow;
+            pbFoodPic.BackColor = Color.White;
             pbFoodPic.Height = 90;
-            pbFoodPic.Width = 95;
+            pbFoodPic.Width = 90;
             pbFoodPic.Image = Image.FromFile(item.PhotoPath);
-            pbFoodPic.BackgroundImageLayout = ImageLayout.Zoom;
+            //pbFoodPic.BackgroundImageLayout = ImageLayout.Stretch;
+            pbFoodPic.SizeMode = PictureBoxSizeMode.StretchImage;
             pbFoodPic.Location = new Point(5, 5);
 
             Label lblFoodName = new Label();
-            lblFoodName.BackColor = Color.White;
+            lblFoodName.BackColor = Color.Transparent;
+            lblFoodName.ForeColor = Color.Black;
+            lblFoodName.Font=new Font("Tahoma",20) ;
             lblFoodName.Width = 150;
             lblFoodName.Text = item.Name;
             lblFoodName.Tag = $"lblFoodName_{item.ID}";
             lblFoodName.Location = new Point(110, 10);
 
             Label lblDescription = new Label();
-            lblDescription.BackColor = Color.White;
+            lblDescription.BackColor = Color.Transparent;
+            lblDescription.ForeColor = Color.Black;
+            lblFoodName.Font = new Font("Tahoma",8);
             lblDescription.Width = 190;
             lblDescription.Text = item.Description;
             lblDescription.Location = new Point(110, 70);
 
             RJButton addButton = new RJButton();
-            addButton.BackColor = Color.Blue;
+            addButton.BackColor = Color.Black;
             addButton.Width = 30;
             addButton.Height = 30;
             addButton.BorderRadius = 15;
             addButton.Tag = $"{item.ID}";
             //addButton.Image = Image.FromFile(@"..\..\İmages\plus_icon.jpg");
-            //addButton2.BackgroundImageLayout = ImageLayout.Center;
+            //addButton.BackgroundImageLayout = ImageLayout.Tile;
+            addButton.Text = "+";
+            addButton.Font = new Font("Tahoma", 12);
+            
             addButton.Location = new Point(270, 20);
+            
             
 
 
             Label lblAmount = new Label();
-            lblAmount.BackColor = Color.White;
+            lblAmount.BackColor = Color.Transparent;
             lblAmount.Text = "Amount :";
             lblAmount.ForeColor = Color.Black;
+            lblAmount.Font = new Font("Tahoma", 8);
             lblAmount.Width = 50;
             lblAmount.Height = 15;
             lblAmount.Tag = $"lblAmount_{item.ID}";
@@ -196,6 +206,11 @@ namespace CaloryBoost
             {
                 AddFoodsControls(item);
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 

@@ -20,6 +20,23 @@ namespace CaloryBoost.BLL.Services
                 throw new Exception("Bilgiler boş geçilemez");
             };
 
+            foreach (char item in user.FirstName)
+            {
+                if (char.IsDigit(item))
+                {
+                    throw new Exception("Buraya sadece harf giriniz.");
+                }
+            }
+
+
+            foreach (char item in user.LastName)
+            {
+                if (char.IsDigit(item))
+                {
+                    throw new Exception("Buraya sadece harf giriniz.");
+                }
+            }
+
             //email validasyonu yapıldı
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
             if (!regex.Match(user.Email).Success) //match metodu yukarıdaki regex ile eşleşiyor mu diye bakar ve success bunu bool sonuç olarak döner

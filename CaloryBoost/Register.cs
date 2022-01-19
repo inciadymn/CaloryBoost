@@ -15,12 +15,13 @@ namespace CaloryBoost
         }
 
         User user;
+        bool check;
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
                 
-                bool check;
+               
                 user = new User()
                 {
                     FirstName = txtFirstName.Text.Trim(),
@@ -34,12 +35,16 @@ namespace CaloryBoost
 
                 check = userService.Insert(user);
                 MessageBox.Show(check ? "Kayıt gerçekleşti" : "Bilgilerinizi kontrol ediniz");
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            this.Close();
+            if (check)
+            {
+                this.Close();
+            }
         }
     }
 }
