@@ -45,6 +45,7 @@ namespace CaloryBoost
             this.rdMale = new ReaLTaiizor.Controls.ThunderRadioButton();
             this.dtpcDate = new RJCodeAdvance.RJControls.RJDatePicker();
             this.btnSave = new RJCodeAdvance.RJControls.RJButton();
+            this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             this.SuspendLayout();
             // 
             // txtFirstName
@@ -289,12 +290,25 @@ namespace CaloryBoost
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // bigLabel1
+            // 
+            this.bigLabel1.AutoSize = true;
+            this.bigLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel1.Font = new System.Drawing.Font("Segoe UI", 25F);
+            this.bigLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bigLabel1.Location = new System.Drawing.Point(59, 9);
+            this.bigLabel1.Name = "bigLabel1";
+            this.bigLabel1.Size = new System.Drawing.Size(249, 46);
+            this.bigLabel1.TabIndex = 9;
+            this.bigLabel1.Text = "CALORYBOOST";
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.ClientSize = new System.Drawing.Size(360, 610);
+            this.Controls.Add(this.bigLabel1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dtpcDate);
             this.Controls.Add(this.rdMale);
@@ -338,5 +352,6 @@ namespace CaloryBoost
         private ReaLTaiizor.Controls.ThunderRadioButton rdMale;
         private RJCodeAdvance.RJControls.RJDatePicker dtpcDate;
         private RJCodeAdvance.RJControls.RJButton btnSave;
+        private ReaLTaiizor.Controls.BigLabel bigLabel1;
     }
 }

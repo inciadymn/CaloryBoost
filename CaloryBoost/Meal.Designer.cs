@@ -45,6 +45,7 @@ namespace CaloryBoost
             this.txtSearch = new RJCodeAdvance.RJControls.RJTextBox();
             this.headerLabel2 = new ReaLTaiizor.Controls.HeaderLabel();
             this.btnClose = new RJCodeAdvance.RJControls.RJButton();
+            this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             this.grpMealName.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -265,11 +266,24 @@ namespace CaloryBoost
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // bigLabel1
+            // 
+            this.bigLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.bigLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bigLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bigLabel1.Location = new System.Drawing.Point(115, 4);
+            this.bigLabel1.Name = "bigLabel1";
+            this.bigLabel1.Size = new System.Drawing.Size(135, 25);
+            this.bigLabel1.TabIndex = 5;
+            this.bigLabel1.Text = "CALORYBOOST";
+            this.bigLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Meal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(360, 610);
+            this.Controls.Add(this.bigLabel1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.grpMealName);
@@ -303,5 +317,6 @@ namespace CaloryBoost
         private ReaLTaiizor.Controls.HeaderLabel headerLabel1;
         private ReaLTaiizor.Controls.HeaderLabel headerLabel2;
         private RJCodeAdvance.RJControls.RJButton btnClose;
+        private ReaLTaiizor.Controls.BigLabel bigLabel1;
     }
 }

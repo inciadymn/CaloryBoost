@@ -46,15 +46,27 @@ namespace CaloryBoost.DAL.Repositories
 
         public bool Update(UserMealFood food)
         {
-            UserMealFood updatedPortion = context.UserMealFoods.SingleOrDefault(a => a.MealID == food.MealID && a.FoodID == food.FoodID);
+            var date = DateTime.Now.Date;
+
+            UserMealFood updatedPortion = context.UserMealFoods.Where(x => x.UserID == food.UserID &&
+                                                                     x.MealID == food.MealID &&
+                                                                     x.FoodID == food.FoodID &&
+                                                                     DbFunctions.TruncateTime(x.CreatedDate) == date)
+                                                          .FirstOrDefault();
+                                                          
             updatedPortion.Portion = food.Portion;
             return context.SaveChanges() > 0;
         }
 
 
-        public bool Delete(int foodId)
+        public bool Delete(UserMealFood food)
         {
-            UserMealFood deletedFood = context.UserMealFoods.SingleOrDefault(a => a.FoodID == foodId);
+            var date = DateTime.Now.Date;
+            UserMealFood deletedFood = context.UserMealFoods.Where(x => x.UserID == food.UserID &&
+                                                                     x.MealID == food.MealID &&
+                                                                     x.FoodID == food.FoodID &&
+                                                                     DbFunctions.TruncateTime(x.CreatedDate) == date)
+                                                          .FirstOrDefault();
             context.UserMealFoods.Remove(deletedFood);
             return context.SaveChanges() > 0;
         }

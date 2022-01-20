@@ -50,11 +50,9 @@
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\UserMealFood.cs" />
     <Compile Include="Enums\FoodType.cs" />
-    <Compile Include="Enums\GenderType.cs" />
-    <Compile Include="Enums\MealType.cs" />
     <Compile Include="Enums\PortionType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SelectedFood.cs" />
+    <Compile Include="DataTransfer\SelectedFood.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

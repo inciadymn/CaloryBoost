@@ -34,15 +34,30 @@ namespace CaloryBoost
             lblDinnerFoodName.Text = reportService.GetFoodName(user.ID, dinnerMealID);
             lblSnackFoodName.Text = reportService.GetFoodName(user.ID, snackMealID);
 
-            lblWeeklyCaloryAverage.Text = Math.Round(reportService.GetWeeklyAverageCalory(user.ID),2).ToString();
+            double weeklyAverage = Math.Round(reportService.GetWeeklyAverageCalory(user.ID),2);
+            lblWeeklyCaloryAverage.Text = weeklyAverage.ToString();
 
-            lblMonhtlyCaloryAverage.Text= Math.Round(reportService.GetMonthlyAverageCalory(user.ID), 2).ToString();
+            double monthlyAverage = Math.Round(reportService.GetMonthlyAverageCalory(user.ID), 2);
+            lblMonhtlyCaloryAverage.Text = monthlyAverage.ToString();
 
-            lblUserWeeklyCalory.Text= Math.Round(reportService.GetWeeklyAverageCaloryByUser(user.ID),2).ToString();
+            double userWeeklyAverage = Math.Round(reportService.GetWeeklyAverageCaloryByUser(user.ID),2);
+            lblUserWeeklyCalory.Text = userWeeklyAverage.ToString();
 
-            lblUserMonhtlyCalory.Text= Math.Round(reportService.GetMonthlyAverageCaloryByUser(user.ID), 2).ToString();
+            double userMonthlyAverage = Math.Round(reportService.GetMonthlyAverageCaloryByUser(user.ID), 2);
+            lblUserMonhtlyCalory.Text = userMonthlyAverage.ToString();
 
-            grpFullName.Text = user.FirstName + " " + user.LastName;
+            lblUserWeeklyCalory.ForeColor = weeklyAverage > userWeeklyAverage ? Color.Green : Color.Red;
+
+            lblUserMonhtlyCalory.ForeColor = monthlyAverage > userMonthlyAverage ? Color.Green : Color.Red;
+
+
+            grpFullName.Text = user.FirstName.ToUpper() + " " + user.LastName.ToUpper();
+
+            pcRed.BackColor = Color.Red;
+            pcGreen.BackColor = Color.Green;
+
+            lblAboveAverage.ForeColor = Color.Red;
+            lblBelowAverage.ForeColor = Color.Green;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
