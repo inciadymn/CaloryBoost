@@ -46,6 +46,7 @@ namespace CaloryBoost
             this.dtpcDate = new RJCodeAdvance.RJControls.RJDatePicker();
             this.btnSave = new RJCodeAdvance.RJControls.RJButton();
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
+            this.headerLabel8 = new ReaLTaiizor.Controls.HeaderLabel();
             this.SuspendLayout();
             // 
             // txtFirstName
@@ -57,7 +58,7 @@ namespace CaloryBoost
             this.txtFirstName.EdgeColor = System.Drawing.Color.White;
             this.txtFirstName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtFirstName.ForeColor = System.Drawing.Color.DimGray;
-            this.txtFirstName.Location = new System.Drawing.Point(119, 131);
+            this.txtFirstName.Location = new System.Drawing.Point(119, 115);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.ReadOnly = false;
             this.txtFirstName.Size = new System.Drawing.Size(229, 30);
@@ -74,7 +75,7 @@ namespace CaloryBoost
             this.headerLabel1.BackColor = System.Drawing.Color.Transparent;
             this.headerLabel1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.headerLabel1.Location = new System.Drawing.Point(12, 131);
+            this.headerLabel1.Location = new System.Drawing.Point(12, 120);
             this.headerLabel1.Name = "headerLabel1";
             this.headerLabel1.Size = new System.Drawing.Size(101, 19);
             this.headerLabel1.TabIndex = 1;
@@ -89,7 +90,7 @@ namespace CaloryBoost
             this.txtLastName.EdgeColor = System.Drawing.Color.White;
             this.txtLastName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtLastName.ForeColor = System.Drawing.Color.DimGray;
-            this.txtLastName.Location = new System.Drawing.Point(119, 186);
+            this.txtLastName.Location = new System.Drawing.Point(119, 170);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.ReadOnly = false;
             this.txtLastName.Size = new System.Drawing.Size(229, 30);
@@ -106,7 +107,7 @@ namespace CaloryBoost
             this.headerLabel2.BackColor = System.Drawing.Color.Transparent;
             this.headerLabel2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.headerLabel2.Location = new System.Drawing.Point(14, 186);
+            this.headerLabel2.Location = new System.Drawing.Point(14, 175);
             this.headerLabel2.Name = "headerLabel2";
             this.headerLabel2.Size = new System.Drawing.Size(99, 19);
             this.headerLabel2.TabIndex = 1;
@@ -121,7 +122,7 @@ namespace CaloryBoost
             this.txtEmail.EdgeColor = System.Drawing.Color.White;
             this.txtEmail.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.txtEmail.Location = new System.Drawing.Point(119, 241);
+            this.txtEmail.Location = new System.Drawing.Point(119, 225);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = false;
             this.txtEmail.Size = new System.Drawing.Size(229, 30);
@@ -138,7 +139,7 @@ namespace CaloryBoost
             this.headerLabel3.BackColor = System.Drawing.Color.Transparent;
             this.headerLabel3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.headerLabel3.Location = new System.Drawing.Point(50, 241);
+            this.headerLabel3.Location = new System.Drawing.Point(50, 230);
             this.headerLabel3.Name = "headerLabel3";
             this.headerLabel3.Size = new System.Drawing.Size(64, 19);
             this.headerLabel3.TabIndex = 1;
@@ -153,7 +154,7 @@ namespace CaloryBoost
             this.txtPassword.EdgeColor = System.Drawing.Color.White;
             this.txtPassword.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPassword.Location = new System.Drawing.Point(119, 296);
+            this.txtPassword.Location = new System.Drawing.Point(119, 277);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.ReadOnly = false;
             this.txtPassword.Size = new System.Drawing.Size(229, 30);
@@ -170,11 +171,11 @@ namespace CaloryBoost
             this.headerLabel4.BackColor = System.Drawing.Color.Transparent;
             this.headerLabel4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.headerLabel4.Location = new System.Drawing.Point(22, 296);
+            this.headerLabel4.Location = new System.Drawing.Point(13, 281);
             this.headerLabel4.Name = "headerLabel4";
-            this.headerLabel4.Size = new System.Drawing.Size(92, 19);
+            this.headerLabel4.Size = new System.Drawing.Size(101, 19);
             this.headerLabel4.TabIndex = 1;
-            this.headerLabel4.Text = "Password : ";
+            this.headerLabel4.Text = "Password* : ";
             // 
             // headerLabel5
             // 
@@ -182,7 +183,7 @@ namespace CaloryBoost
             this.headerLabel5.BackColor = System.Drawing.Color.Transparent;
             this.headerLabel5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.headerLabel5.Location = new System.Drawing.Point(27, 351);
+            this.headerLabel5.Location = new System.Drawing.Point(27, 366);
             this.headerLabel5.Name = "headerLabel5";
             this.headerLabel5.Size = new System.Drawing.Size(83, 19);
             this.headerLabel5.TabIndex = 1;
@@ -194,7 +195,7 @@ namespace CaloryBoost
             this.headerLabel6.BackColor = System.Drawing.Color.Transparent;
             this.headerLabel6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.headerLabel6.Location = new System.Drawing.Point(40, 411);
+            this.headerLabel6.Location = new System.Drawing.Point(40, 419);
             this.headerLabel6.Name = "headerLabel6";
             this.headerLabel6.Size = new System.Drawing.Size(76, 19);
             this.headerLabel6.TabIndex = 1;
@@ -226,7 +227,7 @@ namespace CaloryBoost
             this.headerLabel7.BackColor = System.Drawing.Color.Transparent;
             this.headerLabel7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.headerLabel7.Location = new System.Drawing.Point(46, 470);
+            this.headerLabel7.Location = new System.Drawing.Point(46, 475);
             this.headerLabel7.Name = "headerLabel7";
             this.headerLabel7.Size = new System.Drawing.Size(69, 19);
             this.headerLabel7.TabIndex = 1;
@@ -239,7 +240,7 @@ namespace CaloryBoost
             this.rdFemale.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdFemale.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rdFemale.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.rdFemale.Location = new System.Drawing.Point(119, 416);
+            this.rdFemale.Location = new System.Drawing.Point(119, 421);
             this.rdFemale.Name = "rdFemale";
             this.rdFemale.Size = new System.Drawing.Size(79, 16);
             this.rdFemale.TabIndex = 5;
@@ -251,7 +252,7 @@ namespace CaloryBoost
             this.rdMale.Checked = false;
             this.rdMale.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdMale.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.rdMale.Location = new System.Drawing.Point(204, 416);
+            this.rdMale.Location = new System.Drawing.Point(204, 421);
             this.rdMale.Name = "rdMale";
             this.rdMale.Size = new System.Drawing.Size(79, 16);
             this.rdMale.TabIndex = 6;
@@ -262,7 +263,7 @@ namespace CaloryBoost
             this.dtpcDate.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.dtpcDate.BorderSize = 0;
             this.dtpcDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtpcDate.Location = new System.Drawing.Point(119, 351);
+            this.dtpcDate.Location = new System.Drawing.Point(119, 361);
             this.dtpcDate.MinimumSize = new System.Drawing.Size(4, 35);
             this.dtpcDate.Name = "dtpcDate";
             this.dtpcDate.Size = new System.Drawing.Size(229, 35);
@@ -302,12 +303,25 @@ namespace CaloryBoost
             this.bigLabel1.TabIndex = 9;
             this.bigLabel1.Text = "CALORYBOOST";
             // 
+            // headerLabel8
+            // 
+            this.headerLabel8.AutoSize = true;
+            this.headerLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.headerLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.headerLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.headerLabel8.Location = new System.Drawing.Point(128, 318);
+            this.headerLabel8.Name = "headerLabel8";
+            this.headerLabel8.Size = new System.Drawing.Size(210, 30);
+            this.headerLabel8.TabIndex = 10;
+            this.headerLabel8.Text = "*Your password must contain \r\nuppercase letters and numbers ";
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.ClientSize = new System.Drawing.Size(360, 610);
+            this.Controls.Add(this.headerLabel8);
             this.Controls.Add(this.bigLabel1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dtpcDate);
@@ -353,5 +367,6 @@ namespace CaloryBoost
         private RJCodeAdvance.RJControls.RJDatePicker dtpcDate;
         private RJCodeAdvance.RJControls.RJButton btnSave;
         private ReaLTaiizor.Controls.BigLabel bigLabel1;
+        private ReaLTaiizor.Controls.HeaderLabel headerLabel8;
     }
 }

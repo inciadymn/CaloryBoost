@@ -15,6 +15,8 @@ namespace CaloryBoost.DAL.Repositories
             context = new CaloryBoostDbContext();
         }
 
+        //listview a seçilen food ları listelemek için kullanılan metot
+
         public List<SelectedFood> GetFood(int mealID, int userId)
         {
             var date = DateTime.Now.Date;
@@ -38,10 +40,11 @@ namespace CaloryBoost.DAL.Repositories
             return selecedFood;
         }
 
+        //Groupbox a o öğünün adını basmak için metot
 
         public string GetMealName(int mealID)
         {
-            return context.Meals.Where(a => a.ID == mealID).Select(a => a.Name).SingleOrDefault();
+            return context.Meals.Where(a => a.ID == mealID).Select(a => a.Name).SingleOrDefault(); 
         }
 
         public bool Update(UserMealFood food)
@@ -70,21 +73,21 @@ namespace CaloryBoost.DAL.Repositories
             context.UserMealFoods.Remove(deletedFood);
             return context.SaveChanges() > 0;
         }
-
+        //flow panel e basılan database de bulunan tüm food lar
         public List<Food> FoodsList()
         {
             List<Food> foodsList = context.Foods.ToList();
 
             return foodsList;
         }
-
+        //flow panel e basılan database de bulunan filtrelenen(txtSearch) food lar
         public List<Food> FoodsList(string filteredFood)
         {
             List<Food> foodsList = context.Foods.Where(f => f.Name.Contains(filteredFood)).ToList();
 
             return foodsList;
         }
-
+        //Kullanıcının eklediği ürünleri database deki ara tabloya gönderen metot
         public bool Insert(UserMealFood userMealFood)
         {
             var date = userMealFood.CreatedDate.Date;

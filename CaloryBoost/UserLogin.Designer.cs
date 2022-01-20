@@ -94,7 +94,7 @@ namespace CaloryBoost
             this.lbkToRegister.Size = new System.Drawing.Size(334, 49);
             this.lbkToRegister.TabIndex = 6;
             this.lbkToRegister.TabStop = true;
-            this.lbkToRegister.Text = "Kayıt olmak için buraya tıklayınız.";
+            this.lbkToRegister.Text = "Click Here for REGİSTER!!";
             this.lbkToRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbkToRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbkToRegister_LinkClicked);
             // 

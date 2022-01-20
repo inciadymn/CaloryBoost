@@ -22,6 +22,8 @@ namespace CaloryBoost.DAL.Repositories
             return context.SaveChanges() > 0;
         }
 
+        //Email database de var mı yok mu kontrol eden metot.
+
         public bool IsExistEmail(string email)
         {
             return context.Users.Any(a => a.Email == email);
