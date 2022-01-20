@@ -196,12 +196,12 @@ namespace CaloryBoost.DAL.Migrations
                         Name="Lunch"
                    },
 
-                    new Meal()
+                   new Meal()
                    {
                         Name="Dinner"
                    },
 
-                     new Meal()
+                   new Meal()
                    {
                         Name="Snack"
                    }
