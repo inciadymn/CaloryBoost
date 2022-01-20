@@ -56,6 +56,11 @@ namespace CaloryBoost
             this.headerLabel9 = new ReaLTaiizor.Controls.HeaderLabel();
             this.groupBox3 = new ReaLTaiizor.Controls.GroupBox();
             this.btnClose = new RJCodeAdvance.RJControls.RJButton();
+            this.pcRed = new System.Windows.Forms.PictureBox();
+            this.pcGreen = new System.Windows.Forms.PictureBox();
+            this.lblAboveAverage = new ReaLTaiizor.Controls.HeaderLabel();
+            this.lblBelowAverage = new ReaLTaiizor.Controls.HeaderLabel();
+            this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -65,6 +70,8 @@ namespace CaloryBoost
             this.grpFullName.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcRed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcGreen)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,7 +80,7 @@ namespace CaloryBoost
             this.panel1.Controls.Add(this.lblBreakFastFoodName);
             this.panel1.Controls.Add(this.headerLabel1);
             this.panel1.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.panel1.Location = new System.Drawing.Point(9, 41);
+            this.panel1.Location = new System.Drawing.Point(9, 31);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
             this.panel1.Size = new System.Drawing.Size(319, 33);
@@ -111,7 +118,7 @@ namespace CaloryBoost
             this.panel3.Controls.Add(this.lblDinnerFoodName);
             this.panel3.Controls.Add(this.headerLabel3);
             this.panel3.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.panel3.Location = new System.Drawing.Point(9, 119);
+            this.panel3.Location = new System.Drawing.Point(9, 117);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(5);
             this.panel3.Size = new System.Drawing.Size(319, 33);
@@ -149,7 +156,7 @@ namespace CaloryBoost
             this.panel4.Controls.Add(this.lblSnackFoodName);
             this.panel4.Controls.Add(this.headerLabel4);
             this.panel4.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.panel4.Location = new System.Drawing.Point(9, 158);
+            this.panel4.Location = new System.Drawing.Point(9, 160);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(5);
             this.panel4.Size = new System.Drawing.Size(319, 33);
@@ -184,7 +191,7 @@ namespace CaloryBoost
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.BackGColor = System.Drawing.Color.DodgerBlue;
+            this.groupBox1.BackGColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.groupBox1.BaseColor = System.Drawing.Color.Transparent;
             this.groupBox1.BorderColorG = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
             this.groupBox1.BorderColorH = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(180)))), ((int)(((byte)(186)))));
@@ -193,9 +200,9 @@ namespace CaloryBoost
             this.groupBox1.Controls.Add(this.panel3);
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.groupBox1.HeaderColor = System.Drawing.Color.CornflowerBlue;
-            this.groupBox1.Location = new System.Drawing.Point(12, 21);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.HeaderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
+            this.groupBox1.Location = new System.Drawing.Point(12, 30);
             this.groupBox1.MinimumSize = new System.Drawing.Size(136, 50);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
@@ -210,7 +217,7 @@ namespace CaloryBoost
             this.panel2.Controls.Add(this.lblLunchFoodName);
             this.panel2.Controls.Add(this.headerLabel2);
             this.panel2.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.panel2.Location = new System.Drawing.Point(9, 80);
+            this.panel2.Location = new System.Drawing.Point(9, 74);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(5);
             this.panel2.Size = new System.Drawing.Size(319, 33);
@@ -245,20 +252,20 @@ namespace CaloryBoost
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.BackGColor = System.Drawing.Color.Green;
+            this.groupBox2.BackGColor = System.Drawing.Color.White;
             this.groupBox2.BaseColor = System.Drawing.Color.Transparent;
             this.groupBox2.BorderColorG = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
             this.groupBox2.BorderColorH = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(180)))), ((int)(((byte)(186)))));
             this.groupBox2.Controls.Add(this.lblMonhtlyCaloryAverage);
             this.groupBox2.Controls.Add(this.headerLabel10);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.groupBox2.HeaderColor = System.Drawing.Color.CornflowerBlue;
-            this.groupBox2.Location = new System.Drawing.Point(183, 43);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.HeaderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
+            this.groupBox2.Location = new System.Drawing.Point(183, 25);
             this.groupBox2.MinimumSize = new System.Drawing.Size(136, 50);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.groupBox2.Size = new System.Drawing.Size(161, 164);
+            this.groupBox2.Size = new System.Drawing.Size(161, 163);
             this.groupBox2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.groupBox2.TabIndex = 9;
             this.groupBox2.Text = "Monthly";
@@ -290,7 +297,7 @@ namespace CaloryBoost
             // grpFullName
             // 
             this.grpFullName.BackColor = System.Drawing.Color.Transparent;
-            this.grpFullName.BackGColor = System.Drawing.Color.DodgerBlue;
+            this.grpFullName.BackGColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.grpFullName.BaseColor = System.Drawing.Color.Transparent;
             this.grpFullName.BorderColorG = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
             this.grpFullName.BorderColorH = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(180)))), ((int)(((byte)(186)))));
@@ -299,9 +306,9 @@ namespace CaloryBoost
             this.grpFullName.Controls.Add(this.headerLabel6);
             this.grpFullName.Controls.Add(this.headerLabel5);
             this.grpFullName.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.grpFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.grpFullName.HeaderColor = System.Drawing.Color.CornflowerBlue;
-            this.grpFullName.Location = new System.Drawing.Point(4, 465);
+            this.grpFullName.ForeColor = System.Drawing.Color.White;
+            this.grpFullName.HeaderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
+            this.grpFullName.Location = new System.Drawing.Point(4, 435);
             this.grpFullName.MinimumSize = new System.Drawing.Size(136, 50);
             this.grpFullName.Name = "grpFullName";
             this.grpFullName.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
@@ -314,10 +321,10 @@ namespace CaloryBoost
             // 
             this.lblUserMonhtlyCalory.BackColor = System.Drawing.Color.Transparent;
             this.lblUserMonhtlyCalory.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUserMonhtlyCalory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblUserMonhtlyCalory.Location = new System.Drawing.Point(236, 81);
+            this.lblUserMonhtlyCalory.ForeColor = System.Drawing.Color.White;
+            this.lblUserMonhtlyCalory.Location = new System.Drawing.Point(233, 81);
             this.lblUserMonhtlyCalory.Name = "lblUserMonhtlyCalory";
-            this.lblUserMonhtlyCalory.Size = new System.Drawing.Size(113, 19);
+            this.lblUserMonhtlyCalory.Size = new System.Drawing.Size(108, 19);
             this.lblUserMonhtlyCalory.TabIndex = 10;
             this.lblUserMonhtlyCalory.Text = "0";
             this.lblUserMonhtlyCalory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -326,7 +333,7 @@ namespace CaloryBoost
             // 
             this.lblUserWeeklyCalory.BackColor = System.Drawing.Color.Transparent;
             this.lblUserWeeklyCalory.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUserWeeklyCalory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblUserWeeklyCalory.ForeColor = System.Drawing.Color.White;
             this.lblUserWeeklyCalory.Location = new System.Drawing.Point(231, 46);
             this.lblUserWeeklyCalory.Name = "lblUserWeeklyCalory";
             this.lblUserWeeklyCalory.Size = new System.Drawing.Size(113, 19);
@@ -339,7 +346,7 @@ namespace CaloryBoost
             this.headerLabel6.AutoSize = true;
             this.headerLabel6.BackColor = System.Drawing.Color.Transparent;
             this.headerLabel6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.headerLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.headerLabel6.ForeColor = System.Drawing.Color.White;
             this.headerLabel6.Location = new System.Drawing.Point(15, 81);
             this.headerLabel6.Name = "headerLabel6";
             this.headerLabel6.Size = new System.Drawing.Size(215, 19);
@@ -351,7 +358,7 @@ namespace CaloryBoost
             this.headerLabel5.AutoSize = true;
             this.headerLabel5.BackColor = System.Drawing.Color.Transparent;
             this.headerLabel5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.headerLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.headerLabel5.ForeColor = System.Drawing.Color.White;
             this.headerLabel5.Location = new System.Drawing.Point(15, 46);
             this.headerLabel5.Name = "headerLabel5";
             this.headerLabel5.Size = new System.Drawing.Size(210, 19);
@@ -361,20 +368,20 @@ namespace CaloryBoost
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox4.BackGColor = System.Drawing.Color.Green;
+            this.groupBox4.BackGColor = System.Drawing.Color.White;
             this.groupBox4.BaseColor = System.Drawing.Color.Transparent;
             this.groupBox4.BorderColorG = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
             this.groupBox4.BorderColorH = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(180)))), ((int)(((byte)(186)))));
             this.groupBox4.Controls.Add(this.lblWeeklyCaloryAverage);
             this.groupBox4.Controls.Add(this.headerLabel9);
             this.groupBox4.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.groupBox4.HeaderColor = System.Drawing.Color.DodgerBlue;
-            this.groupBox4.Location = new System.Drawing.Point(8, 43);
+            this.groupBox4.ForeColor = System.Drawing.Color.White;
+            this.groupBox4.HeaderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
+            this.groupBox4.Location = new System.Drawing.Point(8, 25);
             this.groupBox4.MinimumSize = new System.Drawing.Size(136, 50);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.groupBox4.Size = new System.Drawing.Size(160, 164);
+            this.groupBox4.Size = new System.Drawing.Size(159, 163);
             this.groupBox4.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.groupBox4.TabIndex = 11;
             this.groupBox4.Text = "Weekly";
@@ -406,20 +413,20 @@ namespace CaloryBoost
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.BackGColor = System.Drawing.Color.DodgerBlue;
+            this.groupBox3.BackGColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.groupBox3.BaseColor = System.Drawing.Color.Transparent;
             this.groupBox3.BorderColorG = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
             this.groupBox3.BorderColorH = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(180)))), ((int)(((byte)(186)))));
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Controls.Add(this.groupBox2);
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.groupBox3.HeaderColor = System.Drawing.Color.CornflowerBlue;
-            this.groupBox3.Location = new System.Drawing.Point(4, 232);
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.HeaderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(105)))), ((int)(((byte)(30)))));
+            this.groupBox3.Location = new System.Drawing.Point(4, 237);
             this.groupBox3.MinimumSize = new System.Drawing.Size(136, 50);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.groupBox3.Size = new System.Drawing.Size(352, 227);
+            this.groupBox3.Size = new System.Drawing.Size(352, 194);
             this.groupBox3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.groupBox3.TabIndex = 12;
             this.groupBox3.Text = "Other Users";
@@ -444,15 +451,73 @@ namespace CaloryBoost
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // pcRed
+            // 
+            this.pcRed.Location = new System.Drawing.Point(24, 577);
+            this.pcRed.Name = "pcRed";
+            this.pcRed.Size = new System.Drawing.Size(21, 21);
+            this.pcRed.TabIndex = 14;
+            this.pcRed.TabStop = false;
+            // 
+            // pcGreen
+            // 
+            this.pcGreen.Location = new System.Drawing.Point(198, 577);
+            this.pcGreen.Name = "pcGreen";
+            this.pcGreen.Size = new System.Drawing.Size(22, 21);
+            this.pcGreen.TabIndex = 15;
+            this.pcGreen.TabStop = false;
+            // 
+            // lblAboveAverage
+            // 
+            this.lblAboveAverage.AutoSize = true;
+            this.lblAboveAverage.BackColor = System.Drawing.Color.Transparent;
+            this.lblAboveAverage.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAboveAverage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblAboveAverage.Location = new System.Drawing.Point(49, 579);
+            this.lblAboveAverage.Name = "lblAboveAverage";
+            this.lblAboveAverage.Size = new System.Drawing.Size(114, 16);
+            this.lblAboveAverage.TabIndex = 16;
+            this.lblAboveAverage.Text = "Above Average ";
+            // 
+            // lblBelowAverage
+            // 
+            this.lblBelowAverage.AutoSize = true;
+            this.lblBelowAverage.BackColor = System.Drawing.Color.Transparent;
+            this.lblBelowAverage.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBelowAverage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblBelowAverage.Location = new System.Drawing.Point(224, 579);
+            this.lblBelowAverage.Name = "lblBelowAverage";
+            this.lblBelowAverage.Size = new System.Drawing.Size(110, 16);
+            this.lblBelowAverage.TabIndex = 17;
+            this.lblBelowAverage.Text = "Below Average ";
+            // 
+            // bigLabel1
+            // 
+            this.bigLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.bigLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bigLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bigLabel1.Location = new System.Drawing.Point(117, 1);
+            this.bigLabel1.Name = "bigLabel1";
+            this.bigLabel1.Size = new System.Drawing.Size(135, 29);
+            this.bigLabel1.TabIndex = 18;
+            this.bigLabel1.Text = "CALORYBOOST";
+            this.bigLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(360, 610);
+            this.Controls.Add(this.bigLabel1);
+            this.Controls.Add(this.lblBelowAverage);
+            this.Controls.Add(this.lblAboveAverage);
+            this.Controls.Add(this.pcGreen);
+            this.Controls.Add(this.pcRed);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.grpFullName);
             this.Controls.Add(this.groupBox1);
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Reports";
             this.Text = "Reports";
@@ -473,7 +538,10 @@ namespace CaloryBoost
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcRed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcGreen)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -505,5 +573,10 @@ namespace CaloryBoost
         private ReaLTaiizor.Controls.HeaderLabel lblWeeklyCaloryAverage;
         private ReaLTaiizor.Controls.GroupBox groupBox3;
         private RJCodeAdvance.RJControls.RJButton btnClose;
+        private System.Windows.Forms.PictureBox pcRed;
+        private System.Windows.Forms.PictureBox pcGreen;
+        private ReaLTaiizor.Controls.HeaderLabel lblAboveAverage;
+        private ReaLTaiizor.Controls.HeaderLabel lblBelowAverage;
+        private ReaLTaiizor.Controls.BigLabel bigLabel1;
     }
 }

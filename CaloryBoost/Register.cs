@@ -20,8 +20,6 @@ namespace CaloryBoost
         {
             try
             {
-                
-               
                 user = new User()
                 {
                     FirstName = txtFirstName.Text.Trim(),
@@ -34,8 +32,8 @@ namespace CaloryBoost
                 };
 
                 check = userService.Insert(user);
+
                 MessageBox.Show(check ? "Kayıt gerçekleşti" : "Bilgilerinizi kontrol ediniz");
-                
             }
             catch (Exception ex)
             {

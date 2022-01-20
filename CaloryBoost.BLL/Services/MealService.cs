@@ -40,14 +40,14 @@ namespace CaloryBoost.BLL.Services
             return mealRepository.Update(food);
         }
 
-        public bool Delete(int foodId)
+        public bool Delete(UserMealFood food)
         {
-            if (foodId<1)
+            if (food.UserID == 0 || food.MealID == 0)
             {
                 throw new Exception("Parametre değeri uygun değil");
             }
 
-            return mealRepository.Delete(foodId);
+            return mealRepository.Delete(food);
         }
 
         public List<Food> FoodsList()

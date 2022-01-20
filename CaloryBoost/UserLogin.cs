@@ -19,14 +19,13 @@ namespace CaloryBoost
         {
             InitializeComponent();
             userService = new UserService();
-
         }
         User user;
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string email = txtEmail.Text.Trim();
-            string password = txtPassword.Text.Trim();
+            string email = txtEmail.Texts.Trim();
+            string password = txtPassword.Texts.Trim();
             try
             {
                 user = userService.CheckLogin(email, password);
@@ -34,23 +33,17 @@ namespace CaloryBoost
                 {
                     UserProfil userProfile = new UserProfil(user);
                     userProfile.ShowDialog();
-                    
                 }
                 this.Close();
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
-
             }
-            
-
         }
 
         private void lbkToRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
             Register register = new Register();
             this.Hide();
             register.ShowDialog();

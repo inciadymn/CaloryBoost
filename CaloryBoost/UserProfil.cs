@@ -24,7 +24,6 @@ namespace CaloryBoost
         }
         private void UserProfil_Load(object sender, EventArgs e)
         {
-
             lblFullName.Text = user.FirstName + " " + user.LastName;
             lblDate.Text = DateTime.Now.ToShortDateString();
             lblTotalCal.Text = userProfileService.GetByCalory(user.ID).ToString()+" "+"kcal";
@@ -76,7 +75,6 @@ namespace CaloryBoost
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            
             Application.Exit();
         }
 
@@ -86,8 +84,6 @@ namespace CaloryBoost
             this.Hide();
             reports.ShowDialog();
             this.Show();
-
-
         }
     }
 }

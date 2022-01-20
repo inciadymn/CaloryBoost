@@ -31,6 +31,7 @@ namespace CaloryBoost
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserProfil));
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.btnReports = new RJCodeAdvance.RJControls.RJButton();
             this.btnClose = new RJCodeAdvance.RJControls.RJButton();
             this.lblTotalCal = new ReaLTaiizor.Controls.BigLabel();
             this.lblDate = new ReaLTaiizor.Controls.BigLabel();
@@ -52,7 +53,6 @@ namespace CaloryBoost
             this.btnSnack = new RJCodeAdvance.RJControls.RJButton();
             this.headerLabel4 = new ReaLTaiizor.Controls.HeaderLabel();
             this.hopePictureBox4 = new ReaLTaiizor.Controls.HopePictureBox();
-            this.btnReports = new RJCodeAdvance.RJControls.RJButton();
             this.parrotGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -92,6 +92,27 @@ namespace CaloryBoost
             this.parrotGradientPanel1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.parrotGradientPanel1.TopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.parrotGradientPanel1.TopRight = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            // 
+            // btnReports
+            // 
+            this.btnReports.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnReports.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.btnReports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnReports.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnReports.BorderRadius = 7;
+            this.btnReports.BorderSize = 0;
+            this.btnReports.FlatAppearance.BorderSize = 0;
+            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnReports.ForeColor = System.Drawing.Color.Black;
+            this.btnReports.Location = new System.Drawing.Point(5, 6);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(96, 35);
+            this.btnReports.TabIndex = 6;
+            this.btnReports.Text = "Reports";
+            this.btnReports.TextColor = System.Drawing.Color.Black;
+            this.btnReports.UseVisualStyleBackColor = false;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnClose
             // 
@@ -157,9 +178,10 @@ namespace CaloryBoost
             this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.rjCircularPictureBox1.BorderSize = 2;
             this.rjCircularPictureBox1.GradientAngle = 50F;
-            this.rjCircularPictureBox1.Location = new System.Drawing.Point(128, 59);
+            this.rjCircularPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("rjCircularPictureBox1.Image")));
+            this.rjCircularPictureBox1.Location = new System.Drawing.Point(124, 42);
             this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
-            this.rjCircularPictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.rjCircularPictureBox1.Size = new System.Drawing.Size(117, 117);
             this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.rjCircularPictureBox1.TabIndex = 0;
             this.rjCircularPictureBox1.TabStop = false;
@@ -411,27 +433,6 @@ namespace CaloryBoost
             this.hopePictureBox4.TabIndex = 4;
             this.hopePictureBox4.TabStop = false;
             this.hopePictureBox4.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            // 
-            // btnReports
-            // 
-            this.btnReports.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnReports.BackgroundColor = System.Drawing.Color.AliceBlue;
-            this.btnReports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnReports.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnReports.BorderRadius = 7;
-            this.btnReports.BorderSize = 0;
-            this.btnReports.FlatAppearance.BorderSize = 0;
-            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnReports.ForeColor = System.Drawing.Color.Black;
-            this.btnReports.Location = new System.Drawing.Point(5, 6);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(96, 35);
-            this.btnReports.TabIndex = 6;
-            this.btnReports.Text = "Reports";
-            this.btnReports.TextColor = System.Drawing.Color.Black;
-            this.btnReports.UseVisualStyleBackColor = false;
-            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // UserProfil
             // 

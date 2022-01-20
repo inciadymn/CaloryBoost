@@ -26,9 +26,11 @@ namespace CaloryBoost
             this.mealId = mealId;
             mealService = new MealService();
         }
+
         User user;
         int mealId;
         double total = 0;
+
         private void Meal_Load(object sender, EventArgs e)
         {
             string mealName = mealService.GetMealName(mealId);
@@ -37,8 +39,6 @@ namespace CaloryBoost
             FillListView();
 
             lblTotalCalory.Text = mealService.GetMealName(mealId) + " " + "Total Calory";
-
-            //metotlaştırılıp tekrar çağırılacak
 
             List<Food> foods = mealService.FoodsList();
             foreach (Food item in foods)
@@ -78,7 +78,6 @@ namespace CaloryBoost
             pbFoodPic.Height = 90;
             pbFoodPic.Width = 90;
             pbFoodPic.Image = Image.FromFile(item.PhotoPath);
-            //pbFoodPic.BackgroundImageLayout = ImageLayout.Stretch;
             pbFoodPic.SizeMode = PictureBoxSizeMode.StretchImage;
             pbFoodPic.Location = new Point(5, 5);
 
@@ -101,20 +100,15 @@ namespace CaloryBoost
 
             RJButton addButton = new RJButton();
             addButton.BackColor = Color.Black;
-            addButton.Width = 30;
-            addButton.Height = 30;
-            addButton.BorderRadius = 15;
+            addButton.Width = 35;
+            addButton.Height = 35;
+            addButton.BorderRadius = 7;
             addButton.Tag = $"{item.ID}";
-            //addButton.Image = Image.FromFile(@"..\..\İmages\plus_icon.jpg");
-            //addButton.BackgroundImageLayout = ImageLayout.Tile;
             addButton.Text = "+";
-            addButton.Font = new Font("Tahoma", 12);
-            
+            addButton.Font = new Font("Tahoma", 14, FontStyle.Bold);
+            addButton.TextAlign = ContentAlignment.MiddleCenter;
             addButton.Location = new Point(270, 20);
             
-            
-
-
             Label lblAmount = new Label();
             lblAmount.BackColor = Color.Transparent;
             lblAmount.Text = "Amount :";
@@ -124,7 +118,6 @@ namespace CaloryBoost
             lblAmount.Height = 15;
             lblAmount.Tag = $"lblAmount_{item.ID}";
             lblAmount.Location = new Point(110, 45);
-
 
             TextBox txtAmount = new TextBox();
             txtAmount.BackColor = Color.White;
@@ -158,18 +151,17 @@ namespace CaloryBoost
                 MessageBox.Show(check ? "Ekleme başarılı" : "Ekleme başarısız");
                 lvMealDetails.Items.Clear();
 
-                txtAmont.Clear();
-
                 FillListView();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
+            finally
+            {
+                txtAmont.Clear();
+            }
         }
-
-
 
         int foodId;
         private void lvMealDetails_MouseClick(object sender, MouseEventArgs e)
@@ -179,25 +171,30 @@ namespace CaloryBoost
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            bool check = mealService.Delete(foodId);
+            bool check = mealService.Delete(new UserMealFood
+            {
+                FoodID = Convert.ToInt32(foodId),
+                MealID = mealId,
+                UserID = user.ID
+            });
             MessageBox.Show(check ? "Silme başarılı" : "Silme başarısız");
 
             lvMealDetails.Items.Clear();
             FillListView();
         }
-        UserMealFood userMealFood; //kullanılmamış
+       
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
             bool check = mealService.Update(new UserMealFood
             {
                 FoodID = Convert.ToInt32(foodId),
                 MealID = mealId,
                 UserID = user.ID,
-                Portion = Convert.ToDouble(txtUpdateAmount.Texts)
+                Portion = Convert.ToDouble(txtUpdateAmount.Texts.Trim())
             });
             MessageBox.Show(check ? "Güncelleme başarılı" : "Güncelleme başarısız");
 
+            txtUpdateAmount.Texts = "";
             lvMealDetails.Items.Clear();
             FillListView();
         }
