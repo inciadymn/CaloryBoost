@@ -33,6 +33,10 @@ namespace CaloryBoost
 
         private void Meal_Load(object sender, EventArgs e)
         {
+            btnUpdate.Enabled = false;
+            btnDelete.Enabled=false;
+            
+
             string mealName = mealService.GetMealName(mealId);
             grpMealName.Text = mealName;
 
@@ -167,36 +171,75 @@ namespace CaloryBoost
         private void lvMealDetails_MouseClick(object sender, MouseEventArgs e)
         {
             foodId = Convert.ToInt32(lvMealDetails.SelectedItems[0].Tag);
+            if (lvMealDetails.SelectedItems.Count == 1 )
+            {
+                btnDelete.Enabled = true;
+            }
+            if (lvMealDetails.SelectedItems.Count == 1 && txtUpdateAmount.Texts!=string.Empty)
+            {
+                btnUpdate.Enabled = true;
+            }
         }
 
+                
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            bool check = mealService.Delete(new UserMealFood
+            try
             {
-                FoodID = Convert.ToInt32(foodId),
-                MealID = mealId,
-                UserID = user.ID
-            });
-            MessageBox.Show(check ? "Silme başarılı" : "Silme başarısız");
+                bool check = mealService.Delete(new UserMealFood
+                {
+                    FoodID = Convert.ToInt32(foodId),
+                    MealID = mealId,
+                    UserID = user.ID
+                });
+                MessageBox.Show(check ? "Silme başarılı" : "Silme başarısız");
+                lvMealDetails.Items.Clear();
+                FillListView();
 
-            lvMealDetails.Items.Clear();
-            FillListView();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally 
+            {
+                btnDelete.Enabled = false;
+            }
+            
         }
        
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            bool check = mealService.Update(new UserMealFood
+            try
             {
-                FoodID = Convert.ToInt32(foodId),
-                MealID = mealId,
-                UserID = user.ID,
-                Portion = Convert.ToDouble(txtUpdateAmount.Texts.Trim())
-            });
-            MessageBox.Show(check ? "Güncelleme başarılı" : "Güncelleme başarısız");
+                bool check = mealService.Update(new UserMealFood
+                {
+                    FoodID = Convert.ToInt32(foodId),
+                    MealID = mealId,
+                    UserID = user.ID,
+                    Portion = Convert.ToDouble(txtUpdateAmount.Texts.Trim())
+                });
+                if (lvMealDetails.SelectedItems.Count > -1 && txtUpdateAmount.Texts != null)
+                {
+                    btnUpdate.Enabled = true;
+                }
+                MessageBox.Show(check ? "Güncelleme başarılı" : "Güncelleme başarısız");
 
-            txtUpdateAmount.Texts = "";
-            lvMealDetails.Items.Clear();
-            FillListView();
+                txtUpdateAmount.Texts = "";
+                lvMealDetails.Items.Clear();
+                FillListView();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally 
+            {
+                btnUpdate.Enabled = false;
+            }
+            
         }
 
 
