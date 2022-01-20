@@ -33,18 +33,20 @@ namespace CaloryBoost.BLL.Services
 
         public bool Update(UserMealFood food)
         {
-            if (food.UserID == 0 || food.MealID == 0)
+            if (food.FoodID==0)
             {
-                throw new Exception("Food güncellenirken ID bilgisi mutlaka atanmalıdır");
+                throw new Exception("Lütfen Güncellemek İstediğiniz Ürünü Seçiniz.");
             }
+          
             return mealRepository.Update(food);
+
         }
 
         public bool Delete(UserMealFood food)
         {
-            if (food.UserID == 0 || food.MealID == 0)
+            if (food.FoodID==0)
             {
-                throw new Exception("Parametre değeri uygun değil");
+                throw new Exception("Lütfen Silmek İstediğiniz Ürünü Seçiniz.");
             }
 
             return mealRepository.Delete(food);

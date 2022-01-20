@@ -51,14 +51,14 @@ namespace CaloryBoost.BLL.Services
 
             if (user.Phone.Length!=11)
             {
-                throw new Exception("Numarayı düzgün gir ulan.");
+                throw new Exception("Numarayı başında sıfır(0) yazarak 11 haneli olarak giriniz.");
             }
 
             foreach (char item in user.Phone)
             {
                 if (!char.IsDigit(item))
                 {
-                    throw new Exception("Buraya sadece rakamlar giriniz.");
+                    throw new Exception("Buraya sadece rakam giriniz.");
                 }
             }
 
@@ -68,7 +68,7 @@ namespace CaloryBoost.BLL.Services
             }
 
           
-
+            //user ın kayıt olduğu tarih
             user.CreatedDate = DateTime.Now;
 
             return userRepository.Insert(user);
