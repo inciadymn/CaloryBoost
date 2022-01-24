@@ -49,16 +49,21 @@ namespace CaloryBoost.BLL.Services
                 throw new Exception("Password içersinde büyük-küçük harf ve sayı bulunmalıdır.Min 7 karakter şifre girilmelidir.");
             }
 
-            if (user.Phone.Length!=11)
+            if (user.BirthDate.Date >= DateTime.Now.Date)
             {
-                throw new Exception("Numarayı başında sıfır(0) yazarak 11 haneli olarak giriniz.");
+                throw new Exception("Doğum Tarihi İleri Bir Tarih Olamaz.");
+            }
+
+            if (user.Phone.Length != 12)
+            {
+                throw new Exception("Numarayı, ülke kodunuzu ve başında sıfır(0) yazarak 12 haneli olarak giriniz.");
             }
 
             foreach (char item in user.Phone)
             {
                 if (!char.IsDigit(item))
                 {
-                    throw new Exception("Buraya sadece rakam giriniz.");
+                    throw new Exception("Telefon numarasını sadece rakam giriniz.");
                 }
             }
 
@@ -67,7 +72,8 @@ namespace CaloryBoost.BLL.Services
                 throw new Exception("Bu kullanıcı daha önceden kayıt olmuştur.");
             }
 
-          
+
+
             //user ın kayıt olduğu tarih
             user.CreatedDate = DateTime.Now;
 
@@ -80,7 +86,7 @@ namespace CaloryBoost.BLL.Services
             bool isCharLower = false;
             bool isNumber = false;
             bool isPasswordLength = false;
-            if (user.Password.Length>6)
+            if (user.Password.Length > 6)
             {
                 isPasswordLength = true;
             }
@@ -98,7 +104,7 @@ namespace CaloryBoost.BLL.Services
                 {
                     isNumber = true;
                 }
-                
+
             }
 
             if (!isCharUpper || !isCharLower || !isNumber || !isPasswordLength)

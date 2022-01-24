@@ -17,5 +17,6 @@ namespace CaloryBoost.Model
         public int UserId { get; set; }
         public DateTime DailyCalory { get; set; }
         public int FoodId { get; set; }
+        
     }
 }

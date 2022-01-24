@@ -31,10 +31,10 @@ namespace CaloryBoost
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserProfil));
             this.parrotGradientPanel1 = new ReaLTaiizor.Controls.ParrotGradientPanel();
+            this.dtpSelectedDate = new RJCodeAdvance.RJControls.RJDatePicker();
             this.btnReports = new RJCodeAdvance.RJControls.RJButton();
             this.btnClose = new RJCodeAdvance.RJControls.RJButton();
             this.lblTotalCal = new ReaLTaiizor.Controls.BigLabel();
-            this.lblDate = new ReaLTaiizor.Controls.BigLabel();
             this.lblFullName = new ReaLTaiizor.Controls.BigLabel();
             this.rjCircularPictureBox1 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.panel1 = new ReaLTaiizor.Controls.Panel();
@@ -74,10 +74,10 @@ namespace CaloryBoost
             this.parrotGradientPanel1.BottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.parrotGradientPanel1.BottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.parrotGradientPanel1.Controls.Add(this.dtpSelectedDate);
             this.parrotGradientPanel1.Controls.Add(this.btnReports);
             this.parrotGradientPanel1.Controls.Add(this.btnClose);
             this.parrotGradientPanel1.Controls.Add(this.lblTotalCal);
-            this.parrotGradientPanel1.Controls.Add(this.lblDate);
             this.parrotGradientPanel1.Controls.Add(this.lblFullName);
             this.parrotGradientPanel1.Controls.Add(this.rjCircularPictureBox1);
             this.parrotGradientPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
@@ -93,6 +93,20 @@ namespace CaloryBoost
             this.parrotGradientPanel1.TopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.parrotGradientPanel1.TopRight = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             // 
+            // dtpSelectedDate
+            // 
+            this.dtpSelectedDate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dtpSelectedDate.BorderSize = 0;
+            this.dtpSelectedDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpSelectedDate.Location = new System.Drawing.Point(96, 3);
+            this.dtpSelectedDate.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dtpSelectedDate.Name = "dtpSelectedDate";
+            this.dtpSelectedDate.Size = new System.Drawing.Size(178, 35);
+            this.dtpSelectedDate.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dtpSelectedDate.TabIndex = 7;
+            this.dtpSelectedDate.TextColor = System.Drawing.Color.White;
+            this.dtpSelectedDate.ValueChanged += new System.EventHandler(this.dtpSelectedDate_ValueChanged);
+            // 
             // btnReports
             // 
             this.btnReports.BackColor = System.Drawing.Color.AliceBlue;
@@ -103,11 +117,11 @@ namespace CaloryBoost
             this.btnReports.BorderSize = 0;
             this.btnReports.FlatAppearance.BorderSize = 0;
             this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnReports.ForeColor = System.Drawing.Color.Black;
-            this.btnReports.Location = new System.Drawing.Point(5, 6);
+            this.btnReports.Location = new System.Drawing.Point(10, 7);
             this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(96, 35);
+            this.btnReports.Size = new System.Drawing.Size(71, 26);
             this.btnReports.TabIndex = 6;
             this.btnReports.Text = "Reports";
             this.btnReports.TextColor = System.Drawing.Color.Black;
@@ -126,9 +140,9 @@ namespace CaloryBoost
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(314, 10);
+            this.btnClose.Location = new System.Drawing.Point(309, 6);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(36, 37);
+            this.btnClose.Size = new System.Drawing.Size(34, 38);
             this.btnClose.TabIndex = 5;
             this.btnClose.TextColor = System.Drawing.Color.White;
             this.btnClose.UseVisualStyleBackColor = false;
@@ -145,18 +159,6 @@ namespace CaloryBoost
             this.lblTotalCal.TabIndex = 1;
             this.lblTotalCal.Text = "0";
             this.lblTotalCal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblDate
-            // 
-            this.lblDate.BackColor = System.Drawing.Color.Transparent;
-            this.lblDate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(13, 9);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(336, 30);
-            this.lblDate.TabIndex = 1;
-            this.lblDate.Text = "2022/01/12";
-            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblFullName
             // 
@@ -475,7 +477,6 @@ namespace CaloryBoost
         private ReaLTaiizor.Controls.BigLabel lblFullName;
         private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox1;
         private ReaLTaiizor.Controls.BigLabel lblTotalCal;
-        private ReaLTaiizor.Controls.BigLabel lblDate;
         private ReaLTaiizor.Controls.Panel panel1;
         private RJCodeAdvance.RJControls.RJButton btnBreakfast;
         private ReaLTaiizor.Controls.HeaderLabel headerLabel1;
@@ -494,5 +495,6 @@ namespace CaloryBoost
         private RJCodeAdvance.RJControls.RJButton btnSnack;
         private RJCodeAdvance.RJControls.RJButton btnClose;
         public RJCodeAdvance.RJControls.RJButton btnReports;
+        private RJCodeAdvance.RJControls.RJDatePicker dtpSelectedDate;
     }
 }

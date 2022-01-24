@@ -16,6 +16,7 @@ namespace CaloryBoost
     {
         User user;
         UserProfilService userProfileService;
+        DateTime selectedDate;
         public UserProfil(User user)
         {
             InitializeComponent();
@@ -25,52 +26,54 @@ namespace CaloryBoost
         private void UserProfil_Load(object sender, EventArgs e)
         {
             lblFullName.Text = user.FirstName + " " + user.LastName;
-            lblDate.Text = DateTime.Now.ToShortDateString();
-            lblTotalCal.Text = userProfileService.GetByCalory(user.ID).ToString()+" "+"kcal";
+            selectedDate = dtpSelectedDate.Value.Date;
+            //lblDate.Text = DateTime.Now.ToShortDateString();
+            lblTotalCal.Text = userProfileService.GetByCalory(user.ID,selectedDate).ToString()+" "+"kcal";
+
         }
         
         private void btnBreakfast_Click(object sender, EventArgs e)
         {
             int mealId = 1;
-            Meal meal = new Meal(user,mealId);
+            Meal meal = new Meal(user,mealId, selectedDate);
             this.Hide();
             meal.ShowDialog();
             this.Show();
 
-            lblTotalCal.Text = userProfileService.GetByCalory(user.ID).ToString() + " " + "kcal";
+            lblTotalCal.Text = userProfileService.GetByCalory(user.ID,selectedDate).ToString() + " " + "kcal";
         }
 
         private void btnLunch_Click(object sender, EventArgs e)
         {
             int mealId = 2;
-            Meal meal = new Meal(user, mealId);
+            Meal meal = new Meal(user, mealId,selectedDate);
             this.Hide();
             meal.ShowDialog();
             this.Show();
 
-            lblTotalCal.Text = userProfileService.GetByCalory(user.ID).ToString() + " " + "kcal";
+            lblTotalCal.Text = userProfileService.GetByCalory(user.ID,selectedDate).ToString() + " " + "kcal";
         }
 
         private void btnDinner_Click(object sender, EventArgs e)
         {
             int mealId = 3;
-            Meal meal = new Meal(user, mealId);
+            Meal meal = new Meal(user, mealId,selectedDate);
             this.Hide();
             meal.ShowDialog();
             this.Show();
 
-            lblTotalCal.Text = userProfileService.GetByCalory(user.ID).ToString() + " " + "kcal";
+            lblTotalCal.Text = userProfileService.GetByCalory(user.ID,selectedDate).ToString() + " " + "kcal";
         }
 
         private void btnSnack_Click(object sender, EventArgs e)
         {
             int mealId = 4;
-            Meal meal = new Meal(user, mealId);
+            Meal meal = new Meal(user, mealId,selectedDate);
             this.Hide();
             meal.ShowDialog();
             this.Show();
 
-            lblTotalCal.Text = userProfileService.GetByCalory(user.ID).ToString() + " " + "kcal";
+            lblTotalCal.Text = userProfileService.GetByCalory(user.ID,selectedDate).ToString() + " " + "kcal";
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -84,6 +87,12 @@ namespace CaloryBoost
             this.Hide();
             reports.ShowDialog();
             this.Show();
+        }
+
+        private void dtpSelectedDate_ValueChanged(object sender, EventArgs e)
+        {
+            selectedDate = dtpSelectedDate.Value.Date;
+            lblTotalCal.Text = userProfileService.GetByCalory(user.ID, selectedDate).ToString() + " " + "kcal";
         }
     }
 }

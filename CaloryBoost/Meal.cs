@@ -4,24 +4,21 @@ using CaloryBoost.Model.Entities;
 using RJCodeAdvance.RJControls;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Documents;
 using System.Windows.Forms;
 
 
 namespace CaloryBoost
 {
+
     public partial class Meal : Form
     {
+        DateTime selectedDate;
         MealService mealService;
-        public Meal(User user, int mealId)
+        public Meal(User user, int mealId, DateTime selectedDate)
         {
             InitializeComponent();
+            this.selectedDate = selectedDate;
             this.user = user;
             this.mealId = mealId;
             mealService = new MealService();
@@ -34,8 +31,8 @@ namespace CaloryBoost
         private void Meal_Load(object sender, EventArgs e)
         {
             btnUpdate.Enabled = false;
-            btnDelete.Enabled=false;
-            
+            btnDelete.Enabled = false;
+
 
             string mealName = mealService.GetMealName(mealId);
             grpMealName.Text = mealName;
@@ -54,7 +51,7 @@ namespace CaloryBoost
         private void FillListView()
         {
             ListViewItem lvi;
-            List<SelectedFood> addedFoods = mealService.GetFood(mealId, user.ID);
+            List<SelectedFood> addedFoods = mealService.GetFood(mealId, user.ID, selectedDate);
             total = 0;
             foreach (SelectedFood item in addedFoods)
             {
@@ -70,7 +67,7 @@ namespace CaloryBoost
             lblCalory.Text = total.ToString();
         }
 
-      
+
         private void AddFoodsControls(Food item)
         {
             Panel pnlFrame = new Panel();
@@ -88,7 +85,7 @@ namespace CaloryBoost
             Label lblFoodName = new Label();
             lblFoodName.BackColor = Color.Transparent;
             lblFoodName.ForeColor = Color.Black;
-            lblFoodName.Font=new Font("Tahoma",20) ;
+            lblFoodName.Font = new Font("Tahoma", 20);
             lblFoodName.Width = 150;
             lblFoodName.Text = item.Name;
             lblFoodName.Tag = $"lblFoodName_{item.ID}";
@@ -97,7 +94,7 @@ namespace CaloryBoost
             Label lblDescription = new Label();
             lblDescription.BackColor = Color.Transparent;
             lblDescription.ForeColor = Color.Black;
-            lblFoodName.Font = new Font("Tahoma",8);
+            lblFoodName.Font = new Font("Tahoma", 8);
             lblDescription.Width = 190;
             lblDescription.Text = item.Description;
             lblDescription.Location = new Point(110, 70);
@@ -112,7 +109,7 @@ namespace CaloryBoost
             addButton.Font = new Font("Tahoma", 14, FontStyle.Bold);
             addButton.TextAlign = ContentAlignment.MiddleCenter;
             addButton.Location = new Point(270, 20);
-            
+
             Label lblAmount = new Label();
             lblAmount.BackColor = Color.Transparent;
             lblAmount.Text = "Amount :";
@@ -128,7 +125,7 @@ namespace CaloryBoost
             txtAmount.Tag = $"txtAmount_{item.ID}";
             txtAmount.Location = new Point(162, 42);
 
-            addButton.Click += (sender, e) => {AddClickedButton(sender, e, txtAmount); };
+            addButton.Click += (sender, e) => { AddClickedButton(sender, e, txtAmount); };
 
             pnlFrame.Controls.Add(pbFoodPic);
             pnlFrame.Controls.Add(lblFoodName);
@@ -150,7 +147,8 @@ namespace CaloryBoost
                     FoodID = Convert.ToInt32(clicked.Tag),
                     MealID = mealId,
                     UserID = user.ID,
-                    Portion = Convert.ToDouble(txtAmont.Text)
+                    CreatedDate = selectedDate,
+                    Portion = Convert.ToDouble(txtAmont.Text.ToString().Replace('.', ',').Trim())
                 });
                 MessageBox.Show(check ? "Ekleme başarılı" : "Ekleme başarısız");
                 lvMealDetails.Items.Clear();
@@ -171,17 +169,17 @@ namespace CaloryBoost
         private void lvMealDetails_MouseClick(object sender, MouseEventArgs e)
         {
             foodId = Convert.ToInt32(lvMealDetails.SelectedItems[0].Tag);
-            if (lvMealDetails.SelectedItems.Count == 1 )
+            if (lvMealDetails.SelectedItems.Count == 1)
             {
                 btnDelete.Enabled = true;
             }
-            if (lvMealDetails.SelectedItems.Count == 1 && txtUpdateAmount.Texts!=string.Empty)
+            if (lvMealDetails.SelectedItems.Count == 1 && txtUpdateAmount.Texts != string.Empty)
             {
                 btnUpdate.Enabled = true;
             }
         }
 
-                
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
             try
@@ -191,7 +189,7 @@ namespace CaloryBoost
                     FoodID = Convert.ToInt32(foodId),
                     MealID = mealId,
                     UserID = user.ID
-                });
+                }, selectedDate);
                 MessageBox.Show(check ? "Silme başarılı" : "Silme başarısız");
                 lvMealDetails.Items.Clear();
                 FillListView();
@@ -202,13 +200,13 @@ namespace CaloryBoost
 
                 MessageBox.Show(ex.Message);
             }
-            finally 
+            finally
             {
                 btnDelete.Enabled = false;
             }
-            
+
         }
-       
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -218,8 +216,8 @@ namespace CaloryBoost
                     FoodID = Convert.ToInt32(foodId),
                     MealID = mealId,
                     UserID = user.ID,
-                    Portion = Convert.ToDouble(txtUpdateAmount.Texts.Trim())
-                });
+                    Portion = Convert.ToDouble(txtUpdateAmount.Texts.ToString().Replace('.', ',').Trim())
+                }, selectedDate);
                 if (lvMealDetails.SelectedItems.Count > -1 && txtUpdateAmount.Texts != null)
                 {
                     btnUpdate.Enabled = true;
@@ -235,11 +233,11 @@ namespace CaloryBoost
 
                 MessageBox.Show(ex.Message);
             }
-            finally 
+            finally
             {
                 btnUpdate.Enabled = false;
             }
-            
+
         }
 
 
@@ -248,7 +246,7 @@ namespace CaloryBoost
             flpFoods.Controls.Clear();
             string searchFood = txtSearch.Texts;
             List<Food> foods = mealService.FoodsList(searchFood);
-            
+
             foreach (Food item in foods)
             {
                 AddFoodsControls(item);

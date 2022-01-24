@@ -29,6 +29,7 @@ namespace CaloryBoost
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.txtFirstName = new ReaLTaiizor.Controls.RichTextBoxEdit();
             this.headerLabel1 = new ReaLTaiizor.Controls.HeaderLabel();
             this.txtLastName = new ReaLTaiizor.Controls.RichTextBoxEdit();
@@ -39,7 +40,6 @@ namespace CaloryBoost
             this.headerLabel4 = new ReaLTaiizor.Controls.HeaderLabel();
             this.headerLabel5 = new ReaLTaiizor.Controls.HeaderLabel();
             this.headerLabel6 = new ReaLTaiizor.Controls.HeaderLabel();
-            this.txtPhohe = new ReaLTaiizor.Controls.RichTextBoxEdit();
             this.headerLabel7 = new ReaLTaiizor.Controls.HeaderLabel();
             this.rdFemale = new ReaLTaiizor.Controls.ThunderRadioButton();
             this.rdMale = new ReaLTaiizor.Controls.ThunderRadioButton();
@@ -47,6 +47,8 @@ namespace CaloryBoost
             this.btnSave = new RJCodeAdvance.RJControls.RJButton();
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             this.headerLabel8 = new ReaLTaiizor.Controls.HeaderLabel();
+            this.mtxtPhone = new System.Windows.Forms.MaskedTextBox();
+            this.btnClose = new RJCodeAdvance.RJControls.RJButton();
             this.SuspendLayout();
             // 
             // txtFirstName
@@ -201,26 +203,6 @@ namespace CaloryBoost
             this.headerLabel6.TabIndex = 1;
             this.headerLabel6.Text = "Gender : ";
             // 
-            // txtPhohe
-            // 
-            this.txtPhohe.AutoWordSelection = false;
-            this.txtPhohe.BackColor = System.Drawing.Color.Transparent;
-            this.txtPhohe.BaseColor = System.Drawing.Color.Transparent;
-            this.txtPhohe.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.txtPhohe.EdgeColor = System.Drawing.Color.White;
-            this.txtPhohe.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtPhohe.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPhohe.Location = new System.Drawing.Point(119, 470);
-            this.txtPhohe.Name = "txtPhohe";
-            this.txtPhohe.ReadOnly = false;
-            this.txtPhohe.Size = new System.Drawing.Size(229, 30);
-            this.txtPhohe.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.txtPhohe.TabIndex = 7;
-            this.txtPhohe.TextBackColor = System.Drawing.Color.White;
-            this.txtPhohe.TextBorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPhohe.TextFont = new System.Drawing.Font("Tahoma", 10F);
-            this.txtPhohe.WordWrap = true;
-            // 
             // headerLabel7
             // 
             this.headerLabel7.AutoSize = true;
@@ -315,12 +297,43 @@ namespace CaloryBoost
             this.headerLabel8.TabIndex = 10;
             this.headerLabel8.Text = "*Your password must contain \r\nuppercase letters and numbers ";
             // 
+            // mtxtPhone
+            // 
+            this.mtxtPhone.Location = new System.Drawing.Point(119, 475);
+            this.mtxtPhone.Mask = "+90(999) 000-0000";
+            this.mtxtPhone.Name = "mtxtPhone";
+            this.mtxtPhone.Size = new System.Drawing.Size(229, 20);
+            this.mtxtPhone.TabIndex = 11;
+            this.mtxtPhone.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnClose.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnClose.BorderRadius = 15;
+            this.btnClose.BorderSize = 0;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(319, 5);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(35, 30);
+            this.btnClose.TabIndex = 14;
+            this.btnClose.TextColor = System.Drawing.Color.White;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.ClientSize = new System.Drawing.Size(360, 610);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.mtxtPhone);
             this.Controls.Add(this.headerLabel8);
             this.Controls.Add(this.bigLabel1);
             this.Controls.Add(this.btnSave);
@@ -329,7 +342,6 @@ namespace CaloryBoost
             this.Controls.Add(this.rdFemale);
             this.Controls.Add(this.headerLabel7);
             this.Controls.Add(this.headerLabel6);
-            this.Controls.Add(this.txtPhohe);
             this.Controls.Add(this.headerLabel5);
             this.Controls.Add(this.headerLabel4);
             this.Controls.Add(this.headerLabel3);
@@ -342,6 +354,7 @@ namespace CaloryBoost
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -360,7 +373,6 @@ namespace CaloryBoost
         private ReaLTaiizor.Controls.HeaderLabel headerLabel4;
         private ReaLTaiizor.Controls.HeaderLabel headerLabel5;
         private ReaLTaiizor.Controls.HeaderLabel headerLabel6;
-        private ReaLTaiizor.Controls.RichTextBoxEdit txtPhohe;
         private ReaLTaiizor.Controls.HeaderLabel headerLabel7;
         private ReaLTaiizor.Controls.ThunderRadioButton rdFemale;
         private ReaLTaiizor.Controls.ThunderRadioButton rdMale;
@@ -368,5 +380,7 @@ namespace CaloryBoost
         private RJCodeAdvance.RJControls.RJButton btnSave;
         private ReaLTaiizor.Controls.BigLabel bigLabel1;
         private ReaLTaiizor.Controls.HeaderLabel headerLabel8;
+        private System.Windows.Forms.MaskedTextBox mtxtPhone;
+        private RJCodeAdvance.RJControls.RJButton btnClose;
     }
 }
