@@ -144,7 +144,7 @@ namespace CaloryBoost
             this.headerLabel3.BackColor = System.Drawing.Color.Transparent;
             this.headerLabel3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.headerLabel3.Location = new System.Drawing.Point(26, 5);
+            this.headerLabel3.Location = new System.Drawing.Point(26, 7);
             this.headerLabel3.Name = "headerLabel3";
             this.headerLabel3.Size = new System.Drawing.Size(74, 19);
             this.headerLabel3.TabIndex = 5;
@@ -243,7 +243,7 @@ namespace CaloryBoost
             this.headerLabel2.BackColor = System.Drawing.Color.Transparent;
             this.headerLabel2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.headerLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.headerLabel2.Location = new System.Drawing.Point(26, 9);
+            this.headerLabel2.Location = new System.Drawing.Point(26, 8);
             this.headerLabel2.Name = "headerLabel2";
             this.headerLabel2.Size = new System.Drawing.Size(67, 19);
             this.headerLabel2.TabIndex = 5;
@@ -520,6 +520,7 @@ namespace CaloryBoost
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Reports";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reports";
             this.Load += new System.EventHandler(this.Reports_Load);
             this.panel1.ResumeLayout(false);

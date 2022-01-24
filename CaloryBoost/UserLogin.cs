@@ -40,6 +40,10 @@ namespace CaloryBoost
             {
                 MessageBox.Show(ex.Message);
             }
+            finally 
+            {
+                this.Close();
+            }
         }
 
         private void lbkToRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

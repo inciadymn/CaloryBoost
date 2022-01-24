@@ -17,12 +17,12 @@ namespace CaloryBoost.DAL.Repositories
 
         //listview a seçilen food ları listelemek için kullanılan metot
 
-        public List<SelectedFood> GetFood(int mealID, int userId)
+        public List<SelectedFood> GetFood(int mealID, int userId, DateTime date)
         {
-            var date = DateTime.Now.Date;
+            //var date = DateTime.Now.Date;
             var selecedFood = context.Foods.Join(context.UserMealFoods,
                                                  food => food.ID,
-                                                 x => x.FoodID,
+                                                 x => x.FoodID,                                           
                                                  (food, x) => new SelectedFood
                                                  {
                                                      MealId = x.MealID,
@@ -47,9 +47,9 @@ namespace CaloryBoost.DAL.Repositories
             return context.Meals.Where(a => a.ID == mealID).Select(a => a.Name).SingleOrDefault(); 
         }
 
-        public bool Update(UserMealFood food)
+        public bool Update(UserMealFood food, DateTime date)
         {
-            var date = DateTime.Now.Date;
+            //var date = DateTime.Now.Date;
 
             UserMealFood updatedPortion = context.UserMealFoods.Where(x => x.UserID == food.UserID &&
                                                                      x.MealID == food.MealID &&
@@ -62,9 +62,9 @@ namespace CaloryBoost.DAL.Repositories
         }
 
 
-        public bool Delete(UserMealFood food)
+        public bool Delete(UserMealFood food,DateTime date)
         {
-            var date = DateTime.Now.Date;
+            //var date = DateTime.Now.Date;
             UserMealFood deletedFood = context.UserMealFoods.Where(x => x.UserID == food.UserID &&
                                                                      x.MealID == food.MealID &&
                                                                      x.FoodID == food.FoodID &&

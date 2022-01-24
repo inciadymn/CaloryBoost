@@ -16,9 +16,9 @@ namespace CaloryBoost.DAL.Repositories
             context = new CaloryBoostDbContext();
         }
               
-        public double GetByCalory(int userID)
+        public double GetByCalory(int userID, DateTime date)
         {
-            var date = DateTime.Now.Date; // where içerisinde Datetime.date.now yapınca hata veriyor. biz de bunu değişkene atadık
+           // var date = DateTime.Now.Date; // where içerisinde Datetime.date.now yapınca hata veriyor. biz de bunu değişkene atadık
 
             var userInformations = context.Foods.Join(context.UserMealFoods,
                                                food => food.ID,
