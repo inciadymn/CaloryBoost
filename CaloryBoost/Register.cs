@@ -28,7 +28,7 @@ namespace CaloryBoost
                     Password = txtPassword.Text.Trim(),
                     BirthDate = dtpcDate.Value,
                     Gender = rdMale.Checked ? rdMale.Text.Trim() : rdFemale.Text.Trim(),
-                    Phone = txtPhohe.Text.Trim()
+                    Phone = mtxtPhone.Text.Trim()
                 };
 
                 check = userService.Insert(user);
@@ -43,6 +43,11 @@ namespace CaloryBoost
             {
                 this.Close();
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
