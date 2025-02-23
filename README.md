@@ -20,9 +20,7 @@ This project is a calorie tracking application.
 
   The screens in the application are as follows.
 
-![image](https://github.com/user-attachments/assets/ff965d98-b968-4786-a650-b33ea80c4a68)
-
-![image](https://github.com/user-attachments/assets/59bfb22c-fbd6-4463-b5b8-fdaa3fb14e90)
+![image](https://github.com/user-attachments/assets/ff965d98-b968-4786-a650-b33ea80c4a68) ![image](https://github.com/user-attachments/assets/59bfb22c-fbd6-4463-b5b8-fdaa3fb14e90)
 
 ![image](https://github.com/user-attachments/assets/b5c71762-67d7-4441-899c-63b5a66feafe)
 
